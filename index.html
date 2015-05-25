@@ -632,6 +632,21 @@
                         <div id="contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
 
                         <form class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
+                        <!-- fireform -->
+
+                          <script  src="http://src.fireform.org/fireform.min.js"></script>
+                          <script>
+                              options={
+                                emailNotification:"bonny.lai@gmail.com",
+                                emailConfirmationName:"InputName",  //The form input we get the email from.
+                                emailConfirmationFrom:"bonny.lai@gmail.com",  //Email appears as sent by this address.
+                                emailConfirmationSubject:"Thanks! Information submitted to MoveQB.",
+                                emailConfirmationBodyHTML:"<p>Thanks for submitting your move information. We'll touch base within the next 48 hours.</p>",
+                                emailConfirmationBodyText:"MoveQB has received your informaiton. We will respond within 48 hours!"
+                              }
+                              new Fireform('#MySelector', 'http://fireform.org/list/265/FirstForm', options);
+                          </script>
+                         <!-- end fireform -->
 
                             <div class="form-process"></div>
 
