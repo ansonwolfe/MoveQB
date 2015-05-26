@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
     <link rel="stylesheet" href="css/animate.css" type="text/css" />
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
-
     <link rel="stylesheet" href="css/responsive.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!--[if lt IE 9]>
@@ -634,23 +633,8 @@
 <!--                         <form class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
  -->
 
-                        <form class="nobottommargin" id="template-contactform" name="template-contactform" action="http://formspree.io/bonny.lai@gmail.com" method="post">
+                        <form class="nobottommargin" id="contactForm" name="template-contactform" action="http://formspree.io/bonny.lai@gmail.com" method="post">
 
-                        <!-- fireform -->
-                          <script  src="http://src.fireform.org/fireform.min.js"></script>
-                          <script>
-                              options={
-                                emailNotification:"bonny.lai@gmail.com",
-                                emailConfirmationName:"InputName",  //The form input we get the email from.
-                                emailConfirmationFrom:"bonny.lai@gmail.com",  //Email appears as sent by this address.
-                                emailConfirmationSubject:"Thanks! Information submitted to MoveQB.",
-                                emailConfirmationBodyHTML:"<p>Thanks for submitting your move information. We'll touch base within the next 48 hours.</p>",
-                                emailConfirmationBodyText:"MoveQB has received your informaiton. We will respond within 48 hours!"
-                              }
-                              new Fireform('#MySelector', 'http://fireform.org/list/265/FirstForm', options);
-                          </script>
-
-                          <!-- end fireform -->
                           <!-- formspree.io -->
                           <input type="hidden" name="_subject" value="MoveQB: New Assessment Request" />
                           <input type="text" name="name" placeholder="Full Name">
@@ -661,7 +645,6 @@
                           <textarea name="message" placeholder="Message"></textarea>
                           <input type="text" name="_gotcha" style="display:none" />
                           <input type="submit" class="button button-3d nomargin" value="Send">
-                         <!-- end fireform -->
 
 <!--                             <div class="form-process"></div>
 
@@ -707,6 +690,27 @@
                                 <button class="button button-3d nomargin" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Submit</button>
                             </div> -->
 
+                        <!-- fireform -->
+
+                              <script  src="http://src.fireform.org/fireform.min.js"></script>
+                              <script>
+                                new Fireform('#contactForm', 'http://fireform.org/list/265/FirstForm');
+                              </script>
+      
+<!--                           <script type="application/javascript" src="http://src.fireform.org/fireform.min.js"></script>
+                          <script>
+                              options={
+                                emailNotification:"bonny.lai@gmail.com",
+                                emailConfirmationName:"_replyto",  //The form input we get the email from.
+                                emailConfirmationFrom:"bonny.lai@gmail.com",  //Email appears as sent by this address.
+                                emailConfirmationSubject:"Thanks! Information submitted to MoveQB.",
+                                emailConfirmationBodyHTML:"<p>Thanks for submitting your move information. We'll touch base within the next 48 hours.</p>",
+                                emailConfirmationBodyText:"MoveQB has received your informaiton. We will respond within 48 hours!"
+                              }
+                              new Fireform('#contactForm', 'http://fireform.org/list/265/FirstForm', options);
+                          </script> -->
+
+                          <!-- end fireform -->
                         </form>
 
 <!--                         <script type="text/javascript">
