@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/animate.css" type="text/css" />
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
     <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!--[if lt IE 9]>
     	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -24,21 +26,46 @@
     ============================================= -->
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script>
+        var placeSearch, autocomplete;
+        var componentForm = {
+          street_number: 'short_name',
+          route: 'long_name',
+          locality: 'long_name',
+          administrative_area_level_1: 'short_name',
+          country: 'long_name',
+          postal_code: 'short_name'
+        };
 
-    <!-- Document Title
-    ============================================= -->
+        function initialize() {
+          autocomplete = new google.maps.places.Autocomplete(
+              (document.getElementById('autocomplete')),
+              { types: ['geocode'] });
+        }
+        function geolocate() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+              var geolocation = new google.maps.LatLng(
+                  position.coords.latitude, position.coords.longitude);
+              var circle = new google.maps.Circle({
+                center: geolocation,
+                radius: position.coords.accuracy
+              });
+              autocomplete.setBounds(circle.getBounds());
+            });
+          }
+        }
+    </script>
+
 	<title>MoveQB - Your office move experts</title>
 
 </head>
 
-<body class="stretched">
+<body class="stretched"  onload="initialize()">
 
-    <!-- Document Wrapper
-    ============================================= -->
     <div id="wrapper" class="clearfix">
 
-        <!-- Header
-        ============================================= -->
         <header id="header" class="full-header">
 
             <div id="header-wrap">
@@ -57,48 +84,26 @@
                     <!-- Primary Navigation
                     ============================================= -->
                     <nav id="primary-menu">
-                        <ul>
-<!--                             <li>
-                                <a href="#slider"><div>Home</div></a>
-                            </li>
-                            <li>
-                                <a href="#"><div>About</div></a>
-                            </li> -->                            
+                        <ul>                          
                             <li><a href="#benefits"><div>Benefits</div></a>
-                                <!-- <ul>
-                                    <li><a href="#"><div><i class="icon-gift"></i>Widgets</div></a>
-                                        <ul>
-                                            <li><a href="#"><div>Links</div></a></li>
-                                            <li><a href="#"><div>Flickr Photostream</div></a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="side-panel.html"><div><i class="icon-line-layout"></i>Side Panel</div></a></li>
-                                </ul> -->
                             </li>
-<!--                             <li class="mega-menu"><a href="#customers"><div>Customers</div></a>
-                            </li> -->
                             <li class="mega-menu"><a href="#how"><div>How It Works</div></a>
                                 <div class="mega-menu-content style-2 col-5 clearfix">
                                 </div>
-                            </li>      
-                            <li class="current"><a href="#"><div data-toggle="modal" data-target="#myModal">Contact</div></a>
+                            </li> 
+                            <li class="mega-menu"><a href="#how"><div>Vendors</div></a>
+                                <div class="mega-menu-content style-2 col-5 clearfix">
+                                </div>
+                            </li>     
+                            <li class="mega-menu current"><a href="#"><div data-toggle="modal" data-target="#myModal" class="button button-small button-rounded">Contact</div></a>
                                 <div class="mega-menu-content style-2 col-5 clearfix">
                                 </div>
                             </li>                            
-<!--                             <li class="mega-menu"><a href="#"><div>Shortcodes</div></a>
-                                <div class="mega-menu-content col-5 clearfix">
-                                    <ul>
-                                        <li><a href="animations.html"><div><i class="icon-magic"></i>Animations</div></a></li>
-                                    </ul>
-                                </div>
-                            </li> -->
                         </ul>
 
                     </nav>
                     <!-- #primary-menu end -->
-
                 </div>
-
             </div>
 
         </header><!-- #header end -->
@@ -225,11 +230,9 @@
 
                 <div class="promo promo-light promo-full bottommargin-lg header-stick notopborder">
                     <div class="container clearfix">
-                        <h3>Call us today at <span>(312) 662 2300</span> or Email us at <span>support@moveqb.com</span></h3>
-                        <span>We strive to provide Our Customers with Top Notch Support to make their Experience Wonderful</span>
-<!--                        <a href="#" class="button button-dark button-xlarge button-rounded">Start Now</a>-->
-                        <!-- Button trigger modal -->
-                        <button class="button button-dark button-xlarge button-rounded" data-toggle="modal" data-target="#myModal">Start Now</button>
+                        <h3>Get an expert working for you.</h3>
+                        <span>Get a 15-minute FREE assessment. </span>
+                        <a href="#" class="button button-dark button-xlarge button-rounded" data-toggle="modal" data-target="#myModal">Get Started</a>
                     </div>
                 </div>
 
@@ -237,13 +240,12 @@
 
                         <div class="heading-block center" id="benefits">
                             <h3>Why MoveQB?</h3>
-                            <span>We take out the headaches.</span>
                         </div>
 
                     <div class="col_one_third nobottommargin">
                         <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
                             <div class="fbox-icon">
-                                <a href="#"><i class="i-alt noborder icon-line-circle-check"></i></a>
+                                <a href="#"><i class="i-alt noborder icon-dollar"></i></a>
                             </div>
                             <h3>Simplified Decisions<span class="subtitle">Experts who focus your attention on key decisions.</span></h3>
                         </div>
@@ -252,18 +254,18 @@
                     <div class="col_one_third nobottommargin">
                         <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
                             <div class="fbox-icon">
-                                <a href="#"><i class="i-alt noborder icon-megaphone"></i></a>
+                                <a href="#"><i class="i-alt noborder icon-graph"></i></a>
                             </div>
-                            <h3>Better Outcomes<span class="subtitle">Get access to a trusted network of high-quality vendors at competitive prices.</span></h3>
+                            <h3>More Effective<span class="subtitle">Access compeittive prices from our trusted vendor network.</span></h3>
                         </div>
                     </div>
 
                     <div class="col_one_third nobottommargin col_last">
                         <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
                             <div class="fbox-icon">
-                                <a href="#"><i class="i-alt noborder icon-graph"></i></a>
+                                <a href="#"><i class="i-alt noborder icon-megaphone"></i></a>
                             </div>
-                            <h3>More Effective<span class="subtitle">You move every couple years. We do this every day. Benefit from the collective wisdom.</span></h3>
+                            <h3>Better Outcomes<span class="subtitle">You move every couple years. We do this every day.</span></h3>
                         </div>
                     </div>
                     
@@ -275,29 +277,26 @@
 
                         <div class="heading-block center">
                             <h3>Customer Testimonials</h3>
-                            <span>Our customers love us!</span>
                         </div>
 
                         <ul class="testimonials-grid grid-3 clearfix nobottommargin">
                             <li>
                                 <div class="testimonial">
-                                    <div class="testi-image">
-                                        <a href="#"><img src="images/testimonials/1.jpg" alt="Customer Testimonails"></a>
-                                    </div>
                                     <div class="testi-content">
                                         <p>Even on impossibly tight timeline, MoveQB orchestrated everything: setting up our first office in udner two weeks. They'll be my first call when we outgrow our current space!</p>
                                         <div class="testi-meta">
                                             Ben Rubin
                                             <span>CEO, Meerkat App</span>
                                         </div>
+                                   <div class="testi-image">
+                                        <a href="#"><img src="http://a3.mzstatic.com/us/r30/Purple7/v4/bd/89/78/bd897870-1eb3-569a-4d90-5efaed71265e/icon175x175.png" alt="Customer Testimonails"></a>
+                                    </div>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="testimonial">
-                                    <div class="testi-image">
-                                        <a href="#"><img src="images/testimonials/2.jpg" alt="Customer Testimonails"></a>
-                                    </div>
+
                                     <div class="testi-content">
                                         <p>After spinning our wheels and getting nowhere, our broker recommended MoveQB.</p><br>
                                         <p>Best . Decision . Ever . </p>
@@ -305,20 +304,24 @@
                                             Nandita Subramanian
                                             <span>VP of Operations, Cuff.io</span>
                                         </div>
+
+                                    <div class="testi-image">
+                                        <a href="#"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSCkFJ9HRdg46vx0Cwuc_CTUlulvrW-AabphxgPT4v5-xVXqO-k6w" alt="Customer Testimonails"></a>
+                                    </div>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="testimonial">
-                                    <div class="testi-image">
-                                        <a href="#"><img src="images/testimonials/7.jpg" alt="Customer Testimonails"></a>
-                                    </div>
                                     <div class="testi-content">
                                         <p>MoveQB brings an unparralleled level of support to our emerging clients. We can rest assured that MoveQB will shepherd our clients from a signed lease to 'open for business'.</p>
                                         <div class="testi-meta">
                                             Laurence Morgan
                                             <span>Senior VP Office Brokerage, CBRE</span>
                                         </div>
+                                    </div>
+                                    <div class="testi-image">
+                                        <a href="#"><img src="http://upload.wikimedia.org/wikipedia/commons/d/dc/CBRE_logo.png" alt="Customer Testimonails" class="center"></a>
                                     </div>
                                 </div>
                             </li>
@@ -330,64 +333,31 @@
                     <div class="container clearfix">
                         <div class="heading-block center">
                             <h2>How it Works</h2>
-                            <span>We make it as easy as a simple call.</span>
+                        </div>
+                        <div class="col-md-4 col-md-offset-4 ">
+                                <div class="bottommargin-sm">
+                                   <div class="block-number">1</div>
+                                    <div class="block-description-title">Get us up to speed</div>
+                                   Give us the lay of the land in less than 15 minutes. 
+                                </div>
+                                <div class="bottommargin-sm">
+                                   <div class="block-number">2</div>
+                                    <div class="block-description-title">We Customize</div>
+                                    We synthesize a plan and create a customized set of options.
+                                </div>
+                                <div class="bottommargin-sm">
+                                   <div class="block-number">3</div>
+                                    <div class="block-description-title">You Decide</div>
+                                   We provide good, better, and best options. You make the right decision. 
+                                </div>
+                                <div class="bottommargin-sm">
+                                   <div class="block-number">4</div>
+                                   <div class="block-description-title">We Make it Happen</div>
+                                    We bring our experience + trusted vendor network together to get it done.
+                                </div>                 
                         </div>
 
-                        <div class="clear bottommargin-lg"></div>
-
-                        <div class="col_one_third">
-                            <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn">
-                                <div class="fbox-icon">
-                                    <a href="#"><i class="icon-chat-3"></i></a>
-                                </div>
-                                <h3>Let's chat</h3>
-                                <p>We stablish your needs with a 15-minute assessment.</p>
-                            </div>
-                        </div>
-
-                        <div class="col_one_third">
-                            <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="200">
-                                <div class="fbox-icon">
-                                    <a href="#"><i class="icon-check"></i></a>
-                                </div>
-                                <h3>Select Options</h3>
-                                <p>Configure your space from a curated set of options.</p>
-                            </div>
-                        </div>
-
-                        <div class="col_one_third col_last">
-                            <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="400">
-                                <div class="fbox-icon">
-                                    <a href="#"><i class="icon-vcard"></i></a>
-                                </div>
-                                <h3>Vendor Match</h3>
-                                <p>Your selections are matched to MoveQB's trusted network of vendors.</p>
-                            </div>
-                        </div>
-
-                        <div class="clear"></div>
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4">
-                            <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="800">
-                                <div class="fbox-icon">
-                                    <a href="#"><i class="icon-tv"></i></a>
-                                </div>
-                                <h3>Relax</h3>
-                                <p>MoveQB coordinates vendors to ensure all the pieces come together, on-time &amp; on-budget</p>
-                            </div>
-                        </div>
-                        <div class="col-md-2"></div>
-                        <div class="col-md-4">
-                            <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="1000">
-                                <div class="fbox-icon">
-                                    <a href="#"><i class="icon-key"></i></a>
-                                </div>
-                                <h3>Ready!</h3>
-                                <p>Your new office is open for business.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-1 col_last"></div>
-                        <div class="clear"></div>
+        
                     </div>
                 </div>
                 <a class="button button-full center tright footer-stick">
@@ -540,69 +510,6 @@
 
             </div>
 
-            <!-- Copyrights
-            ============================================= -->
- <!--            <div id="copyrights">
-
-                <div class="container clearfix">
-
-                    <div class="col_half">
-                        Copyrights &copy; 2015 All Rights Reserved by MoveQB Inc.<br>
-                        <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
-                    </div>
-
-                    <div class="col_half col_last tright">
-                        <div class="fright clearfix">
-                            <a href="#" class="social-icon si-small si-borderless si-facebook">
-                                <i class="icon-facebook"></i>
-                                <i class="icon-facebook"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-twitter">
-                                <i class="icon-twitter"></i>
-                                <i class="icon-twitter"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-gplus">
-                                <i class="icon-gplus"></i>
-                                <i class="icon-gplus"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-pinterest">
-                                <i class="icon-pinterest"></i>
-                                <i class="icon-pinterest"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-vimeo">
-                                <i class="icon-vimeo"></i>
-                                <i class="icon-vimeo"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-github">
-                                <i class="icon-github"></i>
-                                <i class="icon-github"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-yahoo">
-                                <i class="icon-yahoo"></i>
-                                <i class="icon-yahoo"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-linkedin">
-                                <i class="icon-linkedin"></i>
-                                <i class="icon-linkedin"></i>
-                            </a>
-                        </div>
-
-                        <div class="clear"></div>
-
-                        <i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +91-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
-                    </div>
-
-                </div>
-
-            </div> --><!-- #copyrights end -->
-
         </footer><!-- #footer end -->
 
     </div><!-- #wrapper end -->
@@ -633,89 +540,76 @@
 <!--                         <form class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
  -->
 
-                        <form class="nobottommargin" id="contactForm" name="template-contactform" action="http://formspree.io/bonny.lai@gmail.com" method="post">
+                        <form class="nobottommargin" id="contactForm" name="template-contactform" action="https://formspree.io/bonny.lai@gmail.com" method="post">
 
                           <!-- formspree.io -->
-                          <input type="hidden" name="_subject" value="MoveQB: New Assessment Request" />
-                          <input type="text" name="name" placeholder="Full Name">
+<!-- 
+                          <div class="col_full">
+                            <input type="text" name="name" placeholder="Full Name">
+                          </div>
+                         
                           <input type="text" name="_replyto" placeholder="Company email" />                           
                           <input type="tel" name="phone" placeholder="Contact Number">
                           <input type="text" name="city" placeholder="Moving to City">
                           <input type="text" name="moveDate" placeholder="Targeted Move Date (mm/dd/yy)">
                           <textarea name="message" placeholder="Message"></textarea>
                           <input type="text" name="_gotcha" style="display:none" />
-                          <input type="submit" class="button button-3d nomargin" value="Send">
+                          <div class="col_full">
+                            <input type="submit" class="button button-3d nomargin" value="Send">
+                          </div> -->
 
-<!--                             <div class="form-process"></div>
+                          <!--  -->
+                            <div class="form-process"></div>
 
                             <div class="col_half">
-                                <label for="template-contactform-name">Full Name<small>*</small></label>
-                                <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" required/>
+                                <input type="text" id="template-contactform-name" name="name" value="" class="sm-form-control required" required placeholder="Full Name"/>
                             </div>
 
                             <div class="col_half col_last">
-                                <label for="template-contactform-email">Company Email Address<small>*</small></label>
-                                <input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control" required/>
+                                <input type="email" id="template-contactform-email" name="email" value="" class="required email sm-form-control" placeholder="Company Email" required/>
                             </div>
 
                             <div class="col_half ">
-                                <label for="template-contactform-phone">Contact Number<small>*</small></label>
-                                <input type="tel" id="template-contactform-phone" name="template-contactform-phone" value="" class="required sm-form-control" />
+                                <input type="tel" id="template-contactform-phone" name="phone" placeholder="Contact Number" class="required sm-form-control" />
                             </div>
 
                             <div class="col_half col_last">
-                                <label for="template-contactform-city">Moving To City</label>
-                                <input type="text" id="template-contactform-city" name="template-contactform-city" value="" class="sm-form-control" />
+                                <input type="text" id="autocomplete" name="address" placeholder="Moving To " class="sm-form-control" />
                             </div>
                             <div class="clear"></div>
                             <div class="col_half col_last">
-                                <label for="template-contactform-move">Targeted Move Date</label>
-                                <input type="date" id="template-contactform-move" name="template-contactform-move" class="sm-form-control">
-
+                                <input type="text" id="template-contactform-move" name="employees" placeholder="Number of employees" class="sm-form-control">
                                 </input>
                             </div>
 
                             <div class="clear"></div>
 
-                            <div class="col_full">
-                                <label for="template-contactform-message">Message<small>*</small></label>
-                                <textarea class="required sm-form-control" id="template-contactform-message" name="template-contactform-message" rows="3" cols="30"></textarea>
-                            </div>
-
-                            <div class="col_full hidden">
+<!--                             <div class="col_full hidden">
                                 <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
-                            </div>
+                            </div> -->
+
+                            <input type="hidden" name="_subject" value="MoveQB: New Assessment Request" />
 
                             <div class="col_full">
                                 <button class="button button-3d nomargin" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Submit</button>
-                            </div> -->
-
-                        <!-- fireform -->
-
+                            </div>
+                        </form>
                               <script  src="http://src.fireform.org/fireform.min.js"></script>
                               <script>
-                                new Fireform('#contactForm', 'http://fireform.org/list/265/FirstForm');
-                              </script>
-      
-<!--                           <script type="application/javascript" src="http://src.fireform.org/fireform.min.js"></script>
-                          <script>
-                              options={
-                                emailNotification:"bonny.lai@gmail.com",
-                                emailConfirmationName:"_replyto",  //The form input we get the email from.
-                                emailConfirmationFrom:"bonny.lai@gmail.com",  //Email appears as sent by this address.
-                                emailConfirmationSubject:"Thanks! Information submitted to MoveQB.",
-                                emailConfirmationBodyHTML:"<p>Thanks for submitting your move information. We'll touch base within the next 48 hours.</p>",
-                                emailConfirmationBodyText:"MoveQB has received your informaiton. We will respond within 48 hours!"
-                              }
-                              new Fireform('#contactForm', 'http://fireform.org/list/265/FirstForm', options);
-                          </script> -->
+                                        options={
+                                            emailNotification:"bonny.lai@gmail.com",
+                                            emailConfirmationName:"email",  //The form input we get the email from.
+                                            emailConfirmationFrom:"bonny.lai@gmail.com",  //Email appears as sent by this address.
+                                            emailConfirmationSubject:"Thanks for signing up",
+                                            emailConfirmationBodyHTML:"<p>You have been signed up!</p>",
+                                            emailConfirmationBodyText:"You have been signed up!"
+          }
+                                new Fireform('#contactForm', 'http://fireform.org/list/265/MoveQB');
+                              </script>                        
 
-                          <!-- end fireform -->
-                        </form>
+                        <script type="text/javascript">
 
-<!--                         <script type="text/javascript">
-
-                            $("#template-contactform").validate({
+                            $("#contactForm").validate({
                                 submitHandler: function(form) {
                                     $('.form-process').fadeIn();
                                     $(form).ajaxSubmit({
@@ -730,7 +624,7 @@
                                 }
                             });
 
-                        </script>  -->                      
+                        </script>                       
                     </div>
 <!--
                     <div class="modal-footer">
