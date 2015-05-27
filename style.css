@@ -10458,7 +10458,7 @@ label.error { display: none !important; }
 .emphasis-title h2 {
 	margin-bottom: 0;
 	font-weight: 700;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	letter-spacing: 1px;
 	color: #333;
 }
