@@ -26,43 +26,13 @@
     ============================================= -->
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
-    <script>
-        var placeSearch, autocomplete;
-        var componentForm = {
-          street_number: 'short_name',
-          route: 'long_name',
-          locality: 'long_name',
-          administrative_area_level_1: 'short_name',
-          country: 'long_name',
-          postal_code: 'short_name'
-        };
-
-        function initialize() {
-          autocomplete = new google.maps.places.Autocomplete(
-              (document.getElementById('autocomplete')),
-              { types: ['geocode'] });
-        }
-        function geolocate() {
-          if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
-              var geolocation = new google.maps.LatLng(
-                  position.coords.latitude, position.coords.longitude);
-              var circle = new google.maps.Circle({
-                center: geolocation,
-                radius: position.coords.accuracy
-              });
-              autocomplete.setBounds(circle.getBounds());
-            });
-          }
-        }
-    </script>
-
 	<title>MoveQB - Your office move experts</title>
 
 </head>
 
-<body class="stretched"  onload="initialize()">
+<body class="stretched">
 
     <div id="wrapper" class="clearfix">
 
@@ -288,7 +258,9 @@
                                             Ben Rubin
                                             <span>CEO, Meerkat App</span>
                                         </div>
-                                   <div class="testi-image">
+                                        <br>
+
+                                   <div class="testi-image divcenter">
                                         <a href="#"><img src="http://a3.mzstatic.com/us/r30/Purple7/v4/bd/89/78/bd897870-1eb3-569a-4d90-5efaed71265e/icon175x175.png" alt="Customer Testimonails"></a>
                                     </div>
                                     </div>
@@ -304,8 +276,9 @@
                                             Nandita Subramanian
                                             <span>VP of Operations, Cuff.io</span>
                                         </div>
+                                        <br>
 
-                                    <div class="testi-image">
+                                    <div class="testi-image divcenter">
                                         <a href="#"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSCkFJ9HRdg46vx0Cwuc_CTUlulvrW-AabphxgPT4v5-xVXqO-k6w" alt="Customer Testimonails"></a>
                                     </div>
                                     </div>
@@ -319,8 +292,9 @@
                                             Laurence Morgan
                                             <span>Senior VP Office Brokerage, CBRE</span>
                                         </div>
+                                        <br>
                                     </div>
-                                    <div class="testi-image">
+                                    <div class="testi-image divcenter">
                                         <a href="#"><img src="http://upload.wikimedia.org/wikipedia/commons/d/dc/CBRE_logo.png" alt="Customer Testimonails" class="center"></a>
                                     </div>
                                 </div>
@@ -368,7 +342,7 @@
         
                     </div>
                 </div>
-                <div class="button button-full footer-stick">
+                <div class="button button-full center footer-stick">
                     <div class="container clearfix">
                         Take the first step now. Satisfaction Guaranteed.                         
                         <!-- Button trigger modal -->
@@ -453,7 +427,7 @@
 <!--                         <form class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
  -->
 
-                        <form class="nobottommargin" id="contactForm" name="template-contactform" action="https://formspree.io/bonny.lai@gmail.com" method="post">
+                        <form class="nobottommargin" id="contactForm" name="template-contactform" action="https://formspree.io/bonny.lai@gmail.com" onsubmit="return validateForm()" method="post">
 
                             <div class="form-process"></div>
                             <div class="col-md-8 col-md-offset-2">
@@ -466,28 +440,39 @@
                                 </div>
 
                                 <div class="col_full ">
-                                    <input type="tel" id="template-contactform-phone" name="phone" placeholder="Contact Number (required) " class="required sm-form-control" />
+                                    <input type="tel" id="template-contactform-phone" name="phone" placeholder="Contact Number (required) " class="required sm-form-control" required/>
                                 </div>
 
-                                <div class="col_full ">
-                                    <input type="text" id="autocomplete" name="address" placeholder="Moving to address (123 Main st., San Francisco) " class="sm-form-control" required />
-                                </div>
-                                <div class="col_full ">
-                                    <input type="text" id="template-contactform-move" name="employees" placeholder="Number of employees " class="sm-form-control" />
+                                <div id="hideFields">
+                                    <div class="col_full ">
+                                        <input type="text" id="autocomplete" name="address" placeholder="Moving to address (123 Main st., San Francisco) " class="sm-form-control" required />
+                                    </div>
+                                    <div class="col_full ">
+                                        <input type="text" id="template-contactform-move" name="employees" placeholder="Number of employees " class="sm-form-control" />
 
-                                    <input type="hidden" name="_subject" value="MoveQB: New Assessment Request" />
+                                        <input type="hidden" name="_subject" value="MoveQB: New Assessment Request" />
 
+                                    </div>
                                 </div>
                                 <div class="center">
-                                    <button class="button button-3d btn-primary nomargin" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit" data-dismiss="modal">Submit</button>
+                                    <button class="button button-3d nomargin" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit" data-dismiss="modal">Submit</button>
                                 </div>
                             </div>
-
-
 
                             <div class=" col_full">
                             </div>
                         </form>
+                        <script type="text/javascript">
+                            function validateForm() {
+                                alert("hello");
+                                var x = document.forms["contactForm"]["name","phone","email"].value;
+                                foreach 
+                                if (x == null || x == "") {
+                                    alert("Required fields are empty.");
+                                    return false;
+                                }
+                            }
+                        </script>
                               <script  src="http://src.fireform.org/fireform.min.js"></script>
                               <script>
                                         options={
