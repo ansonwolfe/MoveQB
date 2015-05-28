@@ -5,12 +5,12 @@
 	float: left;
 	font-size: 48px;
 	line-height: 60px;
-	margin-right: 5%;
+	margin-right: 3%;
 	width: 15%;
 }
 .block-description {
 	display: inline-block;
-	margin-right: 5%;
+	/*margin-right: 5%;*/
 	width: 65%;
 }
 .block-description-title {
