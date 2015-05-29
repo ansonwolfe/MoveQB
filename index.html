@@ -80,7 +80,7 @@
                                 <div class="mega-menu-content style-2 col-5 clearfix">
                                 </div>
                             </li> 
-                            <li class="mega-menu"><a href="tel:+18883360070"><div>(888) 356 0070</div></a>
+                            <li class="mega-menu"><a href="tel:+18883560070"><div>(888) 356 0070</div></a>
                                 <div class="mega-menu-content style-2 col-5 clearfix">
                                 </div>
                             </li>     
@@ -105,7 +105,7 @@
                         <div class="container clearfix">
                             <div class="slider-caption slider-caption-center">
                                 <h2 data-caption-animate="fadeInUp">Move Stress Free</h2>
-                                <p data-caption-animate="fadeInUp" data-caption-delay="200">Outsource all the logistics around your office move. From preparing your new office to IT relocation, MoveQB partners have it all.</p>
+                                <p data-caption-animate="fadeInUp" data-caption-delay="200">Outsource all the logistics around your office move.</p>
                             </div>
                         </div>
                         <div class="video-wrap">
@@ -437,7 +437,7 @@
                             <div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
                                 <strong>Contact Us</strong><br>                                
                                 <abbr title="Phone Number"><strong>Phone:</strong></abbr> 
-                                    <a href="tel:+18883360070">(888) 356 0070</a><br>
+                                    <a href="tel:+18883560070">(888) 356 0070</a><br>
                                 <abbr title="Email Address"><strong>Email:</strong></abbr> <a href="mailto:info@moveQB.com?Subject=Hello%20MoveQB">info@moveQB.com</a>
                             </div>
                         </div>
@@ -480,7 +480,7 @@
                     <div class="modal-body ">
                         <h3>Tell us how we can help.</h3>
 
-                        <form class="nobottommargin" id="contactForm" name="template-contactform" action="https://formspree.io/bonny.lai@gmail.com" onsubmit="validateForm()" method="post">
+                        <form class="nobottommargin" id="contactForm" name="template-contactform" onsubmit="confirmation()" method="post">
 
                             <div class="form-process"></div>
                             <div class="col-md-8 col-md-offset-2">
@@ -515,54 +515,14 @@
                             <div class=" col_full">
                             </div>
                         </form>
-                        <!-- <script type="text/javascript">
-                            function validateForm() {
-                                alert("hello");
-                                var x = document.forms["contactForm"]["name","phone","email"].value;
-                                foreach 
-                                if (x == null || x == "") {
-                                    alert("Required fields are empty.");
-                                    return false;
-                                }
+                        <script  src="http://src.fireform.org/fireform.min.js"></script>
+                          <script >
+                            options={
+                              emailNotification:"noah@moveqb.com",
                             }
-                        </script> -->
-                              <script  src="http://src.fireform.org/fireform.min.js"></script>
-                              <script>
-                                        options={
-                                            emailNotification:"bonny.lai@gmail.com",
-                                            emailConfirmationName:"#template-contactform-email",  //The form input we get the email from.
-                                            emailConfirmationFrom:"bonny.lai@gmail.com",  //Email appears as sent by this address.
-                                            emailConfirmationSubject:"Thanks for contacting MoveQB.",
-                                            emailConfirmationBodyHTML:"<p>We will contact you shortly!</p>",
-                                            emailConfirmationBodyText:"Thank you from MoveQB."
-          }
-                                new Fireform('#contactForm', 'http://fireform.org/list/264/moveQB',options);
-                              </script>                        
-
-                        <!-- <script type="text/javascript">
-
-                            $("#contactForm").validate({
-                                submitHandler: function(form) {
-                                    $('.form-process').fadeIn();
-                                    $(form).ajaxSubmit({
-                                        target: '#contact-form-result',
-                                        success: function() {
-                                            $('.form-process').fadeOut();
-                                            $('#template-contactform').find('.sm-form-control').val('');
-                                            $('#contact-form-result').attr('data-notify-msg', $('#contact-form-result').html()).html('');
-                                            SEMICOLON.widget.notifications($('#contact-form-result'));
-                                        }
-                                    });
-                                }
-                            });
-
-                        </script>                -->        
+                            new Fireform('#contactForm', 'http://fireform.org/list/264/moveQB', options);
+                          </script>                         
                     </div>
-
-<!--                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div> -->
-
                 </div>
             </div>
         </div>

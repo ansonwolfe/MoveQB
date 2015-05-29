@@ -6,8 +6,14 @@ $(document).ready(function() {
 
 	$( "#template-contactform-phone" ).focusin(function() {
 	  $( "#hideFields" ).slideDown( "slow", function() {
-	    // Animation complete.
 	  });
 	});
 
+	$( "#contactForm" ).on("submit", function() {
+	  alert("hello me ");
+	});
+
+	function confirmation(){
+		alert("you are welcome");
+	}
  });
