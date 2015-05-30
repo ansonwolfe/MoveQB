@@ -9,11 +9,13 @@ $(document).ready(function() {
 	  });
 	});
 
-	$( "#contactForm" ).on("submit", function() {
-	  alert("hello me ");
-	});
+
 
 	function confirmation(){
 		alert("you are welcome");
 	}
+
+	$('#myModal').on('hidden.bs.modal', function () {
+  		confirmation();
+})
  });
