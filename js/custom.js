@@ -11,11 +11,11 @@ $(document).ready(function() {
 
 
 
-	function confirmation(){
-		alert("you are welcome");
-	}
+	// function confirmation(){
+	// 	alert("you are welcome");
+	// }
 
-	$('#myModal').on('hidden.bs.modal', function () {
-  		confirmation();
-})
+	// $('#myModal').on('hidden.bs.modal', function () {
+ //  		confirmation();
+	// })
  });
