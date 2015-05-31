@@ -48,10 +48,25 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
+    <script>
+        var placeSearch, autocomplete;
+        var componentForm = {
+          street_number: 'short_name',
+          route: 'long_name',
+          locality: 'long_name',
+          administrative_area_level_1: 'short_name',
+          country: 'long_name',
+          postal_code: 'short_name'
+        };
+        function initialize() {
+          autocomplete = new google.maps.places.Autocomplete(
+              (document.getElementById('autocomplete')),
+              { types: ['geocode'] });
+        }
+    </script>
 </head>
 
-<body class="stretched">
+<body class="stretched"  onload="initialize()">
 
     <div id="wrapper" class="clearfix">
 
