@@ -8,14 +8,5 @@ $(document).ready(function() {
 	  $( "#hideFields" ).slideDown( "slow", function() {
 	  });
 	});
-
-
-
-	// function confirmation(){
-	// 	alert("you are welcome");
-	// }
-
-	// $('#myModal').on('hidden.bs.modal', function () {
- //  		confirmation();
-	// })
+	
  });
