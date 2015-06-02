@@ -18,8 +18,8 @@ if( isset( $_POST['template-contactform-submit'] ) AND $_POST['template-contactf
 
         $botcheck = $_POST['template-contactform-botcheck'];
 
-        $toemail = 'noah.barr@gmail.com'; // Your Email Address
-        $toname = 'Noah'; // Your Name
+        $toemail = 'bonny.lai@gmail.com'; // Your Email Address
+        $toname = 'Bon'; // Your Name
 
         if( $botcheck == '' ) {
 
