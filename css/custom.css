@@ -1,17 +1,17 @@
 .block-number {
-	display: inline-block;
-	font-family: 'roboto', sans-serif;
-	font-weight: 200;
-	float: left;
-	font-size: 48px;
-	line-height: 60px;
-	margin-right: 3%;
-	width: 15%;
+  display: inline-block;
+  float: left;
+  font-family: "roboto",sans-serif;
+  font-size: 48px;
+  font-weight: 200;
+  line-height: 41px;
+  margin-right: 5%;
+  width: auto;
 }
 .block-description {
 	display: inline-block;
 	/*margin-right: 5%;*/
-	width: 65%;
+	width: 85%;
 }
 .block-description-title {
 	font-size: 26px;
