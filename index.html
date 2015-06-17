@@ -89,7 +89,7 @@ $(function() {
 					  alert("Invalid email address.");
 					  return false;
 				  }        
-				
+				mixpanel.track("Completed Form");
 			});
   
 });
@@ -544,7 +544,6 @@ function ValidateEmail(email) {
                         </form>
                         <script  src="http://src.fireform.org/fireform.min.js"></script>
                           <script >
-                            mixpanel.track("Completed Form");
                             options={
                               emailNotification:"noah@moveqb.com",
                                 emailConfirmationName:"email", 
