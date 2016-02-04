@@ -12143,7 +12143,12 @@ body:not(.no-transition) #wrapper,
 .footer-wrapper .social-list span{
  float: left;
  margin-right: 15px;
+ font-weight: bold;
 }
 .footer-wrapper .social-list{
 	margin-bottom: 30px;
+}
+#processTabs p{
+	font-size: 24px;
+	text-align: center;
 }

@@ -12,12 +12,17 @@
 	display: inline-block;
 	/*margin-right: 5%;*/
 	width: 85%;
+	font-size: 16px;
 }
 .block-description-title {
-	font-size: 26px;
+	font-size: 24px;
 	line-height: 95%;
-	font-weight: 100;
+	font-weight: 700;
+	margin-bottom: 15px;
 
+}
+.bottommargin-sm {
+    margin-bottom: 60px !important;
 }
 .background-image {
 	background: 
