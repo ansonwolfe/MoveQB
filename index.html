@@ -511,7 +511,7 @@ function ValidateEmail(email) {
                         <h3>Request More Information</h3>
 						<p>We'd love to get to know you and help your organization grow through its support of university sustainability initiatives. Request a meeting by clicking below.</p>
 
-                        <form class="nobottommargin contact-form" method="post" action="mail.php" id="contact-form">
+                        <form  class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
 <!--                             <div class="form-process"></div> -->
                             <div class="col-md-12 nomargin nopadding contact-form-inner">
                                 <div class="input-field">
@@ -519,7 +519,7 @@ function ValidateEmail(email) {
                                     <input type="text" id="template-contactform-name" name="name" value="" class="sm-form-control required" placeholder="Full Name" required />
                                 </div>
                                 <div class="input-field">
-                                        <input type="text" id="autocomplete" name="address" placeholder="Organization" class="sm-form-control" required />
+                                        <input type="text" id="template-contactform-address" name="address" placeholder="Organization" class="sm-form-control" required />
                                 </div>
                                 <div class="input-field">
                                     <input type="email" id="template-contactform-email" name="email" value="" class="required email sm-form-control" placeholder="Work Email Address" required />
