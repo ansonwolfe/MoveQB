@@ -12085,4 +12085,65 @@ body:not(.no-transition) #wrapper,
 	margin:0!important;
 	padding:0!important
 }
+.pdl{
+	padding-left: 0px;
+}
+.pdr{
+	padding-right: 0px;
+}
+.section ol li{
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+.heading-block h3{
+	margin-bottom: 15px;
+}
+.heading-block p{
+	font-size: 16px;
+}
+.client-wrapper{
+	    background: #122B54;
+	    padding-top: 30px;
+}
+.client-wrapper h4{
+	font-size: 24px;
+	color: white;
+}
+.client-wrapper .clients-grid li:after, .client-wrapper .clients-grid li:before{
+  content: none;
+}
+.client-wrapper .clients-grid li{
+	min-height: 150px;
+	display: table;
+}
+.client-wrapper .clients-grid li a{
+     vertical-align: middle;
+	display: table-cell;
+}
+.client-wrapper .clients-grid li img{
+	width: 150px;
+}
 
+.footer-wrapper{
+	    background-color: #E2FCEE;
+    color: #1F1E1E;
+}
+.footer-wrapper .footer-logo{
+	max-width: 160px;
+}
+.footer-wrapper .widget{
+  margin-top: 15px;
+}
+.footer-wrapper .widget h3{
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+.footer-wrapper .copyrights-menu { margin-bottom: 15px; }
+
+.footer-wrapper .social-list span{
+ float: left;
+ margin-right: 15px;
+}
+.footer-wrapper .social-list{
+	margin-bottom: 30px;
+}
