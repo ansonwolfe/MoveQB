@@ -18,7 +18,7 @@ $option = $_POST['persona'];
 $phone = $_POST['phone'];
 $company = $_POST['address'];
 // Create the email and send the message
-$to = 'services.naji@gmail.com,info@greeniphi.com';
+$to = 'abhishekbhandari616@gmail.com, info@greeniphi.com';
 $email_body = "You have received a new message from your website contact form.\n\nHere are the details:\n\nName: $name\n\nEmail: $email_address\n\nCompany: $company\n\nPhone: $phone\n\nWhat best describe you ?: $option";
 $headers = "From: contact@greeniphi.com\n"; 
 $headers .= "Reply-To: $email_address";	
