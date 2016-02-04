@@ -1,22 +1,22 @@
 <?php
 // Check for empty fields
-if(empty($_POST['name'])  		||
-   empty($_POST['email']) 		||
-   empty($_POST['address']) 		||
-   empty($_POST['phone']) 		||
-   empty($_POST['persona'])	||
-   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
+if(empty($_GET['name'])  		||
+   empty($_GET['email']) 		||
+   empty($_GET['address']) 		||
+   empty($_GET['phone']) 		||
+   empty($_GET['persona'])	||
+   !filter_var($_GET['email'],FILTER_VALIDATE_EMAIL))
    {
 	echo "No arguments Provided!";
 	return false;
    }
 	
-$name = $_POST['name'];
-$email_address = $_POST['email'];
+$name = $_GET['name'];
+$email_address = $_GET['email'];
 $email_subject = 'New message from your website';
-$option = $_POST['persona'];
-$phone = $_POST['phone'];
-$company = $_POST['address'];
+$option = $_GET['persona'];
+$phone = $_GET['phone'];
+$company = $_GET['address'];
 // Create the email and send the message
 $to = 'abhishekbhandari616@gmail.com, info@greeniphi.com';
 $email_body = "You have received a new message from your website contact form.\n\nHere are the details:\n\nName: $name\n\nEmail: $email_address\n\nCompany: $company\n\nPhone: $phone\n\nWhat best describe you ?: $option";
