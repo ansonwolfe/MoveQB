@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+d<!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="stylesheet" href="css/dark.css" type="text/css" />
     <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
-    <link rel="stylesheet" href="css/animate.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/animate.css" type="text/css" /> -->
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
     <link rel="stylesheet" href="css/responsive.css" type="text/css" />
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -39,7 +39,11 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
+    <style type="text/css">
+      .fadeIn{
+        opacity: 1 !important;
+      }
+    </style> 
 </head>
 
 <body class="stretched"  onload="initialize()">
@@ -65,24 +69,20 @@
                     
                     ============================================= -->
                     <nav id="primary-menu">
-                        <ul id="mainnav">  
-							<li><a href="#about" class="benefit"><div>About GreeniPhi</div></a></li>
-							<li><a href="#partners" class="benefit"><div>Partnerships</div></a></li>
-							<li><a href="#why" class="benefit"><div>Why GreeniPhi?</div></a></li>
-                            <li class="mega-menu"><a href="#how" class="how"><div>How It Works</div></a>
-                                <div class="mega-menu-content style-2 col-5 clearfix">
-                                </div>
+                        <ul class="one-page-menu">  
+							<li class=""><a href="#about" class="benefit"><div>About GreeniPhi</div></a></li>
+							<li class=""><a href="#partners" class="benefit"><div>Partnerships</div></a></li>
+							<li ><a href="#why" class="benefit"><div>Why GreeniPhi?</div></a></li>
+                            <li class="mega-menu "><a href="#how" class="how"><div>How It Works</div></a>
                             </li> 
-                            <li class="mega-menu"><a href="tel:+17575375700"><div>(757) 537-5700</div></a>
-                                <div class="mega-menu-content style-2 col-5 clearfix">
-                                </div>
-                            </li>     
-                            <li class="mega-menu current"><a href="mailto:info@greeniphi.com">Contact</a>
-                                <div class="mega-menu-content style-2 col-5 clearfix">
-                                </div>
-                            </li>                            
+                                                     
                         </ul>
-
+                        <ul>
+                            <li><a href="tel:+17575375700">(757) 537-5700</a>
+                            </li>     
+                            <li class="current"><a href="mailto:info@greeniphi.com">Contact</a>
+                                </li>  
+                        </ul>
                     </nav>
                     <!-- #primary-menu end -->
                 </div>
@@ -373,11 +373,11 @@
                 <section class="client-wrapper"> 
                    <div class="container">  
                     <h4 class="center">Meet our Partners</h4>
-                    <ul class="clients-grid grid-4 bottommargin clearfix">
-                        <li><a href="http://www.afa1976.org" target="_blank"><img src="images/clients/afa-logo.png" alt="Clients"></a></li>
+                    <ul class="clients-grid grid-1 bottommargin clearfix">
+                       <!--  <li><a href="http://www.afa1976.org" target="_blank"><img src="images/clients/afa-logo.png" alt="Clients"></a></li> -->
                         <li><a href="http://www.aflv.org/" target="_blank"><img src="images/clients/aflv-logo.png" alt="Clients"></a></li>
-                        <li><a href="http://www.ngla.org" target="_blank"><img src="images/clients/ngla-logo.png" alt="Clients"></a></li>
-                        <li><a href="http://www.rethinkgreek.com" target="_blank"><img src="images/clients/re-logo.png" alt="Clients"></a></li>
+                       <!--  <li><a href="http://www.ngla.org" target="_blank"><img src="images/clients/ngla-logo.png" alt="Clients"></a></li>
+                        <li><a href="http://www.rethinkgreek.com" target="_blank"><img src="images/clients/re-logo.png" alt="Clients"></a></li> -->
                     </ul> 
                     </div>
                 </section>
@@ -529,21 +529,19 @@
                        
 
     <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+   <!--  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog form-contact">
             <div class="modal-body">
                 <div class="modal-content">
                     <div class="modal-header">
                      <a href="index.html" class="standard-logo"><img src="qblogo-01.png" alt="Canvas Logo"></a>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-<!--                        <h4 class="modal-title" id="myModalLabel">&nbsp;  </h4>
--->                    </div>
+                 </div>
                     <div class="modal-body">
                         <h3>Request More Information</h3>
 						<p>We'd love to get to know you and help your organization grow through its support of university sustainability initiatives. Request a meeting by clicking below.</p>
 
                         <form class="nobottommargin contact-form" method="get" action="mail.php" id="contact-form">
-<!--                             <div class="form-process"></div> -->
                             <div class="col-md-12 nomargin nopadding contact-form-inner">
                                 <div class="input-field">
 
@@ -574,19 +572,16 @@
                                     <input class="button button-3d nomargin submit" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit" />
                             </div>
                         </form>
-						<!--Contact form message-->
 														<div id="success"><h2>Your message has been sent. Thank you!</h2></div>
 														<div id="error"><h2>Sorry your message can not be sent.</h2></div>
-														<!--End contact form message-->
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Footer Scripts
     ============================================= -->
-	<!-- // <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> -->
 
         <script src="js/jquery.maskedinput.js" ></script>
         <script>
@@ -614,27 +609,20 @@
         
     </script>
     
-   
-
-<style type="text/css">
-    .pac-container {
-        z-index: 1040 !important;
-    }
-</style>
  <script>
 $(function() {
-  $('#primary-menu a').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
+  // $('a').click(function() {
+  //   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+  //     var target = $(this.hash);
+  //     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+  //     if (target.length) {
+  //       $('html,body').animate({
+  //         scrollTop: target.offset().top
+  //       }, 1000);
+  //       return false;
+  //     }
+  //   }
+  // });
 
            $("#template-contactform-submit").click(function(){
                  if (!ValidateEmail($("#template-contactform-email").val())) { 
