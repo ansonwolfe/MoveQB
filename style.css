@@ -425,7 +425,6 @@ span.middot {
 	position: relative;
 	margin: 60px 0;
 	padding: 60px 0;
-	background-color: #ECEAEA;
 	overflow: hidden;
 }
 
@@ -523,6 +522,10 @@ body.stretched .container-fullwidth {
 	clear: right;
 }
 
+
+.zebra:nth-child(even) {
+	background-color: #ECEAEA;
+}
 
 /* ----------------------------------------------------------------
 	Flex Slider
@@ -7099,7 +7102,6 @@ body:not(.device-touch) .button.button-full strong {
 -----------------------------------------------------------------*/
 
 .promo.promo-light {
-	background-color: #ECEAEA;
 	border-radius: 3px;
 	padding-left: 30px;
 }
