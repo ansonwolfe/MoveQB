@@ -12158,6 +12158,11 @@ body:not(.no-transition) #wrapper,
 }
 
 
+.become-a-vendor {
+    margin-top:20px;
+    margin-left:40px;
+}
+
 /* jquery overrides */
 
 .ui-dialog {
@@ -12166,13 +12171,13 @@ body:not(.no-transition) #wrapper,
     border: none;
 }
 
-div#dialog.ui-dialog-content.ui-widget-content {
+div#contact-dialog.ui-dialog-content.ui-widget-content {
     padding: 0px ;
     margin: 0px;
     border: none;
 }    
 
-div#dialog.ui-dialog-content.ui-widget-content modal-body {
+div#contact-dialog.ui-dialog-content.ui-widget-content modal-body {
     padding: 0px ;
     margin: 0px;
     border: none;

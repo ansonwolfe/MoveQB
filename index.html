@@ -6,7 +6,7 @@
 
     <!-- Stylesheets
     ============================================= -->
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.11.4-2.contact-dialog/jquery-ui.css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
@@ -52,8 +52,10 @@
     </style> 
 
     <script>
+
+  <!-- Contact dialog support. TODO: Wrap this in a jekyll include file. -->
   $( function() {
-  $( "#dialog" ).dialog({
+  $( "#contact-dialog" ).dialog({
       // dialogClass is replaced with "classes" in jquery 1.12
       dialogClass: 'no-title',
       autoOpen: false,
@@ -68,18 +70,21 @@
       height: "auto",
       width: "auto"
     });
- 
-    $( "#opener" ).on( "click", function() {
-        $( "#dialog" ).dialog( "open" );
-        $(".ui-dialog-titlebar").hide();
-    });
+
     $( "#contactClose" ).on( "click", function() {
-      $( "#dialog" ).dialog( "close" );
+      $( "#contact-dialog" ).dialog( "close" );
     });
     $( "#template-contactform-submit" ).on( "click", function() {
-      $( "#dialog" ).dialog( "close" );
+      $( "#contact-dialog" ).dialog( "close" );
     });
   } );
+
+  function openContactDialog() {
+        $( "#contact-dialog" ).dialog( "open" );
+        $(".ui-dialog-titlebar").hide();
+  }
+  <!-- End contact dialog support.  -->
+
     </script>
 </head>
 
@@ -100,18 +105,17 @@
                     </div><!-- #logo end -->
 
                     <!-- Primary Navigation
-                    
                     ============================================= -->
                     <nav class="main-menu">
                         <ul>  
-							<li class=""><a href="#about" class="benefit"><div>About GreeniPhi</div></a></li>
-							<li class=""><a href="#partners" class="benefit"><div>Partnerships</div></a></li>
-							<li ><a href="#why" class="benefit"><div>Why GreeniPhi?</div></a></li>
+			  <li class=""><a href="#about" class="benefit"><div>About GreeniPhi</div></a></li>
+			  <li class=""><a href="#partners" class="benefit"><div>Partnerships</div></a></li>
+			  <li ><a href="#why" class="benefit"><div>Why GreeniPhi?</div></a></li>
                             <li class="mega-menu "><a href="#how" class="how"><div>How It Works</div></a>
                             </li> 
                             <li><a  href="#social-media">Let's get social!</a>
                             </li>                
-                            <li class="current"><a href="mailto:info@greeniphi.com">Contact</a>
+                            <li class="current"><a href="javascript:openContactDialog();">Contact</a>
                             </li> 
                         </ul>
                     </nav>
@@ -229,7 +233,7 @@
                         <h3>Ask us about our pop-up consignment stores, flower fundraisers and our "Greeks Going Green" speaking and consulting services! </h3>
                         </div>
                         <div class="col-md-4">
-                            <a href="mailto:info@greeniphi.com" class="button button-xlarge button-rounded">Get Started</a>
+                            <a href="javascript:openContactDialog();" class="button button-xlarge button-rounded">Get Started</a>
                         </div>
                         
                     </div>
@@ -256,13 +260,11 @@
                 </div>
 
 		 <div class="section zebra">
-                    <div class="container clearfix">
+                   <div class="container clearfix">
 
                         <div class="heading-block center">
                             <h3>Vendors</h3>
                         </div>
-<button id="opener">Open Dialog</button>
-
 
 			<p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -295,10 +297,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                             <h3>CATEGORY 3<span class="subtitle">Lorem ipsum dolor sit amet</span></h3>
                         </div>
                     </div>
-
-
-
                     </div>
+		    <div class="become-a-vendor">
+		      <a href="javascript:openContactDialog();"><h3 class="become-a-vendor">Become a vendor now — click here!</h3></a>
+		    </div>
                 </div>
 
 
@@ -317,7 +319,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                     <div class="container clearfix">
                         <h3>Take the first steps now. It’s Free!</h3>
                         <!-- <span>Get a 15-minute FREE assessment. </span> -->
-                        <a href="mailto:info@greeniphi.com">Let’s get started!</a>
+                        <a href="javascript:openContactDialog();">Let’s get started!</a>
                     </div>
 		    <div id="why"></div>
 		</div>
@@ -505,7 +507,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                     <div class="container clearfix">
                        Take the first steps now. It’s Free!                      
                         <!-- Button trigger modal -->
-                        <a href="mailto:info@greeniphi.com" style="color:white"><Strong>Let’s Get started </strong></a>
+                        <a href="javascript:openContactDialog();" style="color:white"><Strong>Let’s Get started </strong></a>
                     </div>
                 </div>
             </div>
@@ -648,7 +650,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                        
 
     <!-- Modal -->
-<div id="dialog" title="Contact">
+<div id="contact-dialog" title="Contact">
         <div class="modal-dialog form-contact">
             <div class="modal-body">
                 <div class="modal-content">
