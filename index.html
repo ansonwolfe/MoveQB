@@ -6,7 +6,8 @@
 
     <!-- Stylesheets
     ============================================= -->
-	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="stylesheet" href="css/dark.css" type="text/css" />    
@@ -25,8 +26,11 @@
 
     <!-- External JavaScripts
     ============================================= -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/plugins.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="js/plugins.js"></script>
 
     <script type="text/javascript" src="js/functions.js"></script>
 
@@ -46,6 +50,37 @@
         opacity: 1 !important;
       }
     </style> 
+
+    <script>
+  $( function() {
+  $( "#dialog" ).dialog({
+      // dialogClass is replaced with "classes" in jquery 1.12
+      dialogClass: 'no-title',
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      },
+      height: "auto",
+      width: "auto"
+    });
+ 
+    $( "#opener" ).on( "click", function() {
+        $( "#dialog" ).dialog( "open" );
+        $(".ui-dialog-titlebar").hide();
+    });
+    $( "#contactClose" ).on( "click", function() {
+      $( "#dialog" ).dialog( "close" );
+    });
+    $( "#template-contactform-submit" ).on( "click", function() {
+      $( "#dialog" ).dialog( "close" );
+    });
+  } );
+    </script>
 </head>
 
 <body class="stretched"  onload="initialize()">
@@ -77,8 +112,7 @@
                             <li><a  href="#social-media">Let's get social!</a>
                             </li>                
                             <li class="current"><a href="mailto:info@greeniphi.com">Contact</a>
-                                </li> 
-                                                     
+                            </li> 
                         </ul>
                     </nav>
                     <!-- #primary-menu end -->
@@ -227,11 +261,43 @@
                         <div class="heading-block center">
                             <h3>Vendors</h3>
                         </div>
+<button id="opener">Open Dialog</button>
+
+
 			<p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
-                       
-                        <div id="partners"></div>
+			</p>Lorem ipsum <a href="od.html">Office Maxum!<a></p>
+			<p>
+
+                    <div class="col_one_third nobottommargin">
+                        <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
+                            <div class="fbox-icon">
+                                <i class="i-alt noborder"></i>
+                            </div>
+                            <h3>CATEGORY 1<span class="subtitle">Lorem ipsum dolor sit amet</span></h3>
+                        </div>
+                    </div>
+
+                    <div class="col_one_third nobottommargin">
+                        <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
+                            <div class="fbox-icon">
+                                <i class="i-alt noborder "></i>
+                            </div>
+                            <h3>CATEGORY 2<span class="subtitle">Lorem ipsum dolor sit amet</span></h3>
+                        </div>
+                    </div>
+
+                    <div class="col_one_third nobottommargin col_last">
+                        <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
+                            <div class="fbox-icon">
+                                <i class="i-alt noborder "></i>
+                            </div>
+                            <h3>CATEGORY 3<span class="subtitle">Lorem ipsum dolor sit amet</span></h3>
+                        </div>
+                    </div>
+
+
+
                     </div>
                 </div>
 
@@ -253,8 +319,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                         <!-- <span>Get a 15-minute FREE assessment. </span> -->
                         <a href="mailto:info@greeniphi.com">Let’s get started!</a>
                     </div>
-					<div id="why"></div>
-				</div>
+		    <div id="why"></div>
+		</div>
                 <div class="container clearfix zebra">
 
                         <div class="heading-block center">
@@ -582,13 +648,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                        
 
     <!-- Modal -->
-   <!--  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div id="dialog" title="Contact">
         <div class="modal-dialog form-contact">
             <div class="modal-body">
                 <div class="modal-content">
                     <div class="modal-header">
                      <a href="index.html" class="standard-logo"><img src="qblogo-01.png" alt="Canvas Logo"></a>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <button type="button" id="contactClose" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                  </div>
                     <div class="modal-body">
                         <h3>Request More Information</h3>
@@ -610,7 +676,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                                 <div class="input-field">
                                     <input tabindex="3" type="text" id="template-contactform-phone" name="phone" placeholder="Organization Phone" class="required sm-form-control" required/>  
                                 </div>
-								<div class="input-field">
+				<div class="input-field">
                                     <select name="persona" id="persona" class="valid required sm-form-control" required >
 									  <option value="__PLACEHOLDER__">What best describes you?</option>
 									  <option value="campus">Council Rep. or Student Affairs Professional</option> 
@@ -620,19 +686,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 									</select>
                                 </div>
                                 
+                                <div class="input-field">
+                                    <input tabindex="4" type="text" id="template-contactform-message" name="message" placeholder="Message" class="sm-form-control" />  
+                                </div>
+
                             </div>
-							<div class="">
-                                    <input class="button button-3d nomargin submit" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit" />
+			    <div class="">
+                              <input class="button button-3d nomargin submit" type="button" id="template-contactform-submit" name="template-contactform-submit" value="submit" />
                             </div>
                         </form>
-														<div id="success"><h2>Your message has been sent. Thank you!</h2></div>
-														<div id="error"><h2>Sorry your message can not be sent.</h2></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
-
+</div>
     <!-- Footer Scripts
     ============================================= -->
 
