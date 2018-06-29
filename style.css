@@ -9708,6 +9708,27 @@ body:not(.device-touch) .team-overlay {
 }
 
 
+/* Vendor pages */
+#vendor-banner div, #vendor-banner p, #vendor-banner h3 {
+    padding-left: 5px;
+}
+
+.vendor-content .vendor-list1 li {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.vendor-content .vendor-list2 li {
+    font-weight: 600
+    font-size: 16px;
+}
+
+.vendor-content .vendor-list3 li {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
 /* ----------------------------------------------------------------
 	Counter
 -----------------------------------------------------------------*/
