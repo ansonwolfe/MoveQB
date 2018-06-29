@@ -60,6 +60,8 @@ img { max-width: 100%; }
 
 iframe { border: none !important; }
 
+category-header {text-transform: lowercase;}
+
 
 /* ----------------------------------------------------------------
 	Basic Layout Styles
