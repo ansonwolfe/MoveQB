@@ -7,7 +7,7 @@
     <!-- Stylesheets
     ============================================= -->
     <link rel="stylesheet" href="jquery-ui-1.11.4-2.contact-dialog/jquery-ui.css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,500,600,700,800|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="stylesheet" href="css/dark.css" type="text/css" />    
@@ -107,17 +107,25 @@
                     <!-- Primary Navigation
                     ============================================= -->
                     <nav class="main-menu">
-                        <ul>  
-			  <li class=""><a href="#about" class="benefit"><div>About GreeniPhi</div></a></li>
-			  <li class=""><a href="#partners" class="benefit"><div>Partnerships</div></a></li>
-			  <li ><a href="#why" class="benefit"><div>Why GreeniPhi?</div></a></li>
-                            <li class="mega-menu "><a href="#how" class="how"><div>How It Works</div></a>
-                            </li> 
-                            <li><a  href="#social-media">Let's get social!</a>
-                            </li>                
-                            <li class="current"><a href="javascript:openContactDialog();">Contact</a>
-                            </li> 
-                        </ul>
+                      <ul>  
+			<li class=""><a href="#about" class="benefit"><div>About GreeniPhi</div></a></li>
+			<li class=""><a href="#partners" class="benefit"><div>Partnerships</div></a></li>
+			<li ><a href="#why" class="benefit"><div>Why GreeniPhi?</div></a></li>
+            <li class="mega-menu "><a href="#how" class="how"><div>How It Works</div></a></li> 
+
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">Learn More</a>
+              <ul class="dropdown-menu" style="background:white">
+                <li><a href="#vendors">Our Vendors</a></li>
+                <li><a href="#about">About Greenifi</a></li>
+                <li><a href="javascript:openContactDialog();">Become a Vendor</a></li>
+                <li><a href="javascript:openContactDialog();">Contact Us</a></li>
+              </ul>
+            </li>
+
+                        <li><a  href="#social-media">Let's get social!</a></li>
+                        <li class="current"><a href="javascript:openContactDialog();">Contact</a></li>
+                      </ul>
                     </nav>
                     <!-- #primary-menu end -->
                 </div>
@@ -239,7 +247,7 @@
                     </div>
 		    <div id="about"></div>
                 </div>
-		 <div class="section zebra">
+		<div class="section zebra">
                     <div class="container clearfix">
 
                         <div class="heading-block center">
@@ -259,7 +267,7 @@
                     </div>
                 </div>
 
-		 <div class="section zebra">
+                 <div id="vendors" class="section zebra">
                    <div class="container clearfix">
 
                      <div class="heading-block center">

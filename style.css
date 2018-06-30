@@ -2154,6 +2154,21 @@ body:not(.device-touch) #page-menu nav li a {
 #page-menu nav li.current a { background-color: rgba(0,0,0,0.15); }
 
 
+#page-menu nav .dropdown li {
+    display: inline;
+}
+
+#page-menu nav .dropdown li a {
+	display: inline;
+	padding: 0 17px;
+	color: #FFF;
+	font-size: 14px;
+}
+
+a.dropdown-toggle {
+    cursor:pointer;
+}
+
 /* Page Menu - Dots Style
 -----------------------------------------------------------------*/
 
