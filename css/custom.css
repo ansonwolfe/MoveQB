@@ -121,11 +121,11 @@
     margin-left: 0;
 }
 
+/* Main menu bar links, including dropdowns */
 .main-menu > ul > li a {
     display: block;
-    height: 100px;
-    line-height: 100px;
-    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
     color: #444;
     font-weight: bold;
     font-size: 13px;
@@ -135,6 +135,11 @@
     -webkit-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
     -o-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
     transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
+}
+
+/* links in main menu bar only */
+.main-menu > ul > li > a {
+    padding: 30px 15px;
 }
 
 .main-menu > ul li.dropdown ul li a {
