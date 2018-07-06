@@ -6,10 +6,10 @@
 
 /* Layout helpers
 ----------------------------------*/
-#contact-dialog .ui-helper-hidden {
+#contact-dialog-wrapper .ui-helper-hidden {
 	display: none;
 }
-#contact-dialog .ui-helper-hidden-accessible {
+#contact-dialog-wrapper .ui-helper-hidden-accessible {
 	border: 0;
 	clip: rect(0 0 0 0);
 	height: 1px;
@@ -19,7 +19,7 @@
 	position: absolute;
 	width: 1px;
 }
-#contact-dialog .ui-helper-reset {
+#contact-dialog-wrapper .ui-helper-reset {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -29,19 +29,19 @@
 	font-size: 100%;
 	list-style: none;
 }
-#contact-dialog .ui-helper-clearfix:before,
-#contact-dialog .ui-helper-clearfix:after {
+#contact-dialog-wrapper .ui-helper-clearfix:before,
+#contact-dialog-wrapper .ui-helper-clearfix:after {
 	content: "";
 	display: table;
 	border-collapse: collapse;
 }
-#contact-dialog .ui-helper-clearfix:after {
+#contact-dialog-wrapper .ui-helper-clearfix:after {
 	clear: both;
 }
-#contact-dialog .ui-helper-clearfix {
+#contact-dialog-wrapper .ui-helper-clearfix {
 	min-height: 0; /* support: IE7 */
 }
-#contact-dialog .ui-helper-zfix {
+#contact-dialog-wrapper .ui-helper-zfix {
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -51,14 +51,14 @@
 	filter:Alpha(Opacity=0); /* support: IE8 */
 }
 
-#contact-dialog .ui-front {
+#contact-dialog-wrapper .ui-front {
 	z-index: 100;
 }
 
 
 /* Interaction Cues
 ----------------------------------*/
-#contact-dialog .ui-state-disabled {
+#contact-dialog-wrapper .ui-state-disabled {
 	cursor: default !important;
 }
 
@@ -67,7 +67,7 @@
 ----------------------------------*/
 
 /* states and images */
-#contact-dialog .ui-icon {
+#contact-dialog-wrapper .ui-icon {
 	display: block;
 	text-indent: -99999px;
 	overflow: hidden;
@@ -79,101 +79,101 @@
 ----------------------------------*/
 
 /* Overlays */
-#contact-dialog .ui-widget-overlay {
+#contact-dialog-wrapper .ui-widget-overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 }
-#contact-dialog .ui-draggable-handle {
+#contact-dialog-wrapper .ui-draggable-handle {
 	-ms-touch-action: none;
 	touch-action: none;
 }
-#contact-dialog .ui-resizable {
+#contact-dialog-wrapper .ui-resizable {
 	position: relative;
 }
-#contact-dialog .ui-resizable-handle {
+#contact-dialog-wrapper .ui-resizable-handle {
 	position: absolute;
 	font-size: 0.1px;
 	display: block;
 	-ms-touch-action: none;
 	touch-action: none;
 }
-#contact-dialog .ui-resizable-disabled .ui-resizable-handle,
-#contact-dialog .ui-resizable-autohide .ui-resizable-handle {
+#contact-dialog-wrapper .ui-resizable-disabled .ui-resizable-handle,
+#contact-dialog-wrapper .ui-resizable-autohide .ui-resizable-handle {
 	display: none;
 }
-#contact-dialog .ui-resizable-n {
+#contact-dialog-wrapper .ui-resizable-n {
 	cursor: n-resize;
 	height: 7px;
 	width: 100%;
 	top: -5px;
 	left: 0;
 }
-#contact-dialog .ui-resizable-s {
+#contact-dialog-wrapper .ui-resizable-s {
 	cursor: s-resize;
 	height: 7px;
 	width: 100%;
 	bottom: -5px;
 	left: 0;
 }
-#contact-dialog .ui-resizable-e {
+#contact-dialog-wrapper .ui-resizable-e {
 	cursor: e-resize;
 	width: 7px;
 	right: -5px;
 	top: 0;
 	height: 100%;
 }
-#contact-dialog .ui-resizable-w {
+#contact-dialog-wrapper .ui-resizable-w {
 	cursor: w-resize;
 	width: 7px;
 	left: -5px;
 	top: 0;
 	height: 100%;
 }
-#contact-dialog .ui-resizable-se {
+#contact-dialog-wrapper .ui-resizable-se {
 	cursor: se-resize;
 	width: 12px;
 	height: 12px;
 	right: 1px;
 	bottom: 1px;
 }
-#contact-dialog .ui-resizable-sw {
+#contact-dialog-wrapper .ui-resizable-sw {
 	cursor: sw-resize;
 	width: 9px;
 	height: 9px;
 	left: -5px;
 	bottom: -5px;
 }
-#contact-dialog .ui-resizable-nw {
+#contact-dialog-wrapper .ui-resizable-nw {
 	cursor: nw-resize;
 	width: 9px;
 	height: 9px;
 	left: -5px;
 	top: -5px;
 }
-#contact-dialog .ui-resizable-ne {
+#contact-dialog-wrapper .ui-resizable-ne {
 	cursor: ne-resize;
 	width: 9px;
 	height: 9px;
 	right: -5px;
 	top: -5px;
 }
-#contact-dialog .ui-selectable {
+#contact-dialog-wrapper .ui-selectable {
 	-ms-touch-action: none;
 	touch-action: none;
 }
-#contact-dialog .ui-selectable-helper {
+#contact-dialog-wrapper .ui-selectable-helper {
 	position: absolute;
 	z-index: 100;
 	border: 1px dotted black;
 }
-#contact-dialog .ui-sortable-handle {
+#contact-dialog-wrapper .ui-sortable-handle {
 	-ms-touch-action: none;
 	touch-action: none;
 }
-#contact-dialog .ui-accordion .ui-accordion-header {
+#contact-dialog-wrapper .ui-accordion .ui-accordion-header {
 	display: block;
 	cursor: pointer;
 	position: relative;
@@ -182,30 +182,30 @@
 	min-height: 0; /* support: IE7 */
 	font-size: 100%;
 }
-#contact-dialog .ui-accordion .ui-accordion-icons {
+#contact-dialog-wrapper .ui-accordion .ui-accordion-icons {
 	padding-left: 2.2em;
 }
-#contact-dialog .ui-accordion .ui-accordion-icons .ui-accordion-icons {
+#contact-dialog-wrapper .ui-accordion .ui-accordion-icons .ui-accordion-icons {
 	padding-left: 2.2em;
 }
-#contact-dialog .ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+#contact-dialog-wrapper .ui-accordion .ui-accordion-header .ui-accordion-header-icon {
 	position: absolute;
 	left: .5em;
 	top: 50%;
 	margin-top: -8px;
 }
-#contact-dialog .ui-accordion .ui-accordion-content {
+#contact-dialog-wrapper .ui-accordion .ui-accordion-content {
 	padding: 1em 2.2em;
 	border-top: 0;
 	overflow: auto;
 }
-#contact-dialog .ui-autocomplete {
+#contact-dialog-wrapper .ui-autocomplete {
 	position: absolute;
 	top: 0;
 	left: 0;
 	cursor: default;
 }
-#contact-dialog .ui-button {
+#contact-dialog-wrapper .ui-button {
 	display: inline-block;
 	position: relative;
 	padding: 0;
@@ -216,50 +216,50 @@
 	text-align: center;
 	overflow: visible; /* removes extra width in IE */
 }
-#contact-dialog .ui-button,
-#contact-dialog .ui-button:link,
-#contact-dialog .ui-button:visited,
-#contact-dialog .ui-button:hover,
-#contact-dialog .ui-button:active {
+#contact-dialog-wrapper .ui-button,
+#contact-dialog-wrapper .ui-button:link,
+#contact-dialog-wrapper .ui-button:visited,
+#contact-dialog-wrapper .ui-button:hover,
+#contact-dialog-wrapper .ui-button:active {
 	text-decoration: none;
 }
 /* to make room for the icon, a width needs to be set here */
-#contact-dialog .ui-button-icon-only {
+#contact-dialog-wrapper .ui-button-icon-only {
 	width: 2.2em;
 }
 /* button elements seem to need a little more width */
-#contact-dialog button.ui-button-icon-only {
+#contact-dialog-wrapper button.ui-button-icon-only {
 	width: 2.4em;
 }
-#contact-dialog .ui-button-icons-only {
+#contact-dialog-wrapper .ui-button-icons-only {
 	width: 3.4em;
 }
-#contact-dialog button.ui-button-icons-only {
+#contact-dialog-wrapper button.ui-button-icons-only {
 	width: 3.7em;
 }
 
 /* button text element */
-#contact-dialog .ui-button .ui-button-text {
+#contact-dialog-wrapper .ui-button .ui-button-text {
 	display: block;
 	line-height: normal;
 }
-#contact-dialog .ui-button-text-only .ui-button-text {
+#contact-dialog-wrapper .ui-button-text-only .ui-button-text {
 	padding: .4em 1em;
 }
-#contact-dialog .ui-button-icon-only .ui-button-text,
-#contact-dialog .ui-button-icons-only .ui-button-text {
+#contact-dialog-wrapper .ui-button-icon-only .ui-button-text,
+#contact-dialog-wrapper .ui-button-icons-only .ui-button-text {
 	padding: .4em;
 	text-indent: -9999999px;
 }
-#contact-dialog .ui-button-text-icon-primary .ui-button-text,
-#contact-dialog .ui-button-text-icons .ui-button-text {
+#contact-dialog-wrapper .ui-button-text-icon-primary .ui-button-text,
+#contact-dialog-wrapper .ui-button-text-icons .ui-button-text {
 	padding: .4em 1em .4em 2.1em;
 }
-#contact-dialog .ui-button-text-icon-secondary .ui-button-text,
-#contact-dialog .ui-button-text-icons .ui-button-text {
+#contact-dialog-wrapper .ui-button-text-icon-secondary .ui-button-text,
+#contact-dialog-wrapper .ui-button-text-icons .ui-button-text {
 	padding: .4em 2.1em .4em 1em;
 }
-#contact-dialog .ui-button-text-icons .ui-button-text {
+#contact-dialog-wrapper .ui-button-text-icons .ui-button-text {
 	padding-left: 2.1em;
 	padding-right: 2.1em;
 }
@@ -269,80 +269,80 @@ input.ui-button {
 }
 
 /* button icon element(s) */
-#contact-dialog .ui-button-icon-only .ui-icon,
-#contact-dialog .ui-button-text-icon-primary .ui-icon,
-#contact-dialog .ui-button-text-icon-secondary .ui-icon,
-#contact-dialog .ui-button-text-icons .ui-icon,
-#contact-dialog .ui-button-icons-only .ui-icon {
+#contact-dialog-wrapper .ui-button-icon-only .ui-icon,
+#contact-dialog-wrapper .ui-button-text-icon-primary .ui-icon,
+#contact-dialog-wrapper .ui-button-text-icon-secondary .ui-icon,
+#contact-dialog-wrapper .ui-button-text-icons .ui-icon,
+#contact-dialog-wrapper .ui-button-icons-only .ui-icon {
 	position: absolute;
 	top: 50%;
 	margin-top: -8px;
 }
-#contact-dialog .ui-button-icon-only .ui-icon {
+#contact-dialog-wrapper .ui-button-icon-only .ui-icon {
 	left: 50%;
 	margin-left: -8px;
 }
-#contact-dialog .ui-button-text-icon-primary .ui-button-icon-primary,
-#contact-dialog .ui-button-text-icons .ui-button-icon-primary,
-#contact-dialog .ui-button-icons-only .ui-button-icon-primary {
+#contact-dialog-wrapper .ui-button-text-icon-primary .ui-button-icon-primary,
+#contact-dialog-wrapper .ui-button-text-icons .ui-button-icon-primary,
+#contact-dialog-wrapper .ui-button-icons-only .ui-button-icon-primary {
 	left: .5em;
 }
-#contact-dialog .ui-button-text-icon-secondary .ui-button-icon-secondary,
-#contact-dialog .ui-button-text-icons .ui-button-icon-secondary,
-#contact-dialog .ui-button-icons-only .ui-button-icon-secondary {
+#contact-dialog-wrapper .ui-button-text-icon-secondary .ui-button-icon-secondary,
+#contact-dialog-wrapper .ui-button-text-icons .ui-button-icon-secondary,
+#contact-dialog-wrapper .ui-button-icons-only .ui-button-icon-secondary {
 	right: .5em;
 }
 
 /* button sets */
-#contact-dialog .ui-buttonset {
+#contact-dialog-wrapper .ui-buttonset {
 	margin-right: 7px;
 }
-#contact-dialog .ui-buttonset .ui-button {
+#contact-dialog-wrapper .ui-buttonset .ui-button {
 	margin-left: 0;
 	margin-right: -.3em;
 }
 
 /* workarounds */
 /* reset extra padding in Firefox, see h5bp.com/l */
-#contact-dialog input.ui-button::-moz-focus-inner,
-#contact-dialog button.ui-button::-moz-focus-inner {
+#contact-dialog-wrapper input.ui-button::-moz-focus-inner,
+#contact-dialog-wrapper button.ui-button::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
-#contact-dialog .ui-datepicker {
+#contact-dialog-wrapper .ui-datepicker {
 	width: 17em;
 	padding: .2em .2em 0;
 	display: none;
 }
-#contact-dialog .ui-datepicker .ui-datepicker-header {
+#contact-dialog-wrapper .ui-datepicker .ui-datepicker-header {
 	position: relative;
 	padding: .2em 0;
 }
-#contact-dialog .ui-datepicker .ui-datepicker-prev,
-#contact-dialog .ui-datepicker .ui-datepicker-next {
+#contact-dialog-wrapper .ui-datepicker .ui-datepicker-prev,
+#contact-dialog-wrapper .ui-datepicker .ui-datepicker-next {
 	position: absolute;
 	top: 2px;
 	width: 1.8em;
 	height: 1.8em;
 }
-#contact-dialog .ui-datepicker .ui-datepicker-prev-hover,
-#contact-dialog .ui-datepicker .ui-datepicker-next-hover {
+#contact-dialog-wrapper .ui-datepicker .ui-datepicker-prev-hover,
+#contact-dialog-wrapper .ui-datepicker .ui-datepicker-next-hover {
 	top: 1px;
 }
-#contact-dialog .ui-datepicker .ui-datepicker-prev {
+#contact-dialog-wrapper .ui-datepicker .ui-datepicker-prev {
 	left: 2px;
 }
-#contact-dialog .ui-datepicker .ui-datepicker-next {
+#contact-dialog-wrapper .ui-datepicker .ui-datepicker-next {
 	right: 2px;
 }
-#contact-dialog .ui-datepicker .ui-datepicker-prev-hover {
+#contact-dialog-wrapper .ui-datepicker .ui-datepicker-prev-hover {
 	left: 1px;
 }
-#contact-dialog .ui-datepicker .ui-datepicker-next-hover {
+#contact-dialog-wrapper .ui-datepicker .ui-datepicker-next-hover {
 	right: 1px;
 }
-#contact-dialog .ui-datepicker .ui-datepicker-prev span,
-#contact-dialog .ui-datepicker .ui-datepicker-next span {
+#contact-dialog-wrapper .ui-datepicker .ui-datepicker-prev span,
+#contact-dialog-wrapper .ui-datepicker .ui-datepicker-next span {
 	display: block;
 	position: absolute;
 	left: 50%;
@@ -350,43 +350,43 @@ input.ui-button {
 	top: 50%;
 	margin-top: -8px;
 }
-#contact-dialog .ui-datepicker .ui-datepicker-title {
+#contact-dialog-wrapper .ui-datepicker .ui-datepicker-title {
 	margin: 0 2.3em;
 	line-height: 1.8em;
 	text-align: center;
 }
-#contact-dialog .ui-datepicker .ui-datepicker-title select {
+#contact-dialog-wrapper .ui-datepicker .ui-datepicker-title select {
 	font-size: 1em;
 	margin: 1px 0;
 }
-#contact-dialog .ui-datepicker select.ui-datepicker-month,
-#contact-dialog .ui-datepicker select.ui-datepicker-year {
+#contact-dialog-wrapper .ui-datepicker select.ui-datepicker-month,
+#contact-dialog-wrapper .ui-datepicker select.ui-datepicker-year {
 	width: 45%;
 }
-#contact-dialog .ui-datepicker table {
+#contact-dialog-wrapper .ui-datepicker table {
 	width: 100%;
 	font-size: .9em;
 	border-collapse: collapse;
 	margin: 0 0 .4em;
 }
-#contact-dialog .ui-datepicker th {
+#contact-dialog-wrapper .ui-datepicker th {
 	padding: .7em .3em;
 	text-align: center;
 	font-weight: bold;
 	border: 0;
 }
-#contact-dialog .ui-datepicker td {
+#contact-dialog-wrapper .ui-datepicker td {
 	border: 0;
 	padding: 1px;
 }
-#contact-dialog .ui-datepicker td span,
-#contact-dialog .ui-datepicker td a {
+#contact-dialog-wrapper .ui-datepicker td span,
+#contact-dialog-wrapper .ui-datepicker td a {
 	display: block;
 	padding: .2em;
 	text-align: right;
 	text-decoration: none;
 }
-#contact-dialog .ui-datepicker .ui-datepicker-buttonpane {
+#contact-dialog-wrapper .ui-datepicker .ui-datepicker-buttonpane {
 	background-image: none;
 	margin: .7em 0 0 0;
 	padding: 0 .2em;
@@ -394,7 +394,7 @@ input.ui-button {
 	border-right: 0;
 	border-bottom: 0;
 }
-#contact-dialog .ui-datepicker .ui-datepicker-buttonpane button {
+#contact-dialog-wrapper .ui-datepicker .ui-datepicker-buttonpane button {
 	float: right;
 	margin: .5em .2em .4em;
 	cursor: pointer;
@@ -402,79 +402,79 @@ input.ui-button {
 	width: auto;
 	overflow: visible;
 }
-#contact-dialog .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+#contact-dialog-wrapper .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
 	float: left;
 }
 
 /* with multiple calendars */
-#contact-dialog .ui-datepicker.ui-datepicker-multi {
+#contact-dialog-wrapper .ui-datepicker.ui-datepicker-multi {
 	width: auto;
 }
-#contact-dialog .ui-datepicker-multi .ui-datepicker-group {
+#contact-dialog-wrapper .ui-datepicker-multi .ui-datepicker-group {
 	float: left;
 }
-#contact-dialog .ui-datepicker-multi .ui-datepicker-group table {
+#contact-dialog-wrapper .ui-datepicker-multi .ui-datepicker-group table {
 	width: 95%;
 	margin: 0 auto .4em;
 }
-#contact-dialog .ui-datepicker-multi-2 .ui-datepicker-group {
+#contact-dialog-wrapper .ui-datepicker-multi-2 .ui-datepicker-group {
 	width: 50%;
 }
-#contact-dialog .ui-datepicker-multi-3 .ui-datepicker-group {
+#contact-dialog-wrapper .ui-datepicker-multi-3 .ui-datepicker-group {
 	width: 33.3%;
 }
-#contact-dialog .ui-datepicker-multi-4 .ui-datepicker-group {
+#contact-dialog-wrapper .ui-datepicker-multi-4 .ui-datepicker-group {
 	width: 25%;
 }
-#contact-dialog .ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
-#contact-dialog .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+#contact-dialog-wrapper .ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+#contact-dialog-wrapper .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
 	border-left-width: 0;
 }
-#contact-dialog .ui-datepicker-multi .ui-datepicker-buttonpane {
+#contact-dialog-wrapper .ui-datepicker-multi .ui-datepicker-buttonpane {
 	clear: left;
 }
-#contact-dialog .ui-datepicker-row-break {
+#contact-dialog-wrapper .ui-datepicker-row-break {
 	clear: both;
 	width: 100%;
 	font-size: 0;
 }
 
 /* RTL support */
-#contact-dialog .ui-datepicker-rtl {
+#contact-dialog-wrapper .ui-datepicker-rtl {
 	direction: rtl;
 }
-#contact-dialog .ui-datepicker-rtl .ui-datepicker-prev {
+#contact-dialog-wrapper .ui-datepicker-rtl .ui-datepicker-prev {
 	right: 2px;
 	left: auto;
 }
-#contact-dialog .ui-datepicker-rtl .ui-datepicker-next {
+#contact-dialog-wrapper .ui-datepicker-rtl .ui-datepicker-next {
 	left: 2px;
 	right: auto;
 }
-#contact-dialog .ui-datepicker-rtl .ui-datepicker-prev:hover {
+#contact-dialog-wrapper .ui-datepicker-rtl .ui-datepicker-prev:hover {
 	right: 1px;
 	left: auto;
 }
-#contact-dialog .ui-datepicker-rtl .ui-datepicker-next:hover {
+#contact-dialog-wrapper .ui-datepicker-rtl .ui-datepicker-next:hover {
 	left: 1px;
 	right: auto;
 }
-#contact-dialog .ui-datepicker-rtl .ui-datepicker-buttonpane {
+#contact-dialog-wrapper .ui-datepicker-rtl .ui-datepicker-buttonpane {
 	clear: right;
 }
-#contact-dialog .ui-datepicker-rtl .ui-datepicker-buttonpane button {
+#contact-dialog-wrapper .ui-datepicker-rtl .ui-datepicker-buttonpane button {
 	float: left;
 }
-#contact-dialog .ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
-#contact-dialog .ui-datepicker-rtl .ui-datepicker-group {
+#contact-dialog-wrapper .ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+#contact-dialog-wrapper .ui-datepicker-rtl .ui-datepicker-group {
 	float: right;
 }
-#contact-dialog .ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
-#contact-dialog .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+#contact-dialog-wrapper .ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+#contact-dialog-wrapper .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
 	border-right-width: 0;
 	border-left-width: 1px;
 }
-#contact-dialog, .ui-dialog {
+#contact-dialog-wrapper, .ui-dialog {
 	overflow: hidden;
 	position: absolute;
 	top: 0;
@@ -482,11 +482,11 @@ input.ui-button {
 	padding: .2em;
 	outline: 0;
 }
-#contact-dialog.ui-dialog-titlebar {
+#contact-dialog-wrapper.ui-dialog-titlebar {
 	padding: .4em 1em;
 	position: relative;
 }
-#contact-dialog.ui-dialog-title {
+#contact-dialog-wrapper.ui-dialog-title {
 	float: left;
 	margin: .1em 0;
 	white-space: nowrap;
@@ -494,7 +494,7 @@ input.ui-button {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-#contact-dialog.ui-dialog-titlebar-close {
+#contact-dialog-wrapper.ui-dialog-titlebar-close {
 	position: absolute;
 	right: .3em;
 	top: 50%;
@@ -503,48 +503,48 @@ input.ui-button {
 	padding: 1px;
 	height: 20px;
 }
-#contact-dialog.ui-dialog-content {
+#contact-dialog-wrapper.ui-dialog-content {
 	position: relative;
 	border: 0;
 	padding: .5em 1em;
 	background: none;
 	overflow: auto;
 }
-#contact-dialog.ui-dialog-buttonpane {
+#contact-dialog-wrapper.ui-dialog-buttonpane {
 	text-align: left;
 	border-width: 1px 0 0 0;
 	background-image: none;
 	margin-top: .5em;
 	padding: .3em 1em .5em .4em;
 }
-#contact-dialog.ui-dialog-buttonpane .ui-dialog-buttonset {
+#contact-dialog-wrapper.ui-dialog-buttonpane .ui-dialog-buttonset {
 	float: right;
 }
-#contact-dialog.ui-dialog-buttonpane button {
+#contact-dialog-wrapper.ui-dialog-buttonpane button {
 	margin: .5em .4em .5em 0;
 	cursor: pointer;
 }
-#contact-dialog.ui-resizable-se {
+#contact-dialog-wrapper.ui-resizable-se {
 	width: 12px;
 	height: 12px;
 	right: -5px;
 	bottom: -5px;
 	background-position: 16px 16px;
 }
-#contact-dialog .ui-draggable .ui-dialog-titlebar {
+#contact-dialog-wrapper .ui-draggable .ui-dialog-titlebar {
 	cursor: move;
 }
-#contact-dialog .ui-menu {
+#contact-dialog-wrapper .ui-menu {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 	display: block;
 	outline: none;
 }
-#contact-dialog .ui-menu .ui-menu {
+#contact-dialog-wrapper .ui-menu .ui-menu {
 	position: absolute;
 }
-#contact-dialog .ui-menu .ui-menu-item {
+#contact-dialog-wrapper .ui-menu .ui-menu-item {
 	position: relative;
 	margin: 0;
 	padding: 3px 1em 3px .4em;
@@ -553,28 +553,28 @@ input.ui-button {
 	/* support: IE10, see #8844 */
 	list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
 }
-#contact-dialog .ui-menu .ui-menu-divider {
+#contact-dialog-wrapper .ui-menu .ui-menu-divider {
 	margin: 5px 0;
 	height: 0;
 	font-size: 0;
 	line-height: 0;
 	border-width: 1px 0 0 0;
 }
-#contact-dialog .ui-menu .ui-state-focus,
-#contact-dialog .ui-menu .ui-state-active {
+#contact-dialog-wrapper .ui-menu .ui-state-focus,
+#contact-dialog-wrapper .ui-menu .ui-state-active {
 	margin: -1px;
 }
 
 /* icon support */
-#contact-dialog .ui-menu-icons {
+#contact-dialog-wrapper .ui-menu-icons {
 	position: relative;
 }
-#contact-dialog .ui-menu-icons .ui-menu-item {
+#contact-dialog-wrapper .ui-menu-icons .ui-menu-item {
 	padding-left: 2em;
 }
 
 /* left-aligned */
-#contact-dialog .ui-menu .ui-icon {
+#contact-dialog-wrapper .ui-menu .ui-icon {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -583,29 +583,29 @@ input.ui-button {
 }
 
 /* right-aligned */
-#contact-dialog .ui-menu .ui-menu-icon {
+#contact-dialog-wrapper .ui-menu .ui-menu-icon {
 	left: auto;
 	right: 0;
 }
-#contact-dialog .ui-progressbar {
+#contact-dialog-wrapper .ui-progressbar {
 	height: 2em;
 	text-align: left;
 	overflow: hidden;
 }
-#contact-dialog .ui-progressbar .ui-progressbar-value {
+#contact-dialog-wrapper .ui-progressbar .ui-progressbar-value {
 	margin: -1px;
 	height: 100%;
 }
-#contact-dialog .ui-progressbar .ui-progressbar-overlay {
+#contact-dialog-wrapper .ui-progressbar .ui-progressbar-overlay {
 	background: url("data:image/gif;base64,R0lGODlhKAAoAIABAAAAAP///yH/C05FVFNDQVBFMi4wAwEAAAAh+QQJAQABACwAAAAAKAAoAAACkYwNqXrdC52DS06a7MFZI+4FHBCKoDeWKXqymPqGqxvJrXZbMx7Ttc+w9XgU2FB3lOyQRWET2IFGiU9m1frDVpxZZc6bfHwv4c1YXP6k1Vdy292Fb6UkuvFtXpvWSzA+HycXJHUXiGYIiMg2R6W459gnWGfHNdjIqDWVqemH2ekpObkpOlppWUqZiqr6edqqWQAAIfkECQEAAQAsAAAAACgAKAAAApSMgZnGfaqcg1E2uuzDmmHUBR8Qil95hiPKqWn3aqtLsS18y7G1SzNeowWBENtQd+T1JktP05nzPTdJZlR6vUxNWWjV+vUWhWNkWFwxl9VpZRedYcflIOLafaa28XdsH/ynlcc1uPVDZxQIR0K25+cICCmoqCe5mGhZOfeYSUh5yJcJyrkZWWpaR8doJ2o4NYq62lAAACH5BAkBAAEALAAAAAAoACgAAAKVDI4Yy22ZnINRNqosw0Bv7i1gyHUkFj7oSaWlu3ovC8GxNso5fluz3qLVhBVeT/Lz7ZTHyxL5dDalQWPVOsQWtRnuwXaFTj9jVVh8pma9JjZ4zYSj5ZOyma7uuolffh+IR5aW97cHuBUXKGKXlKjn+DiHWMcYJah4N0lYCMlJOXipGRr5qdgoSTrqWSq6WFl2ypoaUAAAIfkECQEAAQAsAAAAACgAKAAAApaEb6HLgd/iO7FNWtcFWe+ufODGjRfoiJ2akShbueb0wtI50zm02pbvwfWEMWBQ1zKGlLIhskiEPm9R6vRXxV4ZzWT2yHOGpWMyorblKlNp8HmHEb/lCXjcW7bmtXP8Xt229OVWR1fod2eWqNfHuMjXCPkIGNileOiImVmCOEmoSfn3yXlJWmoHGhqp6ilYuWYpmTqKUgAAIfkECQEAAQAsAAAAACgAKAAAApiEH6kb58biQ3FNWtMFWW3eNVcojuFGfqnZqSebuS06w5V80/X02pKe8zFwP6EFWOT1lDFk8rGERh1TTNOocQ61Hm4Xm2VexUHpzjymViHrFbiELsefVrn6XKfnt2Q9G/+Xdie499XHd2g4h7ioOGhXGJboGAnXSBnoBwKYyfioubZJ2Hn0RuRZaflZOil56Zp6iioKSXpUAAAh+QQJAQABACwAAAAAKAAoAAACkoQRqRvnxuI7kU1a1UU5bd5tnSeOZXhmn5lWK3qNTWvRdQxP8qvaC+/yaYQzXO7BMvaUEmJRd3TsiMAgswmNYrSgZdYrTX6tSHGZO73ezuAw2uxuQ+BbeZfMxsexY35+/Qe4J1inV0g4x3WHuMhIl2jXOKT2Q+VU5fgoSUI52VfZyfkJGkha6jmY+aaYdirq+lQAACH5BAkBAAEALAAAAAAoACgAAAKWBIKpYe0L3YNKToqswUlvznigd4wiR4KhZrKt9Upqip61i9E3vMvxRdHlbEFiEXfk9YARYxOZZD6VQ2pUunBmtRXo1Lf8hMVVcNl8JafV38aM2/Fu5V16Bn63r6xt97j09+MXSFi4BniGFae3hzbH9+hYBzkpuUh5aZmHuanZOZgIuvbGiNeomCnaxxap2upaCZsq+1kAACH5BAkBAAEALAAAAAAoACgAAAKXjI8By5zf4kOxTVrXNVlv1X0d8IGZGKLnNpYtm8Lr9cqVeuOSvfOW79D9aDHizNhDJidFZhNydEahOaDH6nomtJjp1tutKoNWkvA6JqfRVLHU/QUfau9l2x7G54d1fl995xcIGAdXqMfBNadoYrhH+Mg2KBlpVpbluCiXmMnZ2Sh4GBqJ+ckIOqqJ6LmKSllZmsoq6wpQAAAh+QQJAQABACwAAAAAKAAoAAAClYx/oLvoxuJDkU1a1YUZbJ59nSd2ZXhWqbRa2/gF8Gu2DY3iqs7yrq+xBYEkYvFSM8aSSObE+ZgRl1BHFZNr7pRCavZ5BW2142hY3AN/zWtsmf12p9XxxFl2lpLn1rseztfXZjdIWIf2s5dItwjYKBgo9yg5pHgzJXTEeGlZuenpyPmpGQoKOWkYmSpaSnqKileI2FAAACH5BAkBAAEALAAAAAAoACgAAAKVjB+gu+jG4kORTVrVhRlsnn2dJ3ZleFaptFrb+CXmO9OozeL5VfP99HvAWhpiUdcwkpBH3825AwYdU8xTqlLGhtCosArKMpvfa1mMRae9VvWZfeB2XfPkeLmm18lUcBj+p5dnN8jXZ3YIGEhYuOUn45aoCDkp16hl5IjYJvjWKcnoGQpqyPlpOhr3aElaqrq56Bq7VAAAOw==");
 	height: 100%;
 	filter: alpha(opacity=25); /* support: IE8 */
 	opacity: 0.25;
 }
-#contact-dialog .ui-progressbar-indeterminate .ui-progressbar-value {
+#contact-dialog-wrapper .ui-progressbar-indeterminate .ui-progressbar-value {
 	background-image: none;
 }
-#contact-dialog .ui-selectmenu-menu {
+#contact-dialog-wrapper .ui-selectmenu-menu {
 	padding: 0;
 	margin: 0;
 	position: absolute;
@@ -613,13 +613,13 @@ input.ui-button {
 	left: 0;
 	display: none;
 }
-#contact-dialog .ui-selectmenu-menu .ui-menu {
+#contact-dialog-wrapper .ui-selectmenu-menu .ui-menu {
 	overflow: auto;
 	/* Support: IE7 */
 	overflow-x: hidden;
 	padding-bottom: 1px;
 }
-#contact-dialog .ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
+#contact-dialog-wrapper .ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
 	font-size: 1em;
 	font-weight: bold;
 	line-height: 1.5;
@@ -628,24 +628,24 @@ input.ui-button {
 	height: auto;
 	border: 0;
 }
-#contact-dialog .ui-selectmenu-open {
+#contact-dialog-wrapper .ui-selectmenu-open {
 	display: block;
 }
-#contact-dialog .ui-selectmenu-button {
+#contact-dialog-wrapper .ui-selectmenu-button {
 	display: inline-block;
 	overflow: hidden;
 	position: relative;
 	text-decoration: none;
 	cursor: pointer;
 }
-#contact-dialog .ui-selectmenu-button span.ui-icon {
+#contact-dialog-wrapper .ui-selectmenu-button span.ui-icon {
 	right: 0.5em;
 	left: auto;
 	margin-top: -8px;
 	position: absolute;
 	top: 50%;
 }
-#contact-dialog .ui-selectmenu-button span.ui-selectmenu-text {
+#contact-dialog-wrapper .ui-selectmenu-button span.ui-selectmenu-text {
 	text-align: left;
 	padding: 0.4em 2.1em 0.4em 1em;
 	display: block;
@@ -654,11 +654,11 @@ input.ui-button {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-#contact-dialog .ui-slider {
+#contact-dialog-wrapper .ui-slider {
 	position: relative;
 	text-align: left;
 }
-#contact-dialog .ui-slider .ui-slider-handle {
+#contact-dialog-wrapper .ui-slider .ui-slider-handle {
 	position: absolute;
 	z-index: 2;
 	width: 1.2em;
@@ -667,7 +667,7 @@ input.ui-button {
 	-ms-touch-action: none;
 	touch-action: none;
 }
-#contact-dialog .ui-slider .ui-slider-range {
+#contact-dialog-wrapper .ui-slider .ui-slider-range {
 	position: absolute;
 	z-index: 1;
 	font-size: .7em;
@@ -677,56 +677,56 @@ input.ui-button {
 }
 
 /* support: IE8 - See #6727 */
-#contact-dialog .ui-slider.ui-state-disabled .ui-slider-handle,
-#contact-dialog .ui-slider.ui-state-disabled .ui-slider-range {
+#contact-dialog-wrapper .ui-slider.ui-state-disabled .ui-slider-handle,
+#contact-dialog-wrapper .ui-slider.ui-state-disabled .ui-slider-range {
 	filter: inherit;
 }
 
-#contact-dialog .ui-slider-horizontal {
+#contact-dialog-wrapper .ui-slider-horizontal {
 	height: .8em;
 }
-#contact-dialog .ui-slider-horizontal .ui-slider-handle {
+#contact-dialog-wrapper .ui-slider-horizontal .ui-slider-handle {
 	top: -.3em;
 	margin-left: -.6em;
 }
-#contact-dialog .ui-slider-horizontal .ui-slider-range {
+#contact-dialog-wrapper .ui-slider-horizontal .ui-slider-range {
 	top: 0;
 	height: 100%;
 }
-#contact-dialog .ui-slider-horizontal .ui-slider-range-min {
+#contact-dialog-wrapper .ui-slider-horizontal .ui-slider-range-min {
 	left: 0;
 }
-#contact-dialog .ui-slider-horizontal .ui-slider-range-max {
+#contact-dialog-wrapper .ui-slider-horizontal .ui-slider-range-max {
 	right: 0;
 }
 
-#contact-dialog .ui-slider-vertical {
+#contact-dialog-wrapper .ui-slider-vertical {
 	width: .8em;
 	height: 100px;
 }
-#contact-dialog .ui-slider-vertical .ui-slider-handle {
+#contact-dialog-wrapper .ui-slider-vertical .ui-slider-handle {
 	left: -.3em;
 	margin-left: 0;
 	margin-bottom: -.6em;
 }
-#contact-dialog .ui-slider-vertical .ui-slider-range {
+#contact-dialog-wrapper .ui-slider-vertical .ui-slider-range {
 	left: 0;
 	width: 100%;
 }
-#contact-dialog .ui-slider-vertical .ui-slider-range-min {
+#contact-dialog-wrapper .ui-slider-vertical .ui-slider-range-min {
 	bottom: 0;
 }
-#contact-dialog .ui-slider-vertical .ui-slider-range-max {
+#contact-dialog-wrapper .ui-slider-vertical .ui-slider-range-max {
 	top: 0;
 }
-#contact-dialog .ui-spinner {
+#contact-dialog-wrapper .ui-spinner {
 	position: relative;
 	display: inline-block;
 	overflow: hidden;
 	padding: 0;
 	vertical-align: middle;
 }
-#contact-dialog .ui-spinner-input {
+#contact-dialog-wrapper .ui-spinner-input {
 	border: none;
 	background: none;
 	color: inherit;
@@ -736,7 +736,7 @@ input.ui-button {
 	margin-left: .4em;
 	margin-right: 22px;
 }
-#contact-dialog .ui-spinner-button {
+#contact-dialog-wrapper .ui-spinner-button {
 	width: 16px;
 	height: 50%;
 	font-size: .5em;
@@ -750,39 +750,39 @@ input.ui-button {
 	right: 0;
 }
 /* more specificity required here to override default borders */
-#contact-dialog .ui-spinner a.ui-spinner-button {
+#contact-dialog-wrapper .ui-spinner a.ui-spinner-button {
 	border-top: none;
 	border-bottom: none;
 	border-right: none;
 }
 /* vertically center icon */
-#contact-dialog .ui-spinner .ui-icon {
+#contact-dialog-wrapper .ui-spinner .ui-icon {
 	position: absolute;
 	margin-top: -8px;
 	top: 50%;
 	left: 0;
 }
-#contact-dialog .ui-spinner-up {
+#contact-dialog-wrapper .ui-spinner-up {
 	top: 0;
 }
-#contact-dialog .ui-spinner-down {
+#contact-dialog-wrapper .ui-spinner-down {
 	bottom: 0;
 }
 
 /* TR overrides */
-#contact-dialog .ui-spinner .ui-icon-triangle-1-s {
+#contact-dialog-wrapper .ui-spinner .ui-icon-triangle-1-s {
 	/* need to fix icons sprite */
 	background-position: -65px -16px;
 }
-#contact-dialog .ui-tabs {
+#contact-dialog-wrapper .ui-tabs {
 	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 	padding: .2em;
 }
-#contact-dialog .ui-tabs .ui-tabs-nav {
+#contact-dialog-wrapper .ui-tabs .ui-tabs-nav {
 	margin: 0;
 	padding: .2em .2em 0;
 }
-#contact-dialog .ui-tabs .ui-tabs-nav li {
+#contact-dialog-wrapper .ui-tabs .ui-tabs-nav li {
 	list-style: none;
 	float: left;
 	position: relative;
@@ -792,30 +792,30 @@ input.ui-button {
 	padding: 0;
 	white-space: nowrap;
 }
-#contact-dialog .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+#contact-dialog-wrapper .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
 	float: left;
 	padding: .5em 1em;
 	text-decoration: none;
 }
-#contact-dialog .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+#contact-dialog-wrapper .ui-tabs .ui-tabs-nav li.ui-tabs-active {
 	margin-bottom: -1px;
 	padding-bottom: 1px;
 }
-#contact-dialog .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
-#contact-dialog .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
-#contact-dialog .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
+#contact-dialog-wrapper .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
+#contact-dialog-wrapper .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
+#contact-dialog-wrapper .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
 	cursor: text;
 }
-#contact-dialog .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+#contact-dialog-wrapper .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
 	cursor: pointer;
 }
-#contact-dialog .ui-tabs .ui-tabs-panel {
+#contact-dialog-wrapper .ui-tabs .ui-tabs-panel {
 	display: block;
 	border-width: 0;
 	padding: 1em 1.4em;
 	background: none;
 }
-#contact-dialog .ui-tooltip {
+#contact-dialog-wrapper .ui-tooltip {
 	padding: 8px;
 	position: absolute;
 	z-index: 9999;
@@ -829,142 +829,142 @@ body .ui-tooltip {
 
 /* Component containers
 ----------------------------------*/
-#contact-dialog .ui-widget {
+#contact-dialog-wrapper .ui-widget {
 	font-family: Arial,Helvetica,sans-serif;
 	font-size: 1em;
 }
-#contact-dialog .ui-widget .ui-widget {
+#contact-dialog-wrapper .ui-widget .ui-widget {
 	font-size: 1em;
 }
-#contact-dialog .ui-widget input,
-#contact-dialog .ui-widget select,
-#contact-dialog .ui-widget textarea,
-#contact-dialog .ui-widget button {
+#contact-dialog-wrapper .ui-widget input,
+#contact-dialog-wrapper .ui-widget select,
+#contact-dialog-wrapper .ui-widget textarea,
+#contact-dialog-wrapper .ui-widget button {
 	font-family: Arial,Helvetica,sans-serif;
 	font-size: 1em;
 }
-#contact-dialog .ui-widget-content {
+#contact-dialog-wrapper .ui-widget-content {
 	border: 1px solid #dddddd;
 	background: #ffffff;
 	color: #333333;
 }
-#contact-dialog .ui-widget-content a {
+#contact-dialog-wrapper .ui-widget-content a {
 	color: #333333;
 }
-#contact-dialog .ui-widget-header {
+#contact-dialog-wrapper .ui-widget-header {
 	border: 1px solid #dddddd;
 	background: #e9e9e9;
 	color: #333333;
 	font-weight: bold;
 }
-#contact-dialog .ui-widget-header a {
+#contact-dialog-wrapper .ui-widget-header a {
 	color: #333333;
 }
 
 /* Interaction states
 ----------------------------------*/
-#contact-dialog .ui-state-default,
-#contact-dialog .ui-widget-content .ui-state-default,
-#contact-dialog .ui-widget-header .ui-state-default {
+#contact-dialog-wrapper .ui-state-default,
+#contact-dialog-wrapper .ui-widget-content .ui-state-default,
+#contact-dialog-wrapper .ui-widget-header .ui-state-default {
 	border: 1px solid #c5c5c5;
 	background: #f6f6f6;
 	font-weight: normal;
 	color: #454545;
 }
-#contact-dialog .ui-state-default a,
-#contact-dialog .ui-state-default a:link,
-#contact-dialog .ui-state-default a:visited {
+#contact-dialog-wrapper .ui-state-default a,
+#contact-dialog-wrapper .ui-state-default a:link,
+#contact-dialog-wrapper .ui-state-default a:visited {
 	color: #454545;
 	text-decoration: none;
 }
-#contact-dialog .ui-state-hover,
-#contact-dialog .ui-widget-content .ui-state-hover,
-#contact-dialog .ui-widget-header .ui-state-hover,
-#contact-dialog .ui-state-focus,
-#contact-dialog .ui-widget-content .ui-state-focus,
-#contact-dialog .ui-widget-header .ui-state-focus {
+#contact-dialog-wrapper .ui-state-hover,
+#contact-dialog-wrapper .ui-widget-content .ui-state-hover,
+#contact-dialog-wrapper .ui-widget-header .ui-state-hover,
+#contact-dialog-wrapper .ui-state-focus,
+#contact-dialog-wrapper .ui-widget-content .ui-state-focus,
+#contact-dialog-wrapper .ui-widget-header .ui-state-focus {
 	border: 1px solid #cccccc;
 	background: #ededed;
 	font-weight: normal;
 	color: #2b2b2b;
 }
-#contact-dialog .ui-state-hover a,
-#contact-dialog .ui-state-hover a:hover,
-#contact-dialog .ui-state-hover a:link,
-#contact-dialog .ui-state-hover a:visited,
-#contact-dialog .ui-state-focus a,
-#contact-dialog .ui-state-focus a:hover,
-#contact-dialog .ui-state-focus a:link,
-#contact-dialog .ui-state-focus a:visited {
+#contact-dialog-wrapper .ui-state-hover a,
+#contact-dialog-wrapper .ui-state-hover a:hover,
+#contact-dialog-wrapper .ui-state-hover a:link,
+#contact-dialog-wrapper .ui-state-hover a:visited,
+#contact-dialog-wrapper .ui-state-focus a,
+#contact-dialog-wrapper .ui-state-focus a:hover,
+#contact-dialog-wrapper .ui-state-focus a:link,
+#contact-dialog-wrapper .ui-state-focus a:visited {
 	color: #2b2b2b;
 	text-decoration: none;
 }
-#contact-dialog .ui-state-active,
-#contact-dialog .ui-widget-content .ui-state-active,
-#contact-dialog .ui-widget-header .ui-state-active {
+#contact-dialog-wrapper .ui-state-active,
+#contact-dialog-wrapper .ui-widget-content .ui-state-active,
+#contact-dialog-wrapper .ui-widget-header .ui-state-active {
 	border: 1px solid #003eff;
 	background: #007fff;
 	font-weight: normal;
 	color: #ffffff;
 }
-#contact-dialog .ui-state-active a,
-#contact-dialog .ui-state-active a:link,
-#contact-dialog .ui-state-active a:visited {
+#contact-dialog-wrapper .ui-state-active a,
+#contact-dialog-wrapper .ui-state-active a:link,
+#contact-dialog-wrapper .ui-state-active a:visited {
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* Interaction Cues
 ----------------------------------*/
-#contact-dialog .ui-state-highlight,
-#contact-dialog .ui-widget-content .ui-state-highlight,
-#contact-dialog .ui-widget-header .ui-state-highlight {
+#contact-dialog-wrapper .ui-state-highlight,
+#contact-dialog-wrapper .ui-widget-content .ui-state-highlight,
+#contact-dialog-wrapper .ui-widget-header .ui-state-highlight {
 	border: 1px solid #dad55e;
 	background: #fffa90;
 	color: #777620;
 }
-#contact-dialog .ui-state-highlight a,
-#contact-dialog .ui-widget-content .ui-state-highlight a,
-#contact-dialog .ui-widget-header .ui-state-highlight a {
+#contact-dialog-wrapper .ui-state-highlight a,
+#contact-dialog-wrapper .ui-widget-content .ui-state-highlight a,
+#contact-dialog-wrapper .ui-widget-header .ui-state-highlight a {
 	color: #777620;
 }
-#contact-dialog .ui-state-error,
-#contact-dialog .ui-widget-content .ui-state-error,
-#contact-dialog .ui-widget-header .ui-state-error {
+#contact-dialog-wrapper .ui-state-error,
+#contact-dialog-wrapper .ui-widget-content .ui-state-error,
+#contact-dialog-wrapper .ui-widget-header .ui-state-error {
 	border: 1px solid #f1a899;
 	background: #fddfdf;
 	color: #5f3f3f;
 }
-#contact-dialog .ui-state-error a,
-#contact-dialog .ui-widget-content .ui-state-error a,
-#contact-dialog .ui-widget-header .ui-state-error a {
+#contact-dialog-wrapper .ui-state-error a,
+#contact-dialog-wrapper .ui-widget-content .ui-state-error a,
+#contact-dialog-wrapper .ui-widget-header .ui-state-error a {
 	color: #5f3f3f;
 }
-#contact-dialog .ui-state-error-text,
-#contact-dialog .ui-widget-content .ui-state-error-text,
-#contact-dialog .ui-widget-header .ui-state-error-text {
+#contact-dialog-wrapper .ui-state-error-text,
+#contact-dialog-wrapper .ui-widget-content .ui-state-error-text,
+#contact-dialog-wrapper .ui-widget-header .ui-state-error-text {
 	color: #5f3f3f;
 }
-#contact-dialog .ui-priority-primary,
-#contact-dialog .ui-widget-content .ui-priority-primary,
-#contact-dialog .ui-widget-header .ui-priority-primary {
+#contact-dialog-wrapper .ui-priority-primary,
+#contact-dialog-wrapper .ui-widget-content .ui-priority-primary,
+#contact-dialog-wrapper .ui-widget-header .ui-priority-primary {
 	font-weight: bold;
 }
-#contact-dialog .ui-priority-secondary,
-#contact-dialog .ui-widget-content .ui-priority-secondary,
-#contact-dialog .ui-widget-header .ui-priority-secondary {
+#contact-dialog-wrapper .ui-priority-secondary,
+#contact-dialog-wrapper .ui-widget-content .ui-priority-secondary,
+#contact-dialog-wrapper .ui-widget-header .ui-priority-secondary {
 	opacity: .7;
 	filter:Alpha(Opacity=70); /* support: IE8 */
 	font-weight: normal;
 }
-#contact-dialog .ui-state-disabled,
-#contact-dialog .ui-widget-content .ui-state-disabled,
-#contact-dialog .ui-widget-header .ui-state-disabled {
+#contact-dialog-wrapper .ui-state-disabled,
+#contact-dialog-wrapper .ui-widget-content .ui-state-disabled,
+#contact-dialog-wrapper .ui-widget-header .ui-state-disabled {
 	opacity: .35;
 	filter:Alpha(Opacity=35); /* support: IE8 */
 	background-image: none;
 }
-#contact-dialog .ui-state-disabled .ui-icon {
+#contact-dialog-wrapper .ui-state-disabled .ui-icon {
 	filter:Alpha(Opacity=35); /* support: IE8 - See #6059 */
 }
 
@@ -972,250 +972,250 @@ body .ui-tooltip {
 ----------------------------------*/
 
 /* states and images */
-#contact-dialog .ui-icon {
+#contact-dialog-wrapper .ui-icon {
 	width: 16px;
 	height: 16px;
 }
-#contact-dialog .ui-icon,
-#contact-dialog .ui-widget-content .ui-icon {
+#contact-dialog-wrapper .ui-icon,
+#contact-dialog-wrapper .ui-widget-content .ui-icon {
 	background-image: url("images/ui-icons_444444_256x240.png");
 }
-#contact-dialog .ui-widget-header .ui-icon {
+#contact-dialog-wrapper .ui-widget-header .ui-icon {
 	background-image: url("images/ui-icons_444444_256x240.png");
 }
-#contact-dialog .ui-state-default .ui-icon {
+#contact-dialog-wrapper .ui-state-default .ui-icon {
 	background-image: url("images/ui-icons_777777_256x240.png");
 }
-#contact-dialog .ui-state-hover .ui-icon,
-#contact-dialog .ui-state-focus .ui-icon {
+#contact-dialog-wrapper .ui-state-hover .ui-icon,
+#contact-dialog-wrapper .ui-state-focus .ui-icon {
 	background-image: url("images/ui-icons_555555_256x240.png");
 }
-#contact-dialog .ui-state-active .ui-icon {
+#contact-dialog-wrapper .ui-state-active .ui-icon {
 	background-image: url("images/ui-icons_ffffff_256x240.png");
 }
-#contact-dialog .ui-state-highlight .ui-icon {
+#contact-dialog-wrapper .ui-state-highlight .ui-icon {
 	background-image: url("images/ui-icons_777620_256x240.png");
 }
-#contact-dialog .ui-state-error .ui-icon,
-#contact-dialog .ui-state-error-text .ui-icon {
+#contact-dialog-wrapper .ui-state-error .ui-icon,
+#contact-dialog-wrapper .ui-state-error-text .ui-icon {
 	background-image: url("images/ui-icons_cc0000_256x240.png");
 }
 
 /* positioning */
-#contact-dialog .ui-icon-blank { background-position: 16px 16px; }
-#contact-dialog .ui-icon-carat-1-n { background-position: 0 0; }
-#contact-dialog .ui-icon-carat-1-ne { background-position: -16px 0; }
-#contact-dialog .ui-icon-carat-1-e { background-position: -32px 0; }
-#contact-dialog .ui-icon-carat-1-se { background-position: -48px 0; }
-#contact-dialog .ui-icon-carat-1-s { background-position: -64px 0; }
-#contact-dialog .ui-icon-carat-1-sw { background-position: -80px 0; }
-#contact-dialog .ui-icon-carat-1-w { background-position: -96px 0; }
-#contact-dialog .ui-icon-carat-1-nw { background-position: -112px 0; }
-#contact-dialog .ui-icon-carat-2-n-s { background-position: -128px 0; }
-#contact-dialog .ui-icon-carat-2-e-w { background-position: -144px 0; }
-#contact-dialog .ui-icon-triangle-1-n { background-position: 0 -16px; }
-#contact-dialog .ui-icon-triangle-1-ne { background-position: -16px -16px; }
-#contact-dialog .ui-icon-triangle-1-e { background-position: -32px -16px; }
-#contact-dialog .ui-icon-triangle-1-se { background-position: -48px -16px; }
-#contact-dialog .ui-icon-triangle-1-s { background-position: -64px -16px; }
-#contact-dialog .ui-icon-triangle-1-sw { background-position: -80px -16px; }
-#contact-dialog .ui-icon-triangle-1-w { background-position: -96px -16px; }
-#contact-dialog .ui-icon-triangle-1-nw { background-position: -112px -16px; }
-#contact-dialog .ui-icon-triangle-2-n-s { background-position: -128px -16px; }
-#contact-dialog .ui-icon-triangle-2-e-w { background-position: -144px -16px; }
-#contact-dialog .ui-icon-arrow-1-n { background-position: 0 -32px; }
-#contact-dialog .ui-icon-arrow-1-ne { background-position: -16px -32px; }
-#contact-dialog .ui-icon-arrow-1-e { background-position: -32px -32px; }
-#contact-dialog .ui-icon-arrow-1-se { background-position: -48px -32px; }
-#contact-dialog .ui-icon-arrow-1-s { background-position: -64px -32px; }
-#contact-dialog .ui-icon-arrow-1-sw { background-position: -80px -32px; }
-#contact-dialog .ui-icon-arrow-1-w { background-position: -96px -32px; }
-#contact-dialog .ui-icon-arrow-1-nw { background-position: -112px -32px; }
-#contact-dialog .ui-icon-arrow-2-n-s { background-position: -128px -32px; }
-#contact-dialog .ui-icon-arrow-2-ne-sw { background-position: -144px -32px; }
-#contact-dialog .ui-icon-arrow-2-e-w { background-position: -160px -32px; }
-#contact-dialog .ui-icon-arrow-2-se-nw { background-position: -176px -32px; }
-#contact-dialog .ui-icon-arrowstop-1-n { background-position: -192px -32px; }
-#contact-dialog .ui-icon-arrowstop-1-e { background-position: -208px -32px; }
-#contact-dialog .ui-icon-arrowstop-1-s { background-position: -224px -32px; }
-#contact-dialog .ui-icon-arrowstop-1-w { background-position: -240px -32px; }
-#contact-dialog .ui-icon-arrowthick-1-n { background-position: 0 -48px; }
-#contact-dialog .ui-icon-arrowthick-1-ne { background-position: -16px -48px; }
-#contact-dialog .ui-icon-arrowthick-1-e { background-position: -32px -48px; }
-#contact-dialog .ui-icon-arrowthick-1-se { background-position: -48px -48px; }
-#contact-dialog .ui-icon-arrowthick-1-s { background-position: -64px -48px; }
-#contact-dialog .ui-icon-arrowthick-1-sw { background-position: -80px -48px; }
-#contact-dialog .ui-icon-arrowthick-1-w { background-position: -96px -48px; }
-#contact-dialog .ui-icon-arrowthick-1-nw { background-position: -112px -48px; }
-#contact-dialog .ui-icon-arrowthick-2-n-s { background-position: -128px -48px; }
-#contact-dialog .ui-icon-arrowthick-2-ne-sw { background-position: -144px -48px; }
-#contact-dialog .ui-icon-arrowthick-2-e-w { background-position: -160px -48px; }
-#contact-dialog .ui-icon-arrowthick-2-se-nw { background-position: -176px -48px; }
-#contact-dialog .ui-icon-arrowthickstop-1-n { background-position: -192px -48px; }
-#contact-dialog .ui-icon-arrowthickstop-1-e { background-position: -208px -48px; }
-#contact-dialog .ui-icon-arrowthickstop-1-s { background-position: -224px -48px; }
-#contact-dialog .ui-icon-arrowthickstop-1-w { background-position: -240px -48px; }
-#contact-dialog .ui-icon-arrowreturnthick-1-w { background-position: 0 -64px; }
-#contact-dialog .ui-icon-arrowreturnthick-1-n { background-position: -16px -64px; }
-#contact-dialog .ui-icon-arrowreturnthick-1-e { background-position: -32px -64px; }
-#contact-dialog .ui-icon-arrowreturnthick-1-s { background-position: -48px -64px; }
-#contact-dialog .ui-icon-arrowreturn-1-w { background-position: -64px -64px; }
-#contact-dialog .ui-icon-arrowreturn-1-n { background-position: -80px -64px; }
-#contact-dialog .ui-icon-arrowreturn-1-e { background-position: -96px -64px; }
-#contact-dialog .ui-icon-arrowreturn-1-s { background-position: -112px -64px; }
-#contact-dialog .ui-icon-arrowrefresh-1-w { background-position: -128px -64px; }
-#contact-dialog .ui-icon-arrowrefresh-1-n { background-position: -144px -64px; }
-#contact-dialog .ui-icon-arrowrefresh-1-e { background-position: -160px -64px; }
-#contact-dialog .ui-icon-arrowrefresh-1-s { background-position: -176px -64px; }
-#contact-dialog .ui-icon-arrow-4 { background-position: 0 -80px; }
-#contact-dialog .ui-icon-arrow-4-diag { background-position: -16px -80px; }
-#contact-dialog .ui-icon-extlink { background-position: -32px -80px; }
-#contact-dialog .ui-icon-newwin { background-position: -48px -80px; }
-#contact-dialog .ui-icon-refresh { background-position: -64px -80px; }
-#contact-dialog .ui-icon-shuffle { background-position: -80px -80px; }
-#contact-dialog .ui-icon-transfer-e-w { background-position: -96px -80px; }
-#contact-dialog .ui-icon-transferthick-e-w { background-position: -112px -80px; }
-#contact-dialog .ui-icon-folder-collapsed { background-position: 0 -96px; }
-#contact-dialog .ui-icon-folder-open { background-position: -16px -96px; }
-#contact-dialog .ui-icon-document { background-position: -32px -96px; }
-#contact-dialog .ui-icon-document-b { background-position: -48px -96px; }
-#contact-dialog .ui-icon-note { background-position: -64px -96px; }
-#contact-dialog .ui-icon-mail-closed { background-position: -80px -96px; }
-#contact-dialog .ui-icon-mail-open { background-position: -96px -96px; }
-#contact-dialog .ui-icon-suitcase { background-position: -112px -96px; }
-#contact-dialog .ui-icon-comment { background-position: -128px -96px; }
-#contact-dialog .ui-icon-person { background-position: -144px -96px; }
-#contact-dialog .ui-icon-print { background-position: -160px -96px; }
-#contact-dialog .ui-icon-trash { background-position: -176px -96px; }
-#contact-dialog .ui-icon-locked { background-position: -192px -96px; }
-#contact-dialog .ui-icon-unlocked { background-position: -208px -96px; }
-#contact-dialog .ui-icon-bookmark { background-position: -224px -96px; }
-#contact-dialog .ui-icon-tag { background-position: -240px -96px; }
-#contact-dialog .ui-icon-home { background-position: 0 -112px; }
-#contact-dialog .ui-icon-flag { background-position: -16px -112px; }
-#contact-dialog .ui-icon-calendar { background-position: -32px -112px; }
-#contact-dialog .ui-icon-cart { background-position: -48px -112px; }
-#contact-dialog .ui-icon-pencil { background-position: -64px -112px; }
-#contact-dialog .ui-icon-clock { background-position: -80px -112px; }
-#contact-dialog .ui-icon-disk { background-position: -96px -112px; }
-#contact-dialog .ui-icon-calculator { background-position: -112px -112px; }
-#contact-dialog .ui-icon-zoomin { background-position: -128px -112px; }
-#contact-dialog .ui-icon-zoomout { background-position: -144px -112px; }
-#contact-dialog .ui-icon-search { background-position: -160px -112px; }
-#contact-dialog .ui-icon-wrench { background-position: -176px -112px; }
-#contact-dialog .ui-icon-gear { background-position: -192px -112px; }
-#contact-dialog .ui-icon-heart { background-position: -208px -112px; }
-#contact-dialog .ui-icon-star { background-position: -224px -112px; }
-#contact-dialog .ui-icon-link { background-position: -240px -112px; }
-#contact-dialog .ui-icon-cancel { background-position: 0 -128px; }
-#contact-dialog .ui-icon-plus { background-position: -16px -128px; }
-#contact-dialog .ui-icon-plusthick { background-position: -32px -128px; }
-#contact-dialog .ui-icon-minus { background-position: -48px -128px; }
-#contact-dialog .ui-icon-minusthick { background-position: -64px -128px; }
-#contact-dialog .ui-icon-close { background-position: -80px -128px; }
-#contact-dialog .ui-icon-closethick { background-position: -96px -128px; }
-#contact-dialog .ui-icon-key { background-position: -112px -128px; }
-#contact-dialog .ui-icon-lightbulb { background-position: -128px -128px; }
-#contact-dialog .ui-icon-scissors { background-position: -144px -128px; }
-#contact-dialog .ui-icon-clipboard { background-position: -160px -128px; }
-#contact-dialog .ui-icon-copy { background-position: -176px -128px; }
-#contact-dialog .ui-icon-contact { background-position: -192px -128px; }
-#contact-dialog .ui-icon-image { background-position: -208px -128px; }
-#contact-dialog .ui-icon-video { background-position: -224px -128px; }
-#contact-dialog .ui-icon-script { background-position: -240px -128px; }
-#contact-dialog .ui-icon-alert { background-position: 0 -144px; }
-#contact-dialog .ui-icon-info { background-position: -16px -144px; }
-#contact-dialog .ui-icon-notice { background-position: -32px -144px; }
-#contact-dialog .ui-icon-help { background-position: -48px -144px; }
-#contact-dialog .ui-icon-check { background-position: -64px -144px; }
-#contact-dialog .ui-icon-bullet { background-position: -80px -144px; }
-#contact-dialog .ui-icon-radio-on { background-position: -96px -144px; }
-#contact-dialog .ui-icon-radio-off { background-position: -112px -144px; }
-#contact-dialog .ui-icon-pin-w { background-position: -128px -144px; }
-#contact-dialog .ui-icon-pin-s { background-position: -144px -144px; }
-#contact-dialog .ui-icon-play { background-position: 0 -160px; }
-#contact-dialog .ui-icon-pause { background-position: -16px -160px; }
-#contact-dialog .ui-icon-seek-next { background-position: -32px -160px; }
-#contact-dialog .ui-icon-seek-prev { background-position: -48px -160px; }
-#contact-dialog .ui-icon-seek-end { background-position: -64px -160px; }
-#contact-dialog .ui-icon-seek-start { background-position: -80px -160px; }
+#contact-dialog-wrapper .ui-icon-blank { background-position: 16px 16px; }
+#contact-dialog-wrapper .ui-icon-carat-1-n { background-position: 0 0; }
+#contact-dialog-wrapper .ui-icon-carat-1-ne { background-position: -16px 0; }
+#contact-dialog-wrapper .ui-icon-carat-1-e { background-position: -32px 0; }
+#contact-dialog-wrapper .ui-icon-carat-1-se { background-position: -48px 0; }
+#contact-dialog-wrapper .ui-icon-carat-1-s { background-position: -64px 0; }
+#contact-dialog-wrapper .ui-icon-carat-1-sw { background-position: -80px 0; }
+#contact-dialog-wrapper .ui-icon-carat-1-w { background-position: -96px 0; }
+#contact-dialog-wrapper .ui-icon-carat-1-nw { background-position: -112px 0; }
+#contact-dialog-wrapper .ui-icon-carat-2-n-s { background-position: -128px 0; }
+#contact-dialog-wrapper .ui-icon-carat-2-e-w { background-position: -144px 0; }
+#contact-dialog-wrapper .ui-icon-triangle-1-n { background-position: 0 -16px; }
+#contact-dialog-wrapper .ui-icon-triangle-1-ne { background-position: -16px -16px; }
+#contact-dialog-wrapper .ui-icon-triangle-1-e { background-position: -32px -16px; }
+#contact-dialog-wrapper .ui-icon-triangle-1-se { background-position: -48px -16px; }
+#contact-dialog-wrapper .ui-icon-triangle-1-s { background-position: -64px -16px; }
+#contact-dialog-wrapper .ui-icon-triangle-1-sw { background-position: -80px -16px; }
+#contact-dialog-wrapper .ui-icon-triangle-1-w { background-position: -96px -16px; }
+#contact-dialog-wrapper .ui-icon-triangle-1-nw { background-position: -112px -16px; }
+#contact-dialog-wrapper .ui-icon-triangle-2-n-s { background-position: -128px -16px; }
+#contact-dialog-wrapper .ui-icon-triangle-2-e-w { background-position: -144px -16px; }
+#contact-dialog-wrapper .ui-icon-arrow-1-n { background-position: 0 -32px; }
+#contact-dialog-wrapper .ui-icon-arrow-1-ne { background-position: -16px -32px; }
+#contact-dialog-wrapper .ui-icon-arrow-1-e { background-position: -32px -32px; }
+#contact-dialog-wrapper .ui-icon-arrow-1-se { background-position: -48px -32px; }
+#contact-dialog-wrapper .ui-icon-arrow-1-s { background-position: -64px -32px; }
+#contact-dialog-wrapper .ui-icon-arrow-1-sw { background-position: -80px -32px; }
+#contact-dialog-wrapper .ui-icon-arrow-1-w { background-position: -96px -32px; }
+#contact-dialog-wrapper .ui-icon-arrow-1-nw { background-position: -112px -32px; }
+#contact-dialog-wrapper .ui-icon-arrow-2-n-s { background-position: -128px -32px; }
+#contact-dialog-wrapper .ui-icon-arrow-2-ne-sw { background-position: -144px -32px; }
+#contact-dialog-wrapper .ui-icon-arrow-2-e-w { background-position: -160px -32px; }
+#contact-dialog-wrapper .ui-icon-arrow-2-se-nw { background-position: -176px -32px; }
+#contact-dialog-wrapper .ui-icon-arrowstop-1-n { background-position: -192px -32px; }
+#contact-dialog-wrapper .ui-icon-arrowstop-1-e { background-position: -208px -32px; }
+#contact-dialog-wrapper .ui-icon-arrowstop-1-s { background-position: -224px -32px; }
+#contact-dialog-wrapper .ui-icon-arrowstop-1-w { background-position: -240px -32px; }
+#contact-dialog-wrapper .ui-icon-arrowthick-1-n { background-position: 0 -48px; }
+#contact-dialog-wrapper .ui-icon-arrowthick-1-ne { background-position: -16px -48px; }
+#contact-dialog-wrapper .ui-icon-arrowthick-1-e { background-position: -32px -48px; }
+#contact-dialog-wrapper .ui-icon-arrowthick-1-se { background-position: -48px -48px; }
+#contact-dialog-wrapper .ui-icon-arrowthick-1-s { background-position: -64px -48px; }
+#contact-dialog-wrapper .ui-icon-arrowthick-1-sw { background-position: -80px -48px; }
+#contact-dialog-wrapper .ui-icon-arrowthick-1-w { background-position: -96px -48px; }
+#contact-dialog-wrapper .ui-icon-arrowthick-1-nw { background-position: -112px -48px; }
+#contact-dialog-wrapper .ui-icon-arrowthick-2-n-s { background-position: -128px -48px; }
+#contact-dialog-wrapper .ui-icon-arrowthick-2-ne-sw { background-position: -144px -48px; }
+#contact-dialog-wrapper .ui-icon-arrowthick-2-e-w { background-position: -160px -48px; }
+#contact-dialog-wrapper .ui-icon-arrowthick-2-se-nw { background-position: -176px -48px; }
+#contact-dialog-wrapper .ui-icon-arrowthickstop-1-n { background-position: -192px -48px; }
+#contact-dialog-wrapper .ui-icon-arrowthickstop-1-e { background-position: -208px -48px; }
+#contact-dialog-wrapper .ui-icon-arrowthickstop-1-s { background-position: -224px -48px; }
+#contact-dialog-wrapper .ui-icon-arrowthickstop-1-w { background-position: -240px -48px; }
+#contact-dialog-wrapper .ui-icon-arrowreturnthick-1-w { background-position: 0 -64px; }
+#contact-dialog-wrapper .ui-icon-arrowreturnthick-1-n { background-position: -16px -64px; }
+#contact-dialog-wrapper .ui-icon-arrowreturnthick-1-e { background-position: -32px -64px; }
+#contact-dialog-wrapper .ui-icon-arrowreturnthick-1-s { background-position: -48px -64px; }
+#contact-dialog-wrapper .ui-icon-arrowreturn-1-w { background-position: -64px -64px; }
+#contact-dialog-wrapper .ui-icon-arrowreturn-1-n { background-position: -80px -64px; }
+#contact-dialog-wrapper .ui-icon-arrowreturn-1-e { background-position: -96px -64px; }
+#contact-dialog-wrapper .ui-icon-arrowreturn-1-s { background-position: -112px -64px; }
+#contact-dialog-wrapper .ui-icon-arrowrefresh-1-w { background-position: -128px -64px; }
+#contact-dialog-wrapper .ui-icon-arrowrefresh-1-n { background-position: -144px -64px; }
+#contact-dialog-wrapper .ui-icon-arrowrefresh-1-e { background-position: -160px -64px; }
+#contact-dialog-wrapper .ui-icon-arrowrefresh-1-s { background-position: -176px -64px; }
+#contact-dialog-wrapper .ui-icon-arrow-4 { background-position: 0 -80px; }
+#contact-dialog-wrapper .ui-icon-arrow-4-diag { background-position: -16px -80px; }
+#contact-dialog-wrapper .ui-icon-extlink { background-position: -32px -80px; }
+#contact-dialog-wrapper .ui-icon-newwin { background-position: -48px -80px; }
+#contact-dialog-wrapper .ui-icon-refresh { background-position: -64px -80px; }
+#contact-dialog-wrapper .ui-icon-shuffle { background-position: -80px -80px; }
+#contact-dialog-wrapper .ui-icon-transfer-e-w { background-position: -96px -80px; }
+#contact-dialog-wrapper .ui-icon-transferthick-e-w { background-position: -112px -80px; }
+#contact-dialog-wrapper .ui-icon-folder-collapsed { background-position: 0 -96px; }
+#contact-dialog-wrapper .ui-icon-folder-open { background-position: -16px -96px; }
+#contact-dialog-wrapper .ui-icon-document { background-position: -32px -96px; }
+#contact-dialog-wrapper .ui-icon-document-b { background-position: -48px -96px; }
+#contact-dialog-wrapper .ui-icon-note { background-position: -64px -96px; }
+#contact-dialog-wrapper .ui-icon-mail-closed { background-position: -80px -96px; }
+#contact-dialog-wrapper .ui-icon-mail-open { background-position: -96px -96px; }
+#contact-dialog-wrapper .ui-icon-suitcase { background-position: -112px -96px; }
+#contact-dialog-wrapper .ui-icon-comment { background-position: -128px -96px; }
+#contact-dialog-wrapper .ui-icon-person { background-position: -144px -96px; }
+#contact-dialog-wrapper .ui-icon-print { background-position: -160px -96px; }
+#contact-dialog-wrapper .ui-icon-trash { background-position: -176px -96px; }
+#contact-dialog-wrapper .ui-icon-locked { background-position: -192px -96px; }
+#contact-dialog-wrapper .ui-icon-unlocked { background-position: -208px -96px; }
+#contact-dialog-wrapper .ui-icon-bookmark { background-position: -224px -96px; }
+#contact-dialog-wrapper .ui-icon-tag { background-position: -240px -96px; }
+#contact-dialog-wrapper .ui-icon-home { background-position: 0 -112px; }
+#contact-dialog-wrapper .ui-icon-flag { background-position: -16px -112px; }
+#contact-dialog-wrapper .ui-icon-calendar { background-position: -32px -112px; }
+#contact-dialog-wrapper .ui-icon-cart { background-position: -48px -112px; }
+#contact-dialog-wrapper .ui-icon-pencil { background-position: -64px -112px; }
+#contact-dialog-wrapper .ui-icon-clock { background-position: -80px -112px; }
+#contact-dialog-wrapper .ui-icon-disk { background-position: -96px -112px; }
+#contact-dialog-wrapper .ui-icon-calculator { background-position: -112px -112px; }
+#contact-dialog-wrapper .ui-icon-zoomin { background-position: -128px -112px; }
+#contact-dialog-wrapper .ui-icon-zoomout { background-position: -144px -112px; }
+#contact-dialog-wrapper .ui-icon-search { background-position: -160px -112px; }
+#contact-dialog-wrapper .ui-icon-wrench { background-position: -176px -112px; }
+#contact-dialog-wrapper .ui-icon-gear { background-position: -192px -112px; }
+#contact-dialog-wrapper .ui-icon-heart { background-position: -208px -112px; }
+#contact-dialog-wrapper .ui-icon-star { background-position: -224px -112px; }
+#contact-dialog-wrapper .ui-icon-link { background-position: -240px -112px; }
+#contact-dialog-wrapper .ui-icon-cancel { background-position: 0 -128px; }
+#contact-dialog-wrapper .ui-icon-plus { background-position: -16px -128px; }
+#contact-dialog-wrapper .ui-icon-plusthick { background-position: -32px -128px; }
+#contact-dialog-wrapper .ui-icon-minus { background-position: -48px -128px; }
+#contact-dialog-wrapper .ui-icon-minusthick { background-position: -64px -128px; }
+#contact-dialog-wrapper .ui-icon-close { background-position: -80px -128px; }
+#contact-dialog-wrapper .ui-icon-closethick { background-position: -96px -128px; }
+#contact-dialog-wrapper .ui-icon-key { background-position: -112px -128px; }
+#contact-dialog-wrapper .ui-icon-lightbulb { background-position: -128px -128px; }
+#contact-dialog-wrapper .ui-icon-scissors { background-position: -144px -128px; }
+#contact-dialog-wrapper .ui-icon-clipboard { background-position: -160px -128px; }
+#contact-dialog-wrapper .ui-icon-copy { background-position: -176px -128px; }
+#contact-dialog-wrapper .ui-icon-contact { background-position: -192px -128px; }
+#contact-dialog-wrapper .ui-icon-image { background-position: -208px -128px; }
+#contact-dialog-wrapper .ui-icon-video { background-position: -224px -128px; }
+#contact-dialog-wrapper .ui-icon-script { background-position: -240px -128px; }
+#contact-dialog-wrapper .ui-icon-alert { background-position: 0 -144px; }
+#contact-dialog-wrapper .ui-icon-info { background-position: -16px -144px; }
+#contact-dialog-wrapper .ui-icon-notice { background-position: -32px -144px; }
+#contact-dialog-wrapper .ui-icon-help { background-position: -48px -144px; }
+#contact-dialog-wrapper .ui-icon-check { background-position: -64px -144px; }
+#contact-dialog-wrapper .ui-icon-bullet { background-position: -80px -144px; }
+#contact-dialog-wrapper .ui-icon-radio-on { background-position: -96px -144px; }
+#contact-dialog-wrapper .ui-icon-radio-off { background-position: -112px -144px; }
+#contact-dialog-wrapper .ui-icon-pin-w { background-position: -128px -144px; }
+#contact-dialog-wrapper .ui-icon-pin-s { background-position: -144px -144px; }
+#contact-dialog-wrapper .ui-icon-play { background-position: 0 -160px; }
+#contact-dialog-wrapper .ui-icon-pause { background-position: -16px -160px; }
+#contact-dialog-wrapper .ui-icon-seek-next { background-position: -32px -160px; }
+#contact-dialog-wrapper .ui-icon-seek-prev { background-position: -48px -160px; }
+#contact-dialog-wrapper .ui-icon-seek-end { background-position: -64px -160px; }
+#contact-dialog-wrapper .ui-icon-seek-start { background-position: -80px -160px; }
 /* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
-#contact-dialog .ui-icon-seek-first { background-position: -80px -160px; }
-#contact-dialog .ui-icon-stop { background-position: -96px -160px; }
-#contact-dialog .ui-icon-eject { background-position: -112px -160px; }
-#contact-dialog .ui-icon-volume-off { background-position: -128px -160px; }
-#contact-dialog .ui-icon-volume-on { background-position: -144px -160px; }
-#contact-dialog .ui-icon-power { background-position: 0 -176px; }
-#contact-dialog .ui-icon-signal-diag { background-position: -16px -176px; }
-#contact-dialog .ui-icon-signal { background-position: -32px -176px; }
-#contact-dialog .ui-icon-battery-0 { background-position: -48px -176px; }
-#contact-dialog .ui-icon-battery-1 { background-position: -64px -176px; }
-#contact-dialog .ui-icon-battery-2 { background-position: -80px -176px; }
-#contact-dialog .ui-icon-battery-3 { background-position: -96px -176px; }
-#contact-dialog .ui-icon-circle-plus { background-position: 0 -192px; }
-#contact-dialog .ui-icon-circle-minus { background-position: -16px -192px; }
-#contact-dialog .ui-icon-circle-close { background-position: -32px -192px; }
-#contact-dialog .ui-icon-circle-triangle-e { background-position: -48px -192px; }
-#contact-dialog .ui-icon-circle-triangle-s { background-position: -64px -192px; }
-#contact-dialog .ui-icon-circle-triangle-w { background-position: -80px -192px; }
-#contact-dialog .ui-icon-circle-triangle-n { background-position: -96px -192px; }
-#contact-dialog .ui-icon-circle-arrow-e { background-position: -112px -192px; }
-#contact-dialog .ui-icon-circle-arrow-s { background-position: -128px -192px; }
-#contact-dialog .ui-icon-circle-arrow-w { background-position: -144px -192px; }
-#contact-dialog .ui-icon-circle-arrow-n { background-position: -160px -192px; }
-#contact-dialog .ui-icon-circle-zoomin { background-position: -176px -192px; }
-#contact-dialog .ui-icon-circle-zoomout { background-position: -192px -192px; }
-#contact-dialog .ui-icon-circle-check { background-position: -208px -192px; }
-#contact-dialog .ui-icon-circlesmall-plus { background-position: 0 -208px; }
-#contact-dialog .ui-icon-circlesmall-minus { background-position: -16px -208px; }
-#contact-dialog .ui-icon-circlesmall-close { background-position: -32px -208px; }
-#contact-dialog .ui-icon-squaresmall-plus { background-position: -48px -208px; }
-#contact-dialog .ui-icon-squaresmall-minus { background-position: -64px -208px; }
-#contact-dialog .ui-icon-squaresmall-close { background-position: -80px -208px; }
-#contact-dialog .ui-icon-grip-dotted-vertical { background-position: 0 -224px; }
-#contact-dialog .ui-icon-grip-dotted-horizontal { background-position: -16px -224px; }
-#contact-dialog .ui-icon-grip-solid-vertical { background-position: -32px -224px; }
-#contact-dialog .ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
-#contact-dialog .ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
-#contact-dialog .ui-icon-grip-diagonal-se { background-position: -80px -224px; }
+#contact-dialog-wrapper .ui-icon-seek-first { background-position: -80px -160px; }
+#contact-dialog-wrapper .ui-icon-stop { background-position: -96px -160px; }
+#contact-dialog-wrapper .ui-icon-eject { background-position: -112px -160px; }
+#contact-dialog-wrapper .ui-icon-volume-off { background-position: -128px -160px; }
+#contact-dialog-wrapper .ui-icon-volume-on { background-position: -144px -160px; }
+#contact-dialog-wrapper .ui-icon-power { background-position: 0 -176px; }
+#contact-dialog-wrapper .ui-icon-signal-diag { background-position: -16px -176px; }
+#contact-dialog-wrapper .ui-icon-signal { background-position: -32px -176px; }
+#contact-dialog-wrapper .ui-icon-battery-0 { background-position: -48px -176px; }
+#contact-dialog-wrapper .ui-icon-battery-1 { background-position: -64px -176px; }
+#contact-dialog-wrapper .ui-icon-battery-2 { background-position: -80px -176px; }
+#contact-dialog-wrapper .ui-icon-battery-3 { background-position: -96px -176px; }
+#contact-dialog-wrapper .ui-icon-circle-plus { background-position: 0 -192px; }
+#contact-dialog-wrapper .ui-icon-circle-minus { background-position: -16px -192px; }
+#contact-dialog-wrapper .ui-icon-circle-close { background-position: -32px -192px; }
+#contact-dialog-wrapper .ui-icon-circle-triangle-e { background-position: -48px -192px; }
+#contact-dialog-wrapper .ui-icon-circle-triangle-s { background-position: -64px -192px; }
+#contact-dialog-wrapper .ui-icon-circle-triangle-w { background-position: -80px -192px; }
+#contact-dialog-wrapper .ui-icon-circle-triangle-n { background-position: -96px -192px; }
+#contact-dialog-wrapper .ui-icon-circle-arrow-e { background-position: -112px -192px; }
+#contact-dialog-wrapper .ui-icon-circle-arrow-s { background-position: -128px -192px; }
+#contact-dialog-wrapper .ui-icon-circle-arrow-w { background-position: -144px -192px; }
+#contact-dialog-wrapper .ui-icon-circle-arrow-n { background-position: -160px -192px; }
+#contact-dialog-wrapper .ui-icon-circle-zoomin { background-position: -176px -192px; }
+#contact-dialog-wrapper .ui-icon-circle-zoomout { background-position: -192px -192px; }
+#contact-dialog-wrapper .ui-icon-circle-check { background-position: -208px -192px; }
+#contact-dialog-wrapper .ui-icon-circlesmall-plus { background-position: 0 -208px; }
+#contact-dialog-wrapper .ui-icon-circlesmall-minus { background-position: -16px -208px; }
+#contact-dialog-wrapper .ui-icon-circlesmall-close { background-position: -32px -208px; }
+#contact-dialog-wrapper .ui-icon-squaresmall-plus { background-position: -48px -208px; }
+#contact-dialog-wrapper .ui-icon-squaresmall-minus { background-position: -64px -208px; }
+#contact-dialog-wrapper .ui-icon-squaresmall-close { background-position: -80px -208px; }
+#contact-dialog-wrapper .ui-icon-grip-dotted-vertical { background-position: 0 -224px; }
+#contact-dialog-wrapper .ui-icon-grip-dotted-horizontal { background-position: -16px -224px; }
+#contact-dialog-wrapper .ui-icon-grip-solid-vertical { background-position: -32px -224px; }
+#contact-dialog-wrapper .ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
+#contact-dialog-wrapper .ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
+#contact-dialog-wrapper .ui-icon-grip-diagonal-se { background-position: -80px -224px; }
 
 
 /* Misc visuals
 ----------------------------------*/
 
 /* Corner radius */
-#contact-dialog .ui-corner-all,
-#contact-dialog .ui-corner-top,
-#contact-dialog .ui-corner-left,
-#contact-dialog .ui-corner-tl {
+#contact-dialog-wrapper .ui-corner-all,
+#contact-dialog-wrapper .ui-corner-top,
+#contact-dialog-wrapper .ui-corner-left,
+#contact-dialog-wrapper .ui-corner-tl {
 	border-top-left-radius: 3px;
 }
-#contact-dialog .ui-corner-all,
-#contact-dialog .ui-corner-top,
-#contact-dialog .ui-corner-right,
-#contact-dialog .ui-corner-tr {
+#contact-dialog-wrapper .ui-corner-all,
+#contact-dialog-wrapper .ui-corner-top,
+#contact-dialog-wrapper .ui-corner-right,
+#contact-dialog-wrapper .ui-corner-tr {
 	border-top-right-radius: 3px;
 }
-#contact-dialog .ui-corner-all,
-#contact-dialog .ui-corner-bottom,
-#contact-dialog .ui-corner-left,
-#contact-dialog .ui-corner-bl {
+#contact-dialog-wrapper .ui-corner-all,
+#contact-dialog-wrapper .ui-corner-bottom,
+#contact-dialog-wrapper .ui-corner-left,
+#contact-dialog-wrapper .ui-corner-bl {
 	border-bottom-left-radius: 3px;
 }
-#contact-dialog .ui-corner-all,
-#contact-dialog .ui-corner-bottom,
-#contact-dialog .ui-corner-right,
-#contact-dialog .ui-corner-br {
+#contact-dialog-wrapper .ui-corner-all,
+#contact-dialog-wrapper .ui-corner-bottom,
+#contact-dialog-wrapper .ui-corner-right,
+#contact-dialog-wrapper .ui-corner-br {
 	border-bottom-right-radius: 3px;
 }
 
 /* Overlays */
-#contact-dialog .ui-widget-overlay {
+#contact-dialog-wrapper .ui-widget-overlay {
 	background: #aaaaaa;
 	opacity: .3;
 	filter: Alpha(Opacity=30); /* support: IE8 */
 }
-#contact-dialog .ui-widget-shadow {
+#contact-dialog-wrapper .ui-widget-shadow {
 	margin: 0px 0 0 0px;
 	padding: 5px;
 	background: #666666;

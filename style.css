@@ -12206,7 +12206,9 @@ body:not(.no-transition) #wrapper,
 .ui-dialog {
     padding: 0px ;
     margin: 0px;
+    margin-top: 120px;
     border: none;
+    z-index : 9999;
 }
 
 div#contact-dialog.ui-dialog-content.ui-widget-content {
@@ -12221,6 +12223,9 @@ div#contact-dialog.ui-dialog-content.ui-widget-content modal-body {
     border: none;
 }    
 
+#contact-dialog-wrapper: {
+    display: none;
+}
 
 /* bootstrap.css overrides*/
 .modal-dialog {
