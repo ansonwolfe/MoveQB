@@ -12227,6 +12227,10 @@ div#contact-dialog.ui-dialog-content.ui-widget-content modal-body {
     display: none;
 }
 
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+
 /* bootstrap.css overrides*/
 .modal-dialog {
     margin: 1px;

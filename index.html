@@ -58,6 +58,7 @@
   $( "#contact-dialog" ).dialog({
       // dialogClass is replaced with "classes" in jquery 1.12
       dialogClass: 'no-title',
+      modal: true,
       autoOpen: false,
       show: {
         effect: "blind",
@@ -84,6 +85,33 @@
         $(".ui-dialog-titlebar").hide();
   }
   <!-- End contact dialog support.  -->
+
+  // Under Construction 
+  //  TODO: REMOVE THIS
+
+  $( function() {
+  $( "#oopsie" ).dialog({
+      // dialogClass is replaced with "classes" in jquery 1.12
+      dialogClass: 'no-title no-close',
+      modal: true,
+      closeOnEscape: false,
+      resizeable: false,
+      draggable: false,
+      
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      },
+      height: "auto",
+      width: "auto"
+    });
+  } );
+  // Under Construction
+
 
     </script>
 </head>
@@ -209,6 +237,9 @@
 
                     $('#slide-number-current').html(swiperSlider.activeIndex + 1);
                     $('#slide-number-total').html(swiperSlider.slides.length);
+
+                    // Under Construction TODO: REMOVE THIS
+                    $( "#oopsie" ).dialog( "open" );
                 });
             </script>
 
@@ -452,38 +483,30 @@
                 </div>
                  
                 <section class="social-wrapper zebra">
-                    <h4 class="center">Let's get social!</h4> 
-
-                    <ul>
-                       <li class="facebook-ico">
-                           <a href="https://www.facebook.com/GreeniPhi/">
-
-                                <i class="icon-facebook"></i>
-                            </a>
-                        </li>
-                        <li class="twitter-ico">
-                            <a href="https://twitter.com/GreeniPhi">
-
-                                <i class="icon-twitter"></i>
-
-                            </a>
-                        </li> 
-                       
-                        <li class="instagram-ico">
-                            <a href="https://www.instagram.com/GreeniPhi">
-
-                                <i class="icon-instagram"></i>
-
-                            </a>
-                        </li> 
-                        <li class="snap-ico">
-                            <a href="https://www.snapchat.com/GreeniPhi">
-
-                               <i class="fa fa-snapchat fa"></i>
-
-                            </a>
-                        </li>    
-                    </ul>
+                  <h4 class="center">Let's get social!</h4> 
+                  <ul>
+                    <li class="facebook-ico">
+                      <a href="https://www.facebook.com/GreeniPhi/">
+                        <i class="icon-facebook"></i>
+                      </a>
+                    </li>
+                    <li class="twitter-ico">
+                      <a href="https://twitter.com/GreeniPhi">
+                        <i class="icon-twitter"></i>
+                      </a>
+                    </li> 
+                    
+                    <li class="instagram-ico">
+                      <a href="https://www.instagram.com/GreeniPhi">
+                        <i class="icon-instagram"></i>
+                      </a>
+                    </li> 
+                    <li class="snap-ico">
+                      <a href="https://www.snapchat.com/GreeniPhi">
+                        <i class="fa fa-snapchat fa"></i>
+                      </a>
+                    </li>    
+                  </ul>
                 </section>
 
                 <section class="client-wrapper"> 
@@ -511,126 +534,68 @@
         <!-- Footer
         ============================================= -->
         <footer id="footer" class="footer-wrapper">
-
-                <!-- Footer Widgets
-                ============================================= -->
-             
-                <div id="copyrights">
-
-
-
-                <div class="container clearfix">
-
-
-
-                    <div class="col-md-6 pdl pdr ">
-
-
-                        <div class="row">
-                            <div class="col-md-6 pdl pdr">
-
-                                <img src="qblogo-01.png" alt="" class="footer-logo">
-                                <div class="widget clearfix">
-                                    <p>Our mission is to help non-profit organizations raise money by making the recycling and resale of students' and alumni’s gently used items as simple, efficient, and stress-free as possible. </p>
-                                    
-                                </div>
-
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="widget"> 
-                                  <h3><strong>Contact Us</strong></h3>                             
-                                    <abbr title="Phone Number"><strong>Phone:</strong></abbr> 
-                                        <a href="tel:+17575375700">(757) 537-5700</a><br>
-                                    <abbr title="Email Address"><strong>Email:</strong></abbr> <a href="mailto:info@GreeniPhi.com">info@GreeniPhi.com</a>
-                                </div>
-                                <div class="widget">
-                                     <h3><strong>Address</strong></h3>                                
-                                    <address>
-                                        933 First Colonial Road <br>
-                                       Suite 101<br>
-                                       Virginia Beach, VA  23454
-                                    </address>
-                                </div>
-                            </div>
-                        </div>    
-
+          <!-- Footer Widgets
+               ============================================= -->
+          
+          <div id="copyrights">
+            <div class="container clearfix">
+              <div class="col-md-6 pdl pdr ">
+                <div class="row">
+                  <div class="col-md-6 pdl pdr">
+                    <img src="qblogo-01.png" alt="" class="footer-logo">
+                    <div class="widget clearfix">
+                      <p>Our mission is to help non-profit organizations raise money by making the recycling and resale of students' and alumni’s gently used items as simple, efficient, and stress-free as possible. </p>
+                      
                     </div>
-
-
-
-
-
-                    <div class="col-md-6 pdr">
-
-                        <div class="copyrights-menu copyright-links fright clearfix">
-
-                          <!--   <a href="home.html">Home</a>/<a href="faq.html">Faq</a>/<a href="presskit.html">Press Kit</a>/<a href="#">Events</a>/<a href="contact.html">Contact</a>/<a href="#myModal1" data-lightbox="inline">Privacy</a>/<a href="sitemap.html">Sitemap</a> -->
-
-                        </div>
-
-                        <div class="fright clearfix social-list">
-
-                            <span>Let's get social! </span>
-
-                            <a href="https://www.facebook.com/GreeniPhi/" class="social-icon si-small si-borderless nobottommargin si-facebook">
-
-                                <i class="icon-facebook"></i>
-
-                                <i class="icon-facebook"></i>
-
-                            </a>
-
-
-
-                            <a href="https://twitter.com/GreeniPhi" class="social-icon si-small si-borderless nobottommargin si-twitter">
-
-                                <i class="icon-twitter"></i>
-
-                                <i class="icon-twitter"></i>
-
-                            </a>
-
-
-
-                            <a href="https://www.instagram.com/GreeniPhi" class="social-icon si-small si-borderless nobottommargin si-instagram">
-
-                                <i class="icon-instagram"></i>
-
-                                <i class="icon-instagram"></i>
-
-                            </a>
-
-
-                            <a href="https://www.snapchat.com/GreeniPhi" class="social-icon snapchat-ico si-small si-borderless nobottommargin">
-
-                               <i class="fa fa-snapchat fa-2x"></i>
-                               <i class="fa fa-snapchat fa-2x"></i>
-
-                            </a>
-
-
-
-                            
-
-                        </div>
-
-                        <div class="fright clearfix">
-
-                          Copyrights © 2014 All Rights Reserved by Greenphi, LLC.
-
-                        </div>
-
+                  </div>
+                  <div class="col-md-6">
+                    <div class="widget"> 
+                      <h3><strong>Contact Us</strong></h3>                             
+                      <abbr title="Phone Number"><strong>Phone:</strong></abbr> 
+                      <a href="tel:+17575375700">(757) 537-5700</a><br>
+                      <abbr title="Email Address"><strong>Email:</strong></abbr> <a href="mailto:info@GreeniPhi.com">info@GreeniPhi.com</a>
                     </div>
-
-
-
+                    <div class="widget">
+                      <h3><strong>Address</strong></h3>                                
+                      <address>
+                        933 First Colonial Road <br>
+                        Suite 101<br>
+                        Virginia Beach, VA  23454
+                      </address>
+                    </div>
+                  </div>
+                </div>    
+              </div>
+              <div class="col-md-6 pdr">
+                <div class="copyrights-menu copyright-links fright clearfix">
+                  <!--   <a href="home.html">Home</a>/<a href="faq.html">Faq</a>/<a href="presskit.html">Press Kit</a>/<a href="#">Events</a>/<a href="contact.html">Contact</a>/<a href="#myModal1" data-lightbox="inline">Privacy</a>/<a href="sitemap.html">Sitemap</a> -->
                 </div>
-
-
-
+                <div class="fright clearfix social-list">
+                  <span>Let's get social! </span>
+                  <a href="https://www.facebook.com/GreeniPhi/" class="social-icon si-small si-borderless nobottommargin si-facebook">
+                    <i class="icon-facebook"></i>
+                    <i class="icon-facebook"></i>
+                  </a>
+                  <a href="https://twitter.com/GreeniPhi" class="social-icon si-small si-borderless nobottommargin si-twitter">
+                    <i class="icon-twitter"></i>
+                    <i class="icon-twitter"></i>
+                  </a>
+                  <a href="https://www.instagram.com/GreeniPhi" class="social-icon si-small si-borderless nobottommargin si-instagram">
+                    <i class="icon-instagram"></i>
+                    <i class="icon-instagram"></i>
+                  </a>
+                  <a href="https://www.snapchat.com/GreeniPhi" class="social-icon snapchat-ico si-small si-borderless nobottommargin">
+                    <i class="fa fa-snapchat fa-2x"></i>
+                    <i class="fa fa-snapchat fa-2x"></i>
+                  </a>
+                  
+                </div>
+                <div class="fright clearfix">
+                  Copyrights © 2014 All Rights Reserved by Greenphi, LLC.
+                </div>
+              </div>
             </div>
-
+          </div>
         </footer><!-- #footer end -->
 
     </div><!-- #wrapper end -->
@@ -644,8 +609,8 @@
                        
 
     <!-- Modal -->
-    <div id="contact-dialog-wrapper" style="display:none">
-      <div id="contact-dialog" title="Contact">
+    <div class="dialog-wrapper" style="display:none">
+      <div id="contact-dialog" class="greeniphi-dialog" title="Contact">
         <div class="modal-dialog form-contact">
           <div class="modal-body">
             <div class="modal-content">
@@ -698,6 +663,29 @@
         </div>
       </div>
     </div>
+
+    <!-- Under Construction dialog.
+         TODO: REMOVE THIS -->
+    <div class="dialog-wrapper" style="display:none">
+      <div id="oopsie" class="greeniphi-dialog" >
+        <div class="modal-dialog">
+          <div class="modal-body">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span href="index.html" class="standard-logo"><img src="qblogo-01.png" alt="Canvas Logo"></span>
+              </div>
+              <div class="modal-body">
+                <h3>Please Pardon Our Appearance!</h3>
+                <p>You caught us in the middle of renovations! Greeniphi will be back and better in a few days. Please email <a href="mailto:info@GreeniPhi.com">info@greeniphi.com</a> or call 757-537-5700 for assistance and information in the meantime.</p>
+                <form class="nobottommargin contact-form" method="get" action="mail.php" id="contact-form">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Under Construction dialog.-->
 
     <!-- Footer Scripts
     ============================================= -->
