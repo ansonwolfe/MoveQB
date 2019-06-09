@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
-
-
 <head>
-
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="author" content="SemiColonWeb" />
+    <meta name="author" content="GreeniPhi" />
 
     <!-- Stylesheets
     ============================================= -->
-	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="jquery-ui-1.11.4-2.contact-dialog/jquery-ui.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,500,600,700,800|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <link rel="stylesheet" href="css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="css/dark.css" type="text/css" />    
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fa-snapchat.css">
     <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
-    <link rel="stylesheet" href="css/animate.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/animate.css" type="text/css" /> -->
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
     <link rel="stylesheet" href="css/responsive.css" type="text/css" />
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -26,133 +26,128 @@
 
     <!-- External JavaScripts
     ============================================= -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/plugins.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
-	<title>MoveQB - Your office move experts</title>
+    <!-- <script type="text/javascript" src="js/jquery.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="js/plugins.js"></script>
+
+<!--    <script type="text/javascript" src="js/functions.js"></script> -->
+
+    <!-- // <script type="text/javascript" src="js/jquery.smooth-scroll.js"></script> -->
+	<title>GreeniPhi - Greeks going green</title>
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-	
-    <script>
-        var placeSearch, autocomplete;
-        var componentForm = {
-          street_number: 'short_name',
-          route: 'long_name',
-          locality: 'long_name',
-          administrative_area_level_1: 'short_name',
-          country: 'long_name',
-          postal_code: 'short_name'
-        };
-        function initialize() {
-          autocomplete = new google.maps.places.Autocomplete(
-              (document.getElementById('autocomplete')),
-              { types: ['geocode'] });
-        }
-		
-    </script>
-    
-    <script>
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
+    <style type="text/css">
+      .fadeIn{
+        opacity: 1 !important;
       }
-    }
-  });
+    </style> 
 
-		   $("#template-contactform-submit").click(function(){
-				 if (!ValidateEmail($("#template-contactform-email").val())) { 
-					  alert("Invalid email address.");
-					  return false;
-				  }        
-				mixpanel.track("Completed Form");
-			});
-  
-});
+    <script>
+
+  <!-- Contact dialog support. TODO: Wrap this in a jekyll include file. -->
+  $( function() {
+  $( "#contact-dialog" ).dialog({
+      // dialogClass is replaced with "classes" in jquery 1.12
+      dialogClass: 'no-title',
+      modal: true,
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      },
+      height: "auto",
+      width: "auto"
+    });
+
+    $( "#contactClose" ).on( "click", function() {
+      $( "#contact-dialog" ).dialog( "close" );
+    });
+    $( "#template-contactform-submit" ).on( "click", function() {
+      $( "#contact-dialog" ).dialog( "close" );
+    });
+  } );
+
+  function openContactDialog() {
+        $( "#contact-dialog" ).dialog( "open" );
+        $(".ui-dialog-titlebar").hide();
+  }
+  <!-- End contact dialog support.  -->
+
+  // Under Construction 
+  //  TODO: REMOVE THIS
+
+  $( function() {
+  $( "#oopsie" ).dialog({
+      // dialogClass is replaced with "classes" in jquery 1.12
+      dialogClass: 'no-title no-close',
+      modal: true,
+      closeOnEscape: false,
+      resizeable: false,
+      draggable: false,
+      
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      },
+      height: "auto",
+      width: "auto"
+    });
+  } );
+  // Under Construction
 
 
-function ValidateEmail(email) {
-        var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-        return expr.test(email);
-    };
-   
-
-	</script>
-    <!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-    for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
-    mixpanel.init("3c9142a5dc2ae0011655c1d19c1272e4");</script><!-- end Mixpanel -->
-
-
+    </script>
 </head>
 
 <body class="stretched"  onload="initialize()">
 
     <div id="wrapper" class="clearfix">
 
-        <header id="header" class="full-header">
+        <header id="header" class="full-header static-sticky">
 
-            <div id="header-wrap">
+          <div id="header-wrap">
 
-                <div class="container clearfix">
+            <div class="container clearfix">
+              <!-- Logo
+                   ============================================= -->
+              <div id="logo">
+                <a href="index.html" class="standard-logo"><img src="qblogo-01.png" alt="Canvas Logo"></a>
+                <a href="index.html" class="retina-logo"><img src="qblogo-01.png" alt="Canvas Logo"></a>
+              </div><!-- #logo end -->
 
-<!--                    <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
--->
-                    <!-- Logo
-                    ============================================= -->
-                    <div id="logo">
-                        <a href="index.html" class="standard-logo"><img src="images/qblogo-01.png" alt="Canvas Logo"></a>
-                        <a href="index.html" class="retina-logo"><img src="images/qblogo-01.png" alt="Canvas Logo"></a>
-                    </div><!-- #logo end -->
+              <!-- Primary Navigation
+                   ============================================= -->
+              <nav class="main-menu">
+                <ul>  
+			      <li class=""><a href="#about" class="benefit"><div>About GreeniPhi</div></a></li>
+			      <li class=""><a href="#partners" class="benefit"><div>Partnerships</div></a></li>
+			      <li ><a href="#why" class="benefit"><div>Why GreeniPhi?</div></a></li>
+                  <li class="mega-menu "><a href="#how" class="how"><div>How It Works</div></a></li> 
 
-                    <!-- Primary Navigation
-                    
-                    ============================================= -->
-                    <nav id="primary-menu">
-                        <ul>                          
-                            <li><a href="#callout" class="benefit"><div>Benefits</div></a>
-                            </li>
-                            <li class="mega-menu"><a href="#how" class="how"><div>How It Works</div></a>
-                                <div class="mega-menu-content style-2 col-5 clearfix">
-                                </div>
-                            </li> 
-                            <li class="mega-menu"><a href="tel:+18883560070"><div>(888) 356 0070</div></a>
-                                <div class="mega-menu-content style-2 col-5 clearfix">
-                                </div>
-                            </li>     
-                            <li class="mega-menu current"><a href="#"><div data-toggle="modal" data-target="#myModal" class="button button-small button-rounded">Contact</div></a>
-                                <div class="mega-menu-content style-2 col-5 clearfix">
-                                </div>
-                            </li>                            
-                        </ul>
-
-                    </nav>
-                    <!-- #primary-menu end -->
-                </div>
+                  <li><a  href="#social-media">Let's get social!</a></li>
+                  <li class="current"><a href="javascript:openContactDialog();">Contact</a></li>
+                </ul>
+              </nav>
+              <!-- #primary-menu end -->
             </div>
+          </div>
 
         </header><!-- #header end -->
 
@@ -160,37 +155,14 @@ function ValidateEmail(email) {
 
             <div class="swiper-container swiper-parent">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide dark">
-                        <div class="container clearfix">
-                            <div class="slider-caption slider-caption-center">
-                                <h2 data-caption-animate="fadeInUp">Move Stress Free</h2>
-                                <p data-caption-animate="fadeInUp" data-caption-delay="200">Outsource all the logistics around your office move.</p>
-                            </div>
-                        </div>
-                        <div class="video-wrap">
-                            <video poster="images/videos/explore-poster.jpg" preload="auto" loop autoplay muted>
-                                <source src='images/videos/explore.mp4' type='video/mp4' />
-                                <source src='images/videos/explore.webm' type='video/webm' />
-                            </video>
-                            <div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
-                        </div>
-                    </div>
                     <div class="swiper-slide dark background-image">
                         <div class="container clearfix">
                             <div class="slider-caption slider-caption-center">
-                                <h2 data-caption-animate="fadeInUp">Easy office relocation</h2>
-                                <p data-caption-animate="fadeInUp" data-caption-delay="200">MoveQB offers a data-driven solution to ensure your successful office moves</p>
+                                <h2 data-caption-animate="fadeInUp">Waste less. Raise more</h2>
+                                <p data-caption-animate="fadeInUp" data-caption-delay="200">GreeniPhi helps the Greek and University Community turn <strong>GREEN</strong> initiatives into <strong>GOLD</strong></p>
                             </div>
                         </div>
                     </div>
-<!--                     <div class="swiper-slide" style="background-image: url('images/slider/swiper/3.jpg'); background-position: center top;">
-                        <div class="container clearfix">
-                            <div class="slider-caption">
-                                <h2 data-caption-animate="fadeInUp">Easy Office Relocation</h2>
-                                <p data-caption-animate="fadeInUp" data-caption-delay="200">MoveQB offers a data-driven solution to ensure successful office moves.</p>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
                 <div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
                 <div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
@@ -265,6 +237,9 @@ function ValidateEmail(email) {
 
                     $('#slide-number-current').html(swiperSlider.activeIndex + 1);
                     $('#slide-number-total').html(swiperSlider.slides.length);
+
+                    // Under Construction TODO: REMOVE THIS
+                    $( "#oopsie" ).dialog( "open" );
                 });
             </script>
 
@@ -276,18 +251,110 @@ function ValidateEmail(email) {
 
             <div class="content-wrap">
 
-                <div class="promo promo-light promo-full bottommargin-lg header-stick notopborder">
+                <div class="promo promo-light promo-full bottommargin-lg header-stick notopborder zebra">
                     <div class="container clearfix" id="callout">
-                        <h3>Setting up an office is thankless. Get an expert working for you.</h3>
-                        <!-- <span>Get a 15-minute FREE assessment. </span> -->
-                        <a href="#" class="button button-xlarge button-rounded" data-toggle="modal" data-target="#myModal">Get Started</a>
+                        <h3>GreeniPhi helps organizations raise money by making the recycling and resale of students' and alumni’s gently used items as simple, efficient and stress-free as possible.</h3>
+                    </div>
+                </div>
+		<div class="promo promo-full header-stick notopborder zebra" style="padding-bottom: 0px;">
+                    <div class="container clearfix" id="callout">
+                        <div class="col-md-8">
+                        <h3>Ask us about our pop-up consignment stores, flower fundraisers and our "Greeks Going Green" speaking and consulting services! </h3>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="javascript:openContactDialog();" class="button button-xlarge button-rounded">Get Started</a>
+                        </div>
+                        
+                    </div>
+		    <div id="about"></div>
+                </div>
+		<div class="section zebra">
+                    <div class="container clearfix">
+
+                        <div class="heading-block center">
+                            <h3>What does GreeniPhi do?</h3>
+                        </div>
+						<p>
+							GreeniPhi delivers logistics, marketing and resale support tailored to your campus or Greek organization to make our recycling for reuse program a rewarding and valuable experience for you.</p>
+                        <p><strong>We work </strong></p>
+                        <ol style="margin-left: 20px;">
+                            <li>to divert students’ and alumni’s reusable items from the landfill </li>
+                            <li>to prevent additional resource consumption by selling collected items to students and community members in order </li>
+                            <li>to raise funds for GreeniPhi Preferred Charities and Organizations.  </li>
+                        </ol>   
+                                
+                     
+                        <div id="partners"></div>
                     </div>
                 </div>
 
-                <div class="container clearfix ">
+                 <div id="vendors" class="section zebra">
+                   <div class="container clearfix">
 
-                        <div class="heading-block center" id="benefits">
-                            <h3>Why MoveQB?</h3>
+                     <div class="heading-block center">
+                       <h3>Vendors</h3>
+                     </div>
+
+                     <div class="col_one_third nobottommargin">
+                       <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
+                         <h3 class="category-header"><a href="entertainment.html">Entertainment</a></h3>
+                         <h3 class="category-header">Facility & Maintenance Supplies</h3>
+                         <h3 class="category-header">Food Distributors</h3>
+                         <h3 class="category-header">MRO Products, Equipment, &amp; Tools</h3>
+                         <h3 class="category-header">Photographic Experiences</h3>
+                       </div>
+                     </div>
+
+                     <div class="col_one_third nobottommargin">
+                       <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
+                         <h3 class="category-header">office supplies</h3>
+                         <h3 class="category-header">Electronic Office Equipment</h3>
+                         <h3 class="category-header">Service Management Systems</h3>
+                         <h3 class="category-header">Business Furniture</h3>
+                       </div>
+                     </div>
+
+                     <div class="col_one_third nobottommargin col_last">
+                       <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
+                         <h3 class="category-header">Corporate Travel</h3>
+                         <h3 class="category-header">Insurance</h3>
+                         <h3 class="category-header">Document Destruction</h3>
+                         <h3 class="category-header">janitorial and cleaning supplies</h3>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="become-a-vendor">
+                     <a href="javascript:openContactDialog();"><h3 class="become-a-vendor">Become a vendor now — click here!</h3></a>
+                   </div>
+                 </div>
+
+
+                <div class="how-it-works topmargin-lg bottommargin-lg zebra">
+                    <div class="container clearfix">
+                        <div class="heading-block center">
+                            <h2>Our Partnerships: GreeniPhi Preferred Charities and Organizations  </h2>
+                        </div>
+                        <p>GreeniPhi preferred charities and organizations are a distinct group of Greek, charitable and educational organizations that have joined forces with GreeniPhi to process apparel, school supplies and home goods donations on behalf of their donors and members. </p>
+                        <p>GreeniPhi delivers sustainability reports demonstrating the social and economic benefits of sustainability at every step of the way. </p>
+    
+                    </div>
+
+                </div>
+                <div class="promo promo-light promo-full bottommargin-lg notopborder zebra">
+                  <div class="container clearfix">
+                    <h3>Take the first steps now. It’s Free!</h3>
+                    <!-- <span>Get a 15-minute FREE assessment. </span> -->
+                    <a href="javascript:openContactDialog();">Let’s get started!</a>
+                  </div>
+                  <div id="why"></div>
+                </div>
+                <div class="container clearfix zebra">
+
+                        <div class="heading-block center">
+                            <h3>Why GreeniPhi?</h3>
+                            <p>
+                              GreeniPhi has created an innovative recycling and fundraising solution that offers college students, Greek organizations and universities a sustainable solution for cleaning out dorms and apartments that increase college affordability.
+                            </p>
                         </div>
 
                     <div class="col_one_third nobottommargin">
@@ -295,7 +362,7 @@ function ValidateEmail(email) {
                             <div class="fbox-icon">
                                 <i class="i-alt noborder icon-dollar"></i>
                             </div>
-                            <h3>Simplified Decisions<span class="subtitle">Experts who focus your attention on key decisions.</span></h3>
+                            <h3>RAISE MORE<span class="subtitle">For philanthropic and scholarly initiatives and awareness about the core values of the Greek Community </span></h3>
                         </div>
                     </div>
 
@@ -304,7 +371,7 @@ function ValidateEmail(email) {
                             <div class="fbox-icon">
                                 <i class="i-alt noborder icon-graph"></i>
                             </div>
-                            <h3>More Effective<span class="subtitle">Access competitive prices from our trusted vendor network.</span></h3>
+                            <h3>More Convenient <span class="subtitle">Avoids the trouble of moving and selling unwanted items for students and housing organizations</span></h3>
                         </div>
                     </div>
 
@@ -313,88 +380,75 @@ function ValidateEmail(email) {
                             <div class="fbox-icon">
                                 <i class="i-alt noborder icon-megaphone"></i>
                             </div>
-                            <h3>Better Outcomes<span class="subtitle">You move every couple years. We do this every day.</span></h3>
+                            <h3>BETTER OUTCOMES<span class="subtitle">Harnesses social networks and big-data to make college life more affordable.</span></h3>
                         </div>
                     </div>
                     
                     <div class="clear"></div>    
-                                
+                     <div id="how"></div>           
                 </div>
-                <div class="section topmargin-lg " id="customers">
-                    <div class="container clearfix">
-
-                        <div class="heading-block center">
-                            <h3>Customer Testimonials</h3>
-                        </div>
-
-                        <ul class="testimonials-grid grid-3 clearfix nobottommargin">
-                            <li>
-                                <div class="testimonial">
-                                    <div class="testi-content">
-                                        <p>We know setting up a new office in under two weeks is an extremely tight timeline - but MoveQB seamlessly orchestrated everything.  They'll be our first call when we outgrow the current space!</p>
-                                        <div class="testi-meta">
-                                           Ben Rubin
-                                            <span>CEO, Meerkat App</span>
-                                        </div>
-                                        <br>
-
-                                   <div class="testi-image divcenter">
-                                        <img src="http://a3.mzstatic.com/us/r30/Purple7/v4/bd/89/78/bd897870-1eb3-569a-4d90-5efaed71265e/icon175x175.png" alt="Customer Testimonials">
-                                    </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="testimonial">
-
-                                    <div class="testi-content">
-
-                                        <p>In order to secure our SoMa office space, we had to sign a lease and take immediate possession. With no lead time, MoveQB snapped into action and got us up operational in a matter of days! </p>
-                                        <div class="testi-meta">
-                                            Nandita Subramanian
-                                            <span>VP of Operations, Cuff.io</span>
-                                        </div>
-                                        <br>
-
-                                    <div class="testi-image divcenter">
-                                        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSCkFJ9HRdg46vx0Cwuc_CTUlulvrW-AabphxgPT4v5-xVXqO-k6w" alt="Customer Testimonials">
-                                    </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="testimonial" id="lastTestimonial">
-                                    <div class="testi-content">
-                                        <p>MoveQB brings an unparralleled level of support to our emerging clients. We can rest assured that MoveQB will shepherd our clients from a signed lease to 'open for business'.</p>
-                                        <div class="testi-meta">
-                                            Laurence Morgan
-                                            <span>Senior VP Office Brokerage, CBRE</span>
-                                        </div>
-                                        <br>
-                                    </div>
-                                    <div class="testi-image divcenter">
-                                        <img src="http://upload.wikimedia.org/wikipedia/commons/d/dc/CBRE_logo.png" alt="Customer Testimonials" class="center">
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div id="how"></div>
-                    </div>
-                </div>
-
-                <div class="how-it-works topmargin-lg bottommargin-lg">
+                
+                <div class="section how-it-works topmargin-lg zebra" style="margin-bottom: 0px !important">
                     <div class="container clearfix">
                         <div class="heading-block center">
                             <h2>How it Works</h2>
                         </div>
+                        
+                        <div id="processTabs">
+                        <ul class="process-steps bottommargin clearfix">
+                            <li>
+                                <a href="#ptab1" class="i-circled i-bordered i-alt divcenter">1</a>
+                                <h5>Get us up-to-speed</h5>
+                            </li>
+                            <li>
+                                <a href="#ptab2" class="i-circled i-bordered i-alt divcenter">2</a>
+                                <h5>We Customize</h5>
+                            </li>
+                            <li>
+                                <a href="#ptab3" class="i-circled i-bordered i-alt divcenter">3</a>
+                                <h5>You Decide</h5>
+                            </li>
+                            <li>
+                                <a href="#ptab4" class="i-circled i-bordered i-alt divcenter">4</a>
+                                <h5>We Make it Happen</h5>
+                            </li>
+                        </ul>
+                        <div>
+                            <div id="ptab1">
 
-                        <div class="row">
+                               <p>Tell us about your organization and any current sustainability and fundraising initiatives.</p>
+
+                            </div>
+                            <div id="ptab2">
+                                <p>We synthesize a plan and create a customized set of options.<p>
+                            </div>
+                            <div id="ptab3">
+                                <p>You select an option that complements and enhances your goals and needs.</p>
+                            </div>
+                            <div id="ptab4">
+                                <p>
+                                    We bring our experience + our trusted network together to create Green Move out and Pop-Up resale events that help you, your community and our environment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                      jQuery(function() {
+                        jQuery( "#processTabs" ).tabs({ show: { effect: "fade", duration: 400 } });
+                        jQuery( ".tab-linker" ).click(function() {
+                            jQuery( "#processTabs" ).tabs("option", "active", $(this).attr('rel') - 1);
+                            return false;
+                        });
+                      });
+                    </script>
+                       <!--  <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="bottommargin-sm">
                                    <div class="block-number">1</div>
                                    <div class="block-description">
                                         <div class="block-description-title">Get us up-to-speed</div>
-                                        Give us the lay of the land in less than 15 minutes. 
+                                        Tell us about your organization and any current sustainability and fundraising initiatives.
                                    </div>
                                 </div>
                                 <div class="bottommargin-sm">
@@ -410,26 +464,67 @@ function ValidateEmail(email) {
                                    <div class="block-number">3</div>
                                    <div class="block-description">
                                         <div class="block-description-title">You Decide</div>
-                                        We provide good, better, and best options. You make the right decision.
+                                        You select an option that complements and enhances your goals and needs. 
                                    </div>
                                 </div>
                                 <div class="bottommargin-sm">
                                    <div class="block-number">4</div>
                                    <div class="block-description">
                                         <div class="block-description-title">We Make it Happen </div>
-                                        We bring our experience + trusted vendor network together to get it done.
+                                       We bring our experience + our trusted network together to create Green Move out and Pop-Up resale events that help you, your community and our environment.
                                    </div>
                                 </div>  
 
                             </div>
-                        </div>       
+                        </div>    -->    
                     </div>
+
+                    <div id="social-media"></div>
                 </div>
-                <div class="button button-full center footer-stick">
+                 
+                <section class="social-wrapper zebra">
+                  <h4 class="center">Let's get social!</h4> 
+                  <ul>
+                    <li class="facebook-ico">
+                      <a href="https://www.facebook.com/GreeniPhi/">
+                        <i class="icon-facebook"></i>
+                      </a>
+                    </li>
+                    <li class="twitter-ico">
+                      <a href="https://twitter.com/GreeniPhi">
+                        <i class="icon-twitter"></i>
+                      </a>
+                    </li> 
+                    
+                    <li class="instagram-ico">
+                      <a href="https://www.instagram.com/GreeniPhi">
+                        <i class="icon-instagram"></i>
+                      </a>
+                    </li> 
+                    <li class="snap-ico">
+                      <a href="https://www.snapchat.com/GreeniPhi">
+                        <i class="fa fa-snapchat fa"></i>
+                      </a>
+                    </li>    
+                  </ul>
+                </section>
+
+                <section class="client-wrapper"> 
+                   <div class="container">  
+                    <h4 class="center">Meet our Partners</h4>
+                    <ul class="partner-list bottommargin clearfix">
+                       <!--  <li><a href="http://www.afa1976.org" target="_blank"><img src="images/clients/afa-logo.png" alt="Clients"></a></li> -->
+                        <li><a href="http://www.aflv.org/" target="_blank"><img src="images/clients/aflv-logo.png" alt="Clients"></a></li>
+                       <!--  <li><a href="http://www.ngla.org" target="_blank"><img src="images/clients/ngla-logo.png" alt="Clients"></a></li>
+                        <li><a href="http://www.rethinkgreek.com" target="_blank"><img src="images/clients/re-logo.png" alt="Clients"></a></li> -->
+                    </ul> 
+                    </div>
+                </section>
+                <div class="button button-full btn-grey center footer-stick">
                     <div class="container clearfix">
-                        Take the first step now. Satisfaction Guaranteed.                         
+                       Take the first steps now. It’s Free!                      
                         <!-- Button trigger modal -->
-                        <Strong data-toggle="modal" data-target="#myModal">Schedule a Call</strong>
+                        <a href="javascript:openContactDialog();" style="color:white"><Strong>Let’s Get started </strong></a>
                     </div>
                 </div>
             </div>
@@ -438,50 +533,72 @@ function ValidateEmail(email) {
 
         <!-- Footer
         ============================================= -->
-        <footer id="footer" class="dark">
-
-            <div class="container">
-
-                <!-- Footer Widgets
-                ============================================= -->
-                <div class="footer-widgets-wrap clearfix">
-
-                    <div class="col_full">
-
-                        <div class="col_one_third">
-
-                            <div class="widget clearfix">
-                                <p>Our mission is to make seting up your new office <br>
-                                <strong>Simple</strong>, <strong>Efficient</strong> &amp; <strong>Stress Free.</strong></p>
-                            </div>
-
-                        </div>
-                        <div class="col_one_third">
-                            <div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
-                                <strong>Contact Us</strong><br>                                
-                                <abbr title="Phone Number"><strong>Phone:</strong></abbr> 
-                                    <a href="tel:+18883560070">(888) 356 0070</a><br>
-                                <abbr title="Email Address"><strong>Email:</strong></abbr> <a href="mailto:info@moveQB.com?Subject=Hello%20MoveQB">info@moveQB.com</a>
-                            </div>
-                        </div>
-                        <div class="col_one_third col_last">
-                                <strong>Address</strong><br>                                
-                                <address>
-                                    433 Bryant Street<br>
-                                    San Francisco, CA 94107<br>
-                                </address>
-
-                        </div>
+        <footer id="footer" class="footer-wrapper">
+          <!-- Footer Widgets
+               ============================================= -->
+          
+          <div id="copyrights">
+            <div class="container clearfix">
+              <div class="col-md-6 pdl pdr ">
+                <div class="row">
+                  <div class="col-md-6 pdl pdr">
+                    <img src="qblogo-01.png" alt="" class="footer-logo">
+                    <div class="widget clearfix">
+                      <p>Our mission is to help non-profit organizations raise money by making the recycling and resale of students' and alumni’s gently used items as simple, efficient, and stress-free as possible. </p>
+                      
                     </div>
-
-                </div><!-- .footer-widgets-wrap end -->
-
+                  </div>
+                  <div class="col-md-6">
+                    <div class="widget"> 
+                      <h3><strong>Contact Us</strong></h3>                             
+                      <abbr title="Phone Number"><strong>Phone:</strong></abbr> 
+                      <a href="tel:+17575375700">(757) 537-5700</a><br>
+                      <abbr title="Email Address"><strong>Email:</strong></abbr> <a href="mailto:info@GreeniPhi.com">info@GreeniPhi.com</a>
+                    </div>
+                    <div class="widget">
+                      <h3><strong>Address</strong></h3>                                
+                      <address>
+                        933 First Colonial Road <br>
+                        Suite 101<br>
+                        Virginia Beach, VA  23454
+                      </address>
+                    </div>
+                  </div>
+                </div>    
+              </div>
+              <div class="col-md-6 pdr">
+                <div class="copyrights-menu copyright-links fright clearfix">
+                  <!--   <a href="home.html">Home</a>/<a href="faq.html">Faq</a>/<a href="presskit.html">Press Kit</a>/<a href="#">Events</a>/<a href="contact.html">Contact</a>/<a href="#myModal1" data-lightbox="inline">Privacy</a>/<a href="sitemap.html">Sitemap</a> -->
+                </div>
+                <div class="fright clearfix social-list">
+                  <span>Let's get social! </span>
+                  <a href="https://www.facebook.com/GreeniPhi/" class="social-icon si-small si-borderless nobottommargin si-facebook">
+                    <i class="icon-facebook"></i>
+                    <i class="icon-facebook"></i>
+                  </a>
+                  <a href="https://twitter.com/GreeniPhi" class="social-icon si-small si-borderless nobottommargin si-twitter">
+                    <i class="icon-twitter"></i>
+                    <i class="icon-twitter"></i>
+                  </a>
+                  <a href="https://www.instagram.com/GreeniPhi" class="social-icon si-small si-borderless nobottommargin si-instagram">
+                    <i class="icon-instagram"></i>
+                    <i class="icon-instagram"></i>
+                  </a>
+                  <a href="https://www.snapchat.com/GreeniPhi" class="social-icon snapchat-ico si-small si-borderless nobottommargin">
+                    <i class="fa fa-snapchat fa-2x"></i>
+                    <i class="fa fa-snapchat fa-2x"></i>
+                  </a>
+                  
+                </div>
+                <div class="fright clearfix">
+                  Copyrights © 2014 All Rights Reserved by Greenphi, LLC.
+                </div>
+              </div>
             </div>
-
+          </div>
         </footer><!-- #footer end -->
 
     </div><!-- #wrapper end -->
-
     <!-- Go To Top
     ============================================= -->
     <div id="gotoTop" class="icon-angle-up"></div>
@@ -492,76 +609,87 @@ function ValidateEmail(email) {
                        
 
     <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="dialog-wrapper" style="display:none">
+      <div id="contact-dialog" class="greeniphi-dialog" title="Contact">
         <div class="modal-dialog form-contact">
-            <div class="modal-body">
-                <div class="modal-content">
-                    <div class="modal-header">
-                     <a href="index.html" class="standard-logo"><img src="images/qblogo-01.png" alt="Canvas Logo"></a>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-<!--                        <h4 class="modal-title" id="myModalLabel">&nbsp;  </h4>
--->                    </div>
-                    <div class="modal-body">
-                        <h3>15 minutes will bring you peace of mind.</h3>
+          <div class="modal-body">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span href="index.html" class="standard-logo"><img src="qblogo-01.png" alt="Canvas Logo"></span>
+                <button type="button" id="contactClose" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">
+                <h3>Request More Information</h3>
+                <p>We'd love to get to know you and help your organization grow through its support of university sustainability initiatives. Request a meeting by clicking below.</p>
 
-                        <form id="contactForm" name="template-contactform" action="javascript:confirmSubmit();" onsubmit="confirmSubmit()" method="post" class="nobottommargin">
-<!--                             <div class="form-process"></div> -->
-                            <div class="col-md-12 nomargin nopadding contact-form-inner">
-                                <div class="input-field">
+                <form class="nobottommargin contact-form" method="get" action="mail.php" id="contact-form">
+                  <div class="col-md-12 nomargin nopadding contact-form-inner">
+                    <div class="input-field">
 
-                                    <input type="text" id="template-contactform-name" name="name" value="" class="sm-form-control required" placeholder="Full Name" required />
-                                </div>
-                                
-                                <div class="input-field">
-                                    <input type="email" id="template-contactform-email" name="email" value="" class="required email sm-form-control" placeholder="Work Email Address" required />
-                                </div>
-
-                                <div class="input-field">
-                                    <input tabindex="3" type="text" id="template-contactform-phone" name="phone" placeholder="Company Phone" class="required sm-form-control" required/>
-                                    
-                                  
-                                    
-                                </div>
-
-                                <div id="hideFields">
-                                    <div class="input-field">
-                                        <input type="text" id="autocomplete" name="address" placeholder="New Location (Address, Neighborhood, or City)" class="sm-form-control" required />
-                                    </div>
-                                    <div class="input-field"> 
-                                        <input type="number" min="0" id="template-contactform-move" name="employees" placeholder="Number of employees " class="sm-form-control" />
-
-                                        <input type="hidden" name="_subject" value="MoveQB: New Assessment Request" />
-
-                                    </div>
-                                </div>
-                                
-                            </div>
-<div class="">
-                                    <input class="button button-3d nomargin" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit" data-dismiss="modal" />
-                                </div>
-                            <div class=" col_full">
-                            </div>
-                        </form>
-                        <script  src="http://src.fireform.org/fireform.min.js"></script>
-                          <script >
-                            options={
-                              emailNotification:"noah@moveqb.com",
-                                emailConfirmationName:"email", 
-                                emailConfirmationFrom:"noah@moveqb.com", 
-                                emailConfirmationSubject:"Thanks for contacting MoveQB!",
-                                emailConfirmationBodyHTML:"<p>Hi there - We have received your request. Please expect to hear form us within the next 48 hours.</p> - MoveQB",
-                                emailConfirmationBodyText:"Thanks for reaching out. We will contact you within the next 48 hours."           
-                            }
-                            new Fireform('#contactForm', 'http://fireform.org/list/264/moveQB', options);
-                          </script> 
-
+                      <input type="text" id="template-contactform-name" name="name" value="" class="sm-form-control required" placeholder="Full Name" required />
                     </div>
-                </div>
+                    <div class="input-field">
+                      <input type="text" id="autocomplete" name="address" placeholder="Organization" class="sm-form-control" required />
+                    </div>
+                    <div class="input-field">
+                      <input type="email" id="template-contactform-email" name="email" value="" class="required email sm-form-control" placeholder="Work Email Address" required />
+                    </div>
+
+                    <div class="input-field">
+                      <input tabindex="3" type="text" id="template-contactform-phone" name="phone" placeholder="Organization Phone" class="required sm-form-control" required/>  
+                    </div>
+                    <div class="input-field">
+                      <select name="persona" id="persona" class="valid required sm-form-control" required >
+                        <option value="__PLACEHOLDER__">What best describes you?</option>
+                        <option value="campus">Council Rep. or Student Affairs Professional</option> 
+                        <option value="hq">HQ Staff</option>
+                        <option value="chapter">Recruitment leader of a growing chapter</option>
+                        <option value="alum">Involved Alumni or Advisor</option>
+                      </select>
+                    </div>
+                    
+                    <div class="input-field">
+                      <input tabindex="4" type="text" id="template-contactform-message" name="message" placeholder="Message" class="sm-form-control" />  
+                    </div>
+
+                  </div>
+                  <div class="">
+                    <input class="button button-3d nomargin submit" type="button" id="template-contactform-submit" name="template-contactform-submit" value="submit" />
+                  </div>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <!-- Under Construction dialog.
+         TODO: REMOVE THIS -->
+    <div class="dialog-wrapper" style="display:none">
+      <div id="oopsie" class="greeniphi-dialog" >
+        <div class="modal-dialog">
+          <div class="modal-body">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span href="index.html" class="standard-logo"><img src="qblogo-01.png" alt="Canvas Logo"></span>
+              </div>
+              <div class="modal-body">
+                <h3>Please Pardon Our Appearance!</h3>
+                <p>You caught us in the middle of renovations! Greeniphi will be back and better in a few days. Please email <a href="mailto:info@GreeniPhi.com">info@greeniphi.com</a> or call 757-537-5700 for assistance and information in the meantime.</p>
+                <form class="nobottommargin contact-form" method="get" action="mail.php" id="contact-form">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Under Construction dialog.-->
+
+    <!-- Footer Scripts
+    ============================================= -->
+
         <script src="js/jquery.maskedinput.js" ></script>
         <script>
         jQuery(function($) {
@@ -570,20 +698,40 @@ function ValidateEmail(email) {
               
            });
          </script>
+          <script>
+        var placeSearch, autocomplete;
+        var componentForm = {
+          street_number: 'short_name',
+          route: 'long_name',
+          locality: 'long_name',
+          administrative_area_level_1: 'short_name',
+          country: 'long_name',
+          postal_code: 'short_name'
+        };
+        function initialize() {
+          autocomplete = new google.maps.places.Autocomplete(
+              (document.getElementById('autocomplete')),
+              { types: ['geocode'] });
+        }
+        
+    </script>
+    
 
-<style type="text/css">
-    .pac-container {
-        z-index: 1040 !important;
-    }
-</style>
+    <!-- start Mixpanel -->
+    <script type="text/javascript">
+       (function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+    for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+    mixpanel.init("3c9142a5dc2ae0011655c1d19c1272e4");
+</script><!-- end Mixpanel -->
+
 
 <!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W4MMKZ"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4MMKZ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-W4MMKZ');</script>
 <!-- End Google Tag Manager -->
 
@@ -594,7 +742,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     });
 </script>
 
-
+    <script type="text/javascript" src="js/custom.js"></script>
 
 </body>
 

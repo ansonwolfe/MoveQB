@@ -10,15 +10,16 @@ if( isset( $_POST['template-contactform-submit'] ) AND $_POST['template-contactf
         $name = $_POST['template-contactform-name'];
         $email = $_POST['template-contactform-email'];
         $phone = $_POST['template-contactform-phone'];
-        $move = $_POST['template-contactform-move'];
-        $city = $_POST['template-contactform-city'];
+        $address = $_POST['template-contactform-address'];
+        // $city = $_POST['template-contactform-city'];
+        $selectOption = $_POST['persona'];
         $message = $_POST['template-contactform-message'];
 
         $subject = isset($subject) ? $subject : 'New Message From Contact Form';
 
         $botcheck = $_POST['template-contactform-botcheck'];
 
-        $toemail = 'bonny.lai@gmail.com'; // Your Email Address
+        $toemail = 'abhishekbhandari616@gmail.com'; // Your Email Address
         $toname = 'Bon'; // Your Name
 
         if( $botcheck == '' ) {
@@ -31,8 +32,8 @@ if( isset( $_POST['template-contactform-submit'] ) AND $_POST['template-contactf
             $name = isset($name) ? "Name: $name<br><br>" : '';
             $email = isset($email) ? "Email: $email<br><br>" : '';
             $phone = isset($phone) ? "Phone: $phone<br><br>" : '';
-            $move = isset($move) ? "Move Date: $move<br><br>" : '';
-            $city = isset($city) ? "Moving to: $city<br><br>" : '';
+            $address = isset($address) ? "Address: $move<br><br>" : '';
+            $selectOption = isset($selectOption) ? "What best describes you: $selectOption<br><br>" : '';
             $message = isset($message) ? "Message: $message<br><br>" : '';
 
             $referrer = $_SERVER['HTTP_REFERER'] ? '<br><br><br>This Form was submitted from: ' . $_SERVER['HTTP_REFERER'] : '';

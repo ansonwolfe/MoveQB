@@ -12,12 +12,17 @@
 	display: inline-block;
 	/*margin-right: 5%;*/
 	width: 85%;
+	font-size: 16px;
 }
 .block-description-title {
-	font-size: 26px;
+	font-size: 24px;
 	line-height: 95%;
-	font-weight: 100;
+	font-weight: 700;
+	margin-bottom: 15px;
 
+}
+.bottommargin-sm {
+    margin-bottom: 60px !important;
 }
 .background-image {
 	background: 
@@ -25,7 +30,7 @@
 			rgba(0,0,0, 0.65),
 			rgba(0,0,0, 0.65)
 		),
-	url('../images/slider/swiper/office.jpg');
+	url('../ecycling-center.jpg');
     }
 .darken-image {
 	background: 
@@ -33,4 +38,124 @@
 			rgba(0,0,0, 0.65),
 			rgba(0,0,0, 0.65)
 		)
+}
+
+.snapchat-ico i{
+	    font-size: 16px;
+    line-height: 30px;
+}
+
+.snapchat-ico:hover{ background-color: #FFCC00 !important; }
+.partner-list{
+	text-align: center;
+   list-style: none;
+}
+.partner-list li{
+	display: inline-block;
+}
+.social-wrapper{
+   padding: 60px;
+}
+.social-wrapper h4{
+	font-size: 24px;
+}
+.social-wrapper ul{
+	text-align: center;
+	list-style: none;
+}
+.social-wrapper ul li{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+.social-wrapper ul li a{
+	    line-height: 40px;
+    display: block;
+    font-size: 18px;
+    color: white;
+}
+
+.btn-grey{ 
+   background-color: #696767;}
+.btn-grey a{
+	text-decoration: none;
+}   
+.facebook-ico { background-color: #3B5998; }
+.google-ico { background-color: #DD4B39; }
+.twitter-ico { background-color: #00ACEE; }
+.instagram-ico { background-color: #3F729B; }
+.snap-ico{ background-color: #FFCC00 !important; }
+.snap-ico a{
+    font-size: 20px !important;
+    width: 40px;
+    height: 40px;
+}
+.snap-ico a i{
+	    line-height: 38px;
+}
+
+.main-menu {
+   list-style: none;
+   float: right;
+       height: 120px;
+    -webkit-transition: height .4s ease, opacity .3s ease;
+    -o-transition: height .4s ease, opacity .3s ease;
+    transition: height .4s ease, opacity .3s ease;
+}
+.main-menu > ul {
+    list-style: none;
+    margin: 0;
+    float: left;
+        height: 120px;
+    -webkit-transition: height .4s ease, opacity .3s ease;
+    -o-transition: height .4s ease, opacity .3s ease;
+    transition: height .4s ease, opacity .3s ease;
+    opacity: 1;
+}
+.main-menu > ul > li {
+    position: relative;
+    float: left;
+    margin-left: 2px;
+}
+.main-menu > ul > li:first-child {
+    margin-left: 0;
+}
+
+/* Main menu bar links, including dropdowns */
+.main-menu > ul > li a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: #444;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    -webkit-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
+    -o-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
+    transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
+}
+
+/* links in main menu bar only */
+.main-menu > ul > li > a {
+    padding: 30px 15px;
+}
+
+.main-menu > ul li.dropdown ul li a {
+    display: inline;
+    height: 30px;
+    line-height: 30px;
+}
+
+.main-menu dropdown-menu {
+    top: 75%;
+}
+
+
+.promo a.button{
+	margin-top: 0px !important;
+}
+#logo img{
+	padding: 10px !important;
 }
