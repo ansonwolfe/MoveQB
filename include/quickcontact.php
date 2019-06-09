@@ -15,8 +15,8 @@ if( isset( $_POST['quick-contact-form-submit'] ) AND $_POST['quick-contact-form-
 
         $botcheck = $_POST['quick-contact-form-botcheck'];
 
-        $toemail = 'bonny.lai@gmai@gmail.com'; // Your Email Address
-        $toname = 'Bon'; // Your Name
+        $toemail = 'abhishekbhandari616@gmail.com'; // Your Email Address
+        $toname = 'Abhishek'; // Your Name
 
         if( $botcheck == '' ) {
 

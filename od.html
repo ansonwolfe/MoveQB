@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="GreeniPhi" />
+
+    <!-- Stylesheets
+    ============================================= -->
+    <link rel="stylesheet" href="jquery-ui-1.11.4-2.contact-dialog/jquery-ui.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,500,600,700,800|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="css/dark.css" type="text/css" />    
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fa-snapchat.css">
+    <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/animate.css" type="text/css" /> -->
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!--[if lt IE 9]>
+    	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <!-- External JavaScripts
+    ============================================= -->
+    <!-- <script type="text/javascript" src="js/jquery.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="js/plugins.js"></script>
+
+<!--    <script type="text/javascript" src="js/functions.js"></script> -->
+
+    <!-- // <script type="text/javascript" src="js/jquery.smooth-scroll.js"></script> -->
+	<title>GreeniPhi - Greeks going green</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style type="text/css">
+      .fadeIn{
+        opacity: 1 !important;
+      }
+    </style> 
+</head>
+
+<body class="stretched"  onload="initialize()">
+
+    <div id="wrapper" class="clearfix">
+
+        <header id="header" class="full-header static-sticky">
+
+          <div id="header-wrap">
+
+            <div class="container clearfix">
+              <!-- Logo
+                   ============================================= -->
+              <div id="logo">
+                <a href="index.html" class="standard-logo"><img src="qblogo-01.png" alt="Canvas Logo"></a>
+                <a href="index.html" class="retina-logo"><img src="qblogo-01.png" alt="Canvas Logo"></a>
+              </div><!-- #logo end -->
+
+              <!-- Primary Navigation
+                   ============================================= -->
+              <nav class="main-menu">
+                <ul>  
+			      <li class=""><a href="index.html#about" class="benefit"><div>About GreeniPhi</div></a></li>
+			      <li class=""><a href="index.html#partners" class="benefit"><div>Partnerships</div></a></li>
+			      <li ><a href="index.html#why" class="benefit"><div>Why GreeniPhi?</div></a></li>
+                  <li class="mega-menu "><a href="index.html#how" class="how"><div>How It Works</div></a></li> 
+
+                  <li><a  href="index.html#social-media">Let's get social!</a></li>
+                  <li class="current"><a href="javascript:openContactDialog();">Contact</a></li>
+                </ul>
+              </nav>
+              <!-- #primary-menu end -->
+            </div>
+          </div>
+
+        </header><!-- #header end -->
+
+        <!-- Content
+        ============================================= -->
+  <section id="vendor-banner"
+	   style="background-image: url(&quot;images/office-goods.jpg&quot;); background-attachment: scroll; background-position: center center; background-size: cover; box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0px 5000px inset; opacity: 1;">
+<div style="padding-top: 142px;">
+   <div style="opacity: 1; transform: translate(0px, 0px);">
+      <div >
+         <div class="content-section-detail">
+            <div >
+               <div >
+                  <div >
+                     <div >
+                        <div>
+                           <div style="height:1em;"></div>
+                           <div data-completed-entrance="fadeIn">
+			     <!-- Vendor logo goes here
+                             <div class="cv-user-image-wrap align-image-left"><img class="cv-user-image" src="images/od-om-logo.png" alt="Office Depot/OfficeMax Discount Office School Supplies Program"></div>
+			     -->
+                           </div>
+                           <div class="clearfix" style="height:1em;"></div>
+                           <h1>Discount Office Supplies Program</h1>
+                           <p>Save up to 80% on premium <i>Office Supplier</i> products &amp; services.</p>
+                           <div class="clearfix"></div>
+                           <div class="clearfix" style="height:4em;"></div>
+                        </div>
+                     </div>
+                     <div data-delay="250" class="" data-completed-entrance="fadeIn">
+                        <div>
+                           <div style="height:1em;"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+      
+  </section><!-- #content end -->
+
+
+  <section id="content" class="vendor-content">
+    <div class="content-wrap">
+      <div class="section zebra">
+        <div class="container clearfix">
+
+          <div class="heading-block center">
+            <h3>Get Deep Discounts On Office & School Supplies Using Our Exclusive Program</h3>
+          </div>
+          <p>
+            Our <i>Office Supplier</i> Program is a one-stop-shop that will save you significant time and money. You can access up to 80% off list price for all of your office supply needs. With our program, members get discounts on office supplies, janitorial supplies, furniture, office equipment, copy/print services, and more.</p>
+          <div class="heading-block center">
+            <h3>Get Free Access To These Benefits:</h3>
+          </div>
+          <ul class="vendor-list1" style="margin-left: 20px;">
+            <li>Save up to 80% off list price on office products</li>
+            <li>Additional rebates & incentives available</li>
+            <li>Below-retail pricing on 93,000+ products</li>
+            <li>Exclusive members-only specials and promotions</li>
+            <li>Free shipping on select orders</li>
+            <li>Exclusive pricing on copy/print services</li>
+            <li>Free in-store discount card – usable at any Office Depot or OfficeMax location</li>
+          </ul> 
+
+          <div class="heading-block center">
+            <h3>Get Exclusive Pricing On:</h3>
+          </div>
+          <ol class="vendor-list1" style="margin-left: 20px;">
+            <li> Office Supplies
+              <ul class="vendor-list2" style="margin-left:40px">
+                <li>Break room supplies – coffee, coffee supplies, mugs, etc.</li>
+                <li>Stamps, signage, promotional products, and more</li>
+                <li>Computer supplies – keyboards & mice, monitors, monitor stands, etc.</li>
+              </ul>
+            </li>
+            <li>Facilities/Janitorial Solutions
+              <ul class="vendor-list2"  style="margin-left:40px">
+                <li>Additional savings from manufacturers such as:
+                  <ul class="vendor-list3" style="margin-left:60px">
+                    <li>Georgia-Pacific</li>
+                    <li>Diversey</li>
+                    <li>GOJO</li>
+                    <li>Kimberly-Clark</li>
+                    <li>3M</li>
+                  </ul>
+                <li>Toilet paper, kleenex, hand towels, soaps</li>
+              </ul>
+            </li>
+            <li>Office Furniture
+              <ul class="vendor-list2" style="margin-left:40px">
+                <li>Desks & Chairs</li>
+                <li>Conference Rooms</li>
+                <li>Common Areas</li>
+                <li>Outdoor</li>
+                <li>Consulting & Design Help</li>
+              </ul>
+            </li>
+            <li>Office Equipment & Managed Printing
+              <ul class="vendor-list2" style="margin-left:40px">
+                <li>Multi-function Devices</li>
+                <li>Printers</li>
+                <li>Software & Accessories</li>
+                <li>Toner Delivery</li>
+                <li>Maintenance Services & Device Support</li>
+              </ul>
+            </li>
+          </ol> 
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+        <!-- Footer
+        ============================================= -->
+        <footer id="footer" class="footer-wrapper">
+
+                <!-- Footer Widgets
+                ============================================= -->
+             
+                <div id="copyrights">
+
+
+
+                <div class="container clearfix">
+
+
+
+                    <div class="col-md-6 pdl pdr ">
+
+
+                        <div class="row">
+                            <div class="col-md-6 pdl pdr">
+
+                                <img src="qblogo-01.png" alt="" class="footer-logo">
+                                <div class="widget clearfix">
+                                    <p>Our mission is to help non-profit organizations raise money by making the recycling and resale of students' and alumni’s gently used items as simple, efficient, and stress-free as possible. </p>
+                                    
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="widget"> 
+                                  <h3><strong>Contact Us</strong></h3>                             
+                                    <abbr title="Phone Number"><strong>Phone:</strong></abbr> 
+                                        <a href="tel:+17575375700">(757) 537-5700</a><br>
+                                    <abbr title="Email Address"><strong>Email:</strong></abbr> <a href="mailto:info@GreeniPhi.com">info@GreeniPhi.com</a>
+                                </div>
+                                <div class="widget">
+                                     <h3><strong>Address</strong></h3>                                
+                                    <address>
+                                        933 First Colonial Road <br>
+                                       Suite 101<br>
+                                       Virginia Beach, VA  23454
+                                    </address>
+                                </div>
+                            </div>
+                        </div>    
+
+                    </div>
+
+
+
+
+
+                    <div class="col-md-6 pdr">
+
+                        <div class="copyrights-menu copyright-links fright clearfix">
+
+                          <!--   <a href="home.html">Home</a>/<a href="faq.html">Faq</a>/<a href="presskit.html">Press Kit</a>/<a href="#">Events</a>/<a href="contact.html">Contact</a>/<a href="#myModal1" data-lightbox="inline">Privacy</a>/<a href="sitemap.html">Sitemap</a> -->
+
+                        </div>
+
+                        <div class="fright clearfix social-list">
+
+                            <span>Let's get social! </span>
+
+                            <a href="https://www.facebook.com/GreeniPhi/" class="social-icon si-small si-borderless nobottommargin si-facebook">
+
+                                <i class="icon-facebook"></i>
+
+                                <i class="icon-facebook"></i>
+
+                            </a>
+
+
+
+                            <a href="https://twitter.com/GreeniPhi" class="social-icon si-small si-borderless nobottommargin si-twitter">
+
+                                <i class="icon-twitter"></i>
+
+                                <i class="icon-twitter"></i>
+
+                            </a>
+
+
+
+                            <a href="https://www.instagram.com/GreeniPhi" class="social-icon si-small si-borderless nobottommargin si-instagram">
+
+                                <i class="icon-instagram"></i>
+
+                                <i class="icon-instagram"></i>
+
+                            </a>
+
+
+                            <a href="https://www.snapchat.com/GreeniPhi" class="social-icon snapchat-ico si-small si-borderless nobottommargin">
+
+                               <i class="fa fa-snapchat fa-2x"></i>
+                               <i class="fa fa-snapchat fa-2x"></i>
+
+                            </a>
+
+
+
+                            
+
+                        </div>
+
+                        <div class="fright clearfix">
+
+                          Copyrights © 2014 All Rights Reserved by Greenphi, LLC.
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+        </footer><!-- #footer end -->
+
+    </div><!-- #wrapper end -->
+    <!-- Go To Top
+    ============================================= -->
+    <div id="gotoTop" class="icon-angle-up"></div>
+
+    <!-- Footer Scripts
+    ============================================= -->
+    <script type="text/javascript" src="js/functions.js"></script>
+                       
+
+    <!-- Modal -->
+   <!--  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog form-contact">
+            <div class="modal-body">
+                <div class="modal-content">
+                    <div class="modal-header">
+                     <a href="index.html" class="standard-logo"><img src="qblogo-01.png" alt="Canvas Logo"></a>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                 </div>
+                    <div class="modal-body">
+                        <h3>Request More Information</h3>
+						<p>We'd love to get to know you and help your organization grow through its support of university sustainability initiatives. Request a meeting by clicking below.</p>
+
+                        <form class="nobottommargin contact-form" method="get" action="mail.php" id="contact-form">
+                            <div class="col-md-12 nomargin nopadding contact-form-inner">
+                                <div class="input-field">
+
+                                    <input type="text" id="template-contactform-name" name="name" value="" class="sm-form-control required" placeholder="Full Name" required />
+                                </div>
+                                <div class="input-field">
+                                        <input type="text" id="autocomplete" name="address" placeholder="Organization" class="sm-form-control" required />
+                                </div>
+                                <div class="input-field">
+                                    <input type="email" id="template-contactform-email" name="email" value="" class="required email sm-form-control" placeholder="Work Email Address" required />
+                                </div>
+
+                                <div class="input-field">
+                                    <input tabindex="3" type="text" id="template-contactform-phone" name="phone" placeholder="Organization Phone" class="required sm-form-control" required/>  
+                                </div>
+								<div class="input-field">
+                                    <select name="persona" id="persona" class="valid required sm-form-control" required >
+									  <option value="__PLACEHOLDER__">What best describes you?</option>
+									  <option value="campus">Council Rep. or Student Affairs Professional</option> 
+									  <option value="hq">HQ Staff</option>
+									  <option value="chapter">Recruitment leader of a growing chapter</option>
+									  <option value="alum">Involved Alumni or Advisor</option>
+									</select>
+                                </div>
+                                
+                            </div>
+							<div class="">
+                                    <input class="button button-3d nomargin submit" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit" />
+                            </div>
+                        </form>
+														<div id="success"><h2>Your message has been sent. Thank you!</h2></div>
+														<div id="error"><h2>Sorry your message can not be sent.</h2></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Footer Scripts
+    ============================================= -->
+
+        <script src="js/jquery.maskedinput.js" ></script>
+        <script>
+        jQuery(function($) {
+              $.mask.definitions['~']='[+-]';      
+              $('#template-contactform-phone').mask('(999) 999-9999');
+              
+           });
+         </script>
+          <script>
+        var placeSearch, autocomplete;
+        var componentForm = {
+          street_number: 'short_name',
+          route: 'long_name',
+          locality: 'long_name',
+          administrative_area_level_1: 'short_name',
+          country: 'long_name',
+          postal_code: 'short_name'
+        };
+        function initialize() {
+          autocomplete = new google.maps.places.Autocomplete(
+              (document.getElementById('autocomplete')),
+              { types: ['geocode'] });
+        }
+        
+    </script>
+    
+
+    <!-- start Mixpanel -->
+    <script type="text/javascript">
+       (function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+    for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+    mixpanel.init("3c9142a5dc2ae0011655c1d19c1272e4");
+</script><!-- end Mixpanel -->
+
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4MMKZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W4MMKZ');</script>
+<!-- End Google Tag Manager -->
+
+<script type="text/javascript">
+    mixpanel.track('main viewed', {
+        'main viewed' : document.title,
+        'url' : window.location.pathname
+    });
+</script>
+
+    <script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+
+</html>

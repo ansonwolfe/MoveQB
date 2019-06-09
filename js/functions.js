@@ -285,7 +285,7 @@ var SEMICOLON = SEMICOLON || {};
 		},
 
 		testimonialsGrid: function(){
-			if( $testimonialsGridEl.length > 0 ) {
+		/*	if( $testimonialsGridEl.length > 0 ) {
 				if( $body.hasClass('device-sm') || $body.hasClass('device-md') || $body.hasClass('device-lg') ) {
 					var maxHeight = 0;
 					$testimonialsGridEl.each( function(){
@@ -298,7 +298,7 @@ var SEMICOLON = SEMICOLON || {};
 				} else {
 					$testimonialsGridEl.find("li").css({ 'height': 'auto' });
 				}
-			}
+			}*/
 		},
 
 		lightbox: function(){

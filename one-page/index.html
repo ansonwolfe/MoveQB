@@ -22,13 +22,54 @@
 	<link rel="stylesheet" href="../css/magnific-popup.css" type="text/css" />
 
 	<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+	<link href="js/asset.js" type="text/javascript" />   
 
 	<link rel="stylesheet" href="../css/responsive.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<!--[if lt IE 9]>
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
+<script>
+Array.prototype.forEach.call(document.body.querySelectorAll("*[data-mask]"), applyDataMask);
 
+function applyDataMask(field) {
+    var mask = field.dataset.mask.split('');
+    
+    // For now, this just strips everything that's not a number
+    function stripMask(maskedData) {
+        function isDigit(char) {
+            return /\d/.test(char);
+        }
+        return maskedData.split('').filter(isDigit);
+    }
+    
+    // Replace `_` characters with characters from `data`
+    function applyMask(data) {
+        return mask.map(function(char) {
+            if (char != '_') return char;
+            if (data.length == 0) return char;
+            return data.shift();
+        }).join('')
+    }
+    
+    function reapplyMask(data) {
+        return applyMask(stripMask(data));
+    }
+    
+    function changed() {   
+        var oldStart = field.selectionStart;
+        var oldEnd = field.selectionEnd;
+        
+        field.value = reapplyMask(field.value);
+        
+        field.selectionStart = oldStart;
+        field.selectionEnd = oldEnd;
+    }
+    
+    field.addEventListener('click', changed)
+    field.addEventListener('keyup', changed)
+}
+</script>
 	<!-- External JavaScripts
 	============================================= -->
 	<script type="text/javascript" src="../js/jquery.js"></script>
@@ -806,7 +847,7 @@
 								</div>
 
 								<div class="col_two_third col_last">
-									<input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="required sm-form-control border-form-control" placeholder="Subject" />
+									<input type="text" id="template-contactform-subject" name="template-contactform-subject" value="(___) ___-____" data-mask="(___) ___-____" class="required sm-form-control border-form-control" placeholder="Subject" />
 								</div>
 
 								<div class="clear"></div>
